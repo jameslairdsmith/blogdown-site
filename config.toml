@@ -9,7 +9,7 @@
 baseurl = "https://jameslairdsmith.netlify.com/"
 
 # Title of your site
-#title = "James Laird-Smith"
+title = "James Laird-Smith"
 
 # Your copyright notice - appears in site footer.
 # To display a copyright symbol, type `&copy;`.
