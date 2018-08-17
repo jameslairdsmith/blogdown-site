@@ -11,8 +11,8 @@ weight = 5
 [interests]
   interests = [
     "Finance",
-    "Data visualisation",
-    "Text mining"
+    "Data visualisation"
+#    "Text mining"
   ]
 
 # List your qualifications (such as academic degrees).
