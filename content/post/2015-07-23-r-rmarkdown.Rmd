@@ -4,7 +4,7 @@ author: "Frida Gomam"
 date: 2015-07-23T21:13:14-05:00
 categories: ["R"]
 tags: ["R Markdown", "plot", "regression"]
-summary: "Create a beautifully simple website or blog in under 10 minutes."
+summary: "Create a simple website or blog in under 10 minutes."
 ---
 
 ```{r setup, include=FALSE}
