@@ -13,6 +13,25 @@
     
     
     <item>
+      <title>Example with D3</title>
+      <link>/post/example-with-d3/</link>
+      <pubDate>Mon, 03 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/example-with-d3/</guid>
+      <description>svg.selectAll(&amp;#39;rect&amp;#39;) .data(data) .enter() .append(&amp;#39;rect&amp;#39;) .attr(&amp;#39;width&amp;#39;, function(d) { return d * 10; }) .attr(&amp;#39;height&amp;#39;, &amp;#39;20px&amp;#39;) .attr(&amp;#39;y&amp;#39;, function(d, i) { return i * 22; }) .attr(&amp;#39;fill&amp;#39;, &amp;quot;blue&amp;quot;); var test = svg.append(&amp;quot;g&amp;quot;); test.append(&amp;#39;text&amp;#39;) .text(&amp;quot;This is a test&amp;quot;) .attr(&amp;quot;y&amp;quot;, height) .attr(&amp;quot;x&amp;quot;, width) .attr(&amp;quot;text-anchor&amp;quot;, &amp;quot;end&amp;quot;);  {&#34;x&#34;:{&#34;data&#34;:[4,8,15,16,23,42],&#34;type&#34;:&#34;numeric&#34;,&#34;container&#34;:&#34;svg&#34;,&#34;options&#34;:null,&#34;script&#34;:&#34;var d3Script = function(d3, r2d3, data, svg, width, height, options, theme, console) {\nthis.d3 = d3;\n\nsvg = d3.select(svg.node());\nsvg.selectAll(&#39;rect&#39;)\n .data(data)\n .enter()\n .append(&#39;rect&#39;)\n .attr(&#39;width&#39;, function(d) { return d * 10; })\n .</description>
+    </item>
+    
+    <item>
+      <title>Explaining Cape Town&#39;s water crisis</title>
+      <link>/post/explaining-cape-town-s-water-crisis/</link>
+      <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/explaining-cape-town-s-water-crisis/</guid>
+      <description>They are are calling it “Day Zero”. From this date, household taps in Cape Town, one of South Africa’s largest cities, will be turned off by officials. Residents will instead have to queue for water at central distribution points. This rationing will be an attempt to prevent Cape Town from being the first major city in the modern world to run out of fresh water.
+Exactly when Day Zero will occur is uncertain, but official estimates say it will be sometime in the next three to four months.</description>
+    </item>
+    
+    <item>
       <title>Academic: the website designer for Hugo</title>
       <link>/post/getting-started/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0100</pubDate>

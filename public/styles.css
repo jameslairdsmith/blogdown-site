@@ -69,6 +69,9 @@ body {
 p {
   margin-top: 0;
   margin-bottom: 1rem;
+  text-align: justify;
+  color: black;
+  font-size: 0.9rem;
 }
 
 /* Lists */
@@ -226,10 +229,15 @@ blockquote p:last-child {
 }
 
 .universal-wrapper {
-  margin: 0 auto;
-  padding-right: 15px;
-  padding-left: 15px;
-  width: 100%;
+  margin: 0 auto;   
+/*  padding-right: 15px; */
+/*  padding-left: 15px;  */
+/*  width: 100%;  */
+  max-width: 760px;   */ 
+  padding-top: 100rem;
+  padding: 1rem 20px 0 20px;   
+/*  margin: 0 auto 0 auto;   */
+/*  box-sizing: border-box;*/
 }
 @media only screen and (min-width: 1001px) {
   .universal-wrapper {
@@ -898,6 +906,10 @@ article .article-metadata {
 
 .card-simple:first-of-type {
   margin-top: 0;
+}
+
+.card-simple h3 {
+  margin-top: 0.5rem;
 }
 
 .card-simple p.read-more {
