@@ -24,11 +24,19 @@ data <- c(4, 8, 15, 16, 23, 42)
 
 // var totalWidth = document.getElementById("htmlwidget-1").offsetWidth
 
-// var totalWidth = document.getElementsByTagName('body')[0].offsetWidth
+ var totalWidth = document.getElementsByTagName('body')[0].offsetWidth
 
 // var width = totalWidth*1;
 
-var width = width*0.8;
+// var totalWidth = document.getElementsByClassName("r2d3 html-widget html-widget-static-bound")[0].offsetWidth
+
+var width = Math.min(width, totalWidth);
+
+// var chart = d3.select("").attr("id","chart")
+
+// var totalWidth = document.getElementById("chart").offsetWidth
+
+// var width = totalWidth*0.8;
 
 svg.selectAll('rect')
   .data(data)
@@ -42,10 +50,14 @@ svg.selectAll('rect')
 var test = svg.append("g");
 
 test.append('text')
-  .text("This is a test")
+  .text(width)
   .attr("y", height)
   .attr("x", width)
   .attr("text-anchor", "end");
 ```
 
+
+```{r}
+r2d3(data=c(0.3, 0.6, 0.8, 0.95, 0.40, 0.20), script = "extest.js")
+```
 
