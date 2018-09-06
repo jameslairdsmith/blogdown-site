@@ -22,11 +22,13 @@ data <- c(4, 8, 15, 16, 23, 42)
 
 ```{d3 echo=FALSE, data=data}
 
-var totalWidth = document.getElementById("htmlwidget-1").offsetWidth
+// var totalWidth = document.getElementById("htmlwidget-1").offsetWidth
 
-var totalWidth = document.getElementsByTagName('body')[0].offsetWidth
+// var totalWidth = document.getElementsByTagName('body')[0].offsetWidth
 
-var width = totalWidth*1;
+// var width = totalWidth*1;
+
+var width = width*0.8;
 
 svg.selectAll('rect')
   .data(data)

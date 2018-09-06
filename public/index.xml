@@ -23,11 +23,13 @@
 &lt;script src=&#34;/rmarkdown-libs/d3v5/d3.min.js&#34;&gt;&lt;/script&gt;
 
 
-&lt;pre class=&#34;d3&#34;&gt;&lt;code&gt;var totalWidth = document.getElementById(&amp;quot;htmlwidget-1&amp;quot;).offsetWidth
+&lt;pre class=&#34;d3&#34;&gt;&lt;code&gt;// var totalWidth = document.getElementById(&amp;quot;htmlwidget-1&amp;quot;).offsetWidth
 
-var totalWidth = document.getElementsByTagName(&amp;#39;body&amp;#39;)[0].offsetWidth
+// var totalWidth = document.getElementsByTagName(&amp;#39;body&amp;#39;)[0].offsetWidth
 
-var width = totalWidth*1;
+// var width = totalWidth*1;
+
+var width = width*0.8;
 
 svg.selectAll(&amp;#39;rect&amp;#39;)
   .data(data)
@@ -46,7 +48,7 @@ test.append(&amp;#39;text&amp;#39;)
   .attr(&amp;quot;x&amp;quot;, width)
   .attr(&amp;quot;text-anchor&amp;quot;, &amp;quot;end&amp;quot;);&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:672px;height:480px;&#34; class=&#34;r2d3 html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;data&#34;:[4,8,15,16,23,42],&#34;type&#34;:&#34;numeric&#34;,&#34;container&#34;:&#34;svg&#34;,&#34;options&#34;:null,&#34;script&#34;:&#34;var d3Script = function(d3, r2d3, data, svg, width, height, options, theme, console) {\nthis.d3 = d3;\n\nsvg = d3.select(svg.node());\n\nvar totalWidth = document.getElementById(\&#34;htmlwidget-1\&#34;).offsetWidth\n\nvar totalWidth = document.getElementsByTagName(&#39;body&#39;)[0].offsetWidth\n\nvar width = totalWidth*1;\n\nsvg.selectAll(&#39;rect&#39;)\n  .data(data)\n  .enter()\n    .append(&#39;rect&#39;)\n      .attr(&#39;width&#39;, function(d) { return d * 10; })\n      .attr(&#39;height&#39;, &#39;20px&#39;)\n      .attr(&#39;y&#39;, function(d, i) { return i * 22; })\n      .attr(&#39;fill&#39;, \&#34;blue\&#34;);\n      \nvar test = svg.append(\&#34;g\&#34;);\n\ntest.append(&#39;text&#39;)\n  .text(\&#34;This is a test\&#34;)\n  .attr(\&#34;y\&#34;, height)\n  .attr(\&#34;x\&#34;, width)\n  .attr(\&#34;text-anchor\&#34;, \&#34;end\&#34;);\n};&#34;,&#34;style&#34;:null,&#34;version&#34;:5,&#34;theme&#34;:{&#34;default&#34;:{&#34;background&#34;:&#34;#FFFFFF&#34;,&#34;foreground&#34;:&#34;#000000&#34;},&#34;runtime&#34;:null},&#34;useShadow&#34;:true},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;data&#34;:[4,8,15,16,23,42],&#34;type&#34;:&#34;numeric&#34;,&#34;container&#34;:&#34;svg&#34;,&#34;options&#34;:null,&#34;script&#34;:&#34;var d3Script = function(d3, r2d3, data, svg, width, height, options, theme, console) {\nthis.d3 = d3;\n\nsvg = d3.select(svg.node());\n\n// var totalWidth = document.getElementById(\&#34;htmlwidget-1\&#34;).offsetWidth\n\n// var totalWidth = document.getElementsByTagName(&#39;body&#39;)[0].offsetWidth\n\n// var width = totalWidth*1;\n\nvar width = width*0.8;\n\nsvg.selectAll(&#39;rect&#39;)\n  .data(data)\n  .enter()\n    .append(&#39;rect&#39;)\n      .attr(&#39;width&#39;, function(d) { return d * 10; })\n      .attr(&#39;height&#39;, &#39;20px&#39;)\n      .attr(&#39;y&#39;, function(d, i) { return i * 22; })\n      .attr(&#39;fill&#39;, \&#34;blue\&#34;);\n      \nvar test = svg.append(\&#34;g\&#34;);\n\ntest.append(&#39;text&#39;)\n  .text(\&#34;This is a test\&#34;)\n  .attr(\&#34;y\&#34;, height)\n  .attr(\&#34;x\&#34;, width)\n  .attr(\&#34;text-anchor\&#34;, \&#34;end\&#34;);\n};&#34;,&#34;style&#34;:null,&#34;version&#34;:5,&#34;theme&#34;:{&#34;default&#34;:{&#34;background&#34;:&#34;#FFFFFF&#34;,&#34;foreground&#34;:&#34;#000000&#34;},&#34;runtime&#34;:null},&#34;useShadow&#34;:true},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
 </description>
     </item>
     
