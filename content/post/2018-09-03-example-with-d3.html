@@ -18,7 +18,11 @@ summary: "Example using D3."
 <script src="/rmarkdown-libs/d3v5/d3.min.js"></script>
 
 
-<pre class="d3"><code>svg.selectAll(&#39;rect&#39;)
+<pre class="d3"><code>var totalWidth = document.getElementById(&quot;htmlwidget-1&quot;).offsetWidth
+
+var width = totalWidth*1;
+
+svg.selectAll(&#39;rect&#39;)
   .data(data)
   .enter()
     .append(&#39;rect&#39;)
@@ -35,4 +39,4 @@ test.append(&#39;text&#39;)
   .attr(&quot;x&quot;, width)
   .attr(&quot;text-anchor&quot;, &quot;end&quot;);</code></pre>
 <div id="htmlwidget-1" style="width:672px;height:480px;" class="r2d3 html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1">{"x":{"data":[4,8,15,16,23,42],"type":"numeric","container":"svg","options":null,"script":"var d3Script = function(d3, r2d3, data, svg, width, height, options, theme, console) {\nthis.d3 = d3;\n\nsvg = d3.select(svg.node());\nsvg.selectAll('rect')\n  .data(data)\n  .enter()\n    .append('rect')\n      .attr('width', function(d) { return d * 10; })\n      .attr('height', '20px')\n      .attr('y', function(d, i) { return i * 22; })\n      .attr('fill', \"blue\");\n      \nvar test = svg.append(\"g\");\n\ntest.append('text')\n  .text(\"This is a test\")\n  .attr(\"y\", height)\n  .attr(\"x\", width)\n  .attr(\"text-anchor\", \"end\");\n};","style":null,"version":5,"theme":{"default":{"background":"#FFFFFF","foreground":"#000000"},"runtime":null},"useShadow":true},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"data":[4,8,15,16,23,42],"type":"numeric","container":"svg","options":null,"script":"var d3Script = function(d3, r2d3, data, svg, width, height, options, theme, console) {\nthis.d3 = d3;\n\nsvg = d3.select(svg.node());\n\nvar totalWidth = document.getElementById(\"htmlwidget-1\").offsetWidth\n\nvar width = totalWidth*1;\n\nsvg.selectAll('rect')\n  .data(data)\n  .enter()\n    .append('rect')\n      .attr('width', function(d) { return d * 10; })\n      .attr('height', '20px')\n      .attr('y', function(d, i) { return i * 22; })\n      .attr('fill', \"blue\");\n      \nvar test = svg.append(\"g\");\n\ntest.append('text')\n  .text(\"This is a test\")\n  .attr(\"y\", height)\n  .attr(\"x\", width)\n  .attr(\"text-anchor\", \"end\");\n};","style":null,"version":5,"theme":{"default":{"background":"#FFFFFF","foreground":"#000000"},"runtime":null},"useShadow":true},"evals":[],"jsHooks":[]}</script>

@@ -21,6 +21,11 @@ data <- c(4, 8, 15, 16, 23, 42)
 ```
 
 ```{d3 echo=FALSE, data=data}
+
+var totalWidth = document.getElementById("htmlwidget-1").offsetWidth
+
+var width = totalWidth*1;
+
 svg.selectAll('rect')
   .data(data)
   .enter()
