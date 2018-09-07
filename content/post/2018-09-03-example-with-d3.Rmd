@@ -9,7 +9,7 @@ header:
   caption: ''
   image: ''
 summary: "Example using D3."
-draft: true
+draft: false
 ---
 
 ```{r setup, echo=FALSE}
