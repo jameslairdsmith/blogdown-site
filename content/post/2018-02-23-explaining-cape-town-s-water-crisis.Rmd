@@ -69,7 +69,7 @@ Why is this happening? Drought is the main reason. Rainfall in the province has 
 #htmltools::tagList(lst)
 
 l<- hchart(rainfall_data, "column", hcaes(x = "Date", y = "Avr_Prcp_Pct"))
-l
+
 frameWidget(l)
 ```
 
