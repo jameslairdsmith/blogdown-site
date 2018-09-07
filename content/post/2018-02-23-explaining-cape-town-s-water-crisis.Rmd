@@ -9,6 +9,7 @@ header:
   caption: ''
   image: ''
 summary: " "
+draft: true
 ---
 
 They are are calling it “Day Zero”. From this date, household taps in Cape Town, one of South Africa's largest cities, will be turned off by officials. Residents will instead have to queue for water at central distribution points. This rationing will be an attempt to prevent Cape Town from being the first major city in the modern world to run out of fresh water.

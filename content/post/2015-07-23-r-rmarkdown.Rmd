@@ -5,6 +5,7 @@ date: 2015-07-23T21:13:14-05:00
 categories: ["R"]
 tags: ["R Markdown", "plot", "regression"]
 summary: "Create a simple website or blog in under 10 minutes."
+draft: true
 ---
 
 ```{r setup, include=FALSE}
