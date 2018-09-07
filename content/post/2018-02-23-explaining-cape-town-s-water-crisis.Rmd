@@ -9,12 +9,13 @@ header:
   caption: ''
   image: ''
 summary: " "
-draft: true
+draft: false
 ---
 
 ```{r setup, include=FALSE}
 library(tidyverse)
 library(highcharter)
+library(widgetframe)
 ```
 
 
@@ -30,27 +31,27 @@ Why is this happening? Drought is the main reason. Rainfall in the province has 
 
 
 
-```{r echo=TRUE, message=FALSE, warning=FALSE}
-rainfall_data <- data.frame(
-           Year = c(2007L, 2008L, 2009L, 2010L, 2011L, 2012L, 2013L, 2014L,
-                    2015L, 2016L, 2017L),
-        Station = c(688160L, 688160L, 688160L, 688160L, 688160L, 688160L,
-                    688160L, 688160L, 688160L, 688160L, 688160L),
-           PRCP = c(24.94, 21.62, 22.64, 14.23, 14.7, 15.61, 26.79, 20.09,
-                    12.64, 8.64, 5.98),
-           Date = c("2007-01-01", "2008-01-01", "2009-01-01", "2010-01-01",
-                    "2011-01-01", "2012-01-01", "2013-01-01", "2014-01-01",
-                    "2015-01-01", "2016-01-01", "2017-01-02"),
-       Avr_Prcp = c(0.460187353629976, 0.265807962529274, 0.325526932084309,
-                    -0.166861826697892, -0.139344262295082,
-                    -0.0860655737704919, 0.568501170960187, 0.176229508196721, -0.259953161592506,
-                    -0.494145199063232, -0.649882903981265),
-   Avr_Prcp_Pct = c(46.0187353629976, 26.5807962529274, 32.5526932084309,
-                    -16.6861826697892, -13.9344262295082, -8.60655737704919,
-                    56.8501170960187, 17.6229508196721, -25.9953161592506,
-                    -49.4145199063232, -64.9882903981265))
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+#rainfall_data <- data.frame(
+#           Year = c(2007L, 2008L, 2009L, 2010L, 2011L, 2012L, 2013L, 2014L,
+#                    2015L, 2016L, 2017L),
+#        Station = c(688160L, 688160L, 688160L, 688160L, 688160L, 688160L,
+#                    688160L, 688160L, 688160L, 688160L, 688160L),
+#           PRCP = c(24.94, 21.62, 22.64, 14.23, 14.7, 15.61, 26.79, 20.09,
+#                    12.64, 8.64, 5.98),
+#           Date = c("2007-01-01", "2008-01-01", "2009-01-01", "2010-01-01",
+#                    "2011-01-01", "2012-01-01", "2013-01-01", "2014-01-01",
+#                    "2015-01-01", "2016-01-01", "2017-01-02"),
+#       Avr_Prcp = c(0.460187353629976, 0.265807962529274, 0.325526932084309,
+#                    -0.166861826697892, -0.139344262295082,
+#                    -0.0860655737704919, 0.568501170960187, 0.176229508196721, -0.259953161592506,
+#                    -0.494145199063232, -0.649882903981265),
+#   Avr_Prcp_Pct = c(46.0187353629976, 26.5807962529274, 32.5526932084309,
+#                    -16.6861826697892, -13.9344262295082, -8.60655737704919,
+#                    56.8501170960187, 17.6229508196721, -25.9953161592506,
+#                    -49.4145199063232, -64.9882903981265))
 
-# rainfall_data <- read_csv("https://raw.githubusercontent.com/jameslairdsmith/Home_and_dry/master/Rained_out.csv")
+ rainfall_data <- read_csv("https://raw.githubusercontent.com/jameslairdsmith/Home_and_dry/master/Rained_out.csv")
 
 # hchart(data, "column", hcaes(x = as.character(Year), y = Avr_Prcp_Pct))
 # data
@@ -61,13 +62,15 @@ rainfall_data <- data.frame(
   # hc_add_series(data = rainfall_data$Date) %>% 
 #  hc_xAxis(categories = rainfall_data$Date) 
 
-#
 
-# lst <- list(hchart(rainfall_data, "column", hcaes(x = "Date", y = "Avr_Prcp_Pct")))
 
-# htmltools::tagList(lst)
+#lst <- list(hchart(rainfall_data, "column", hcaes(x = "Date", y = "Avr_Prcp_Pct")))
 
-hchart(rainfall_data, "column", hcaes(x = "Date", y = "Avr_Prcp_Pct"))
+#htmltools::tagList(lst)
+
+l<- hchart(rainfall_data, "column", hcaes(x = "Date", y = "Avr_Prcp_Pct"))
+
+frameWidget(l)
 ```
 
 

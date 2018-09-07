@@ -9,42 +9,12 @@ header:
   caption: ''
   image: ''
 summary: " "
-draft: true
+draft: false
 ---
 
 <script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
-<script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
-<script src="/rmarkdown-libs/proj4js/proj4.js"></script>
-<link href="/rmarkdown-libs/highcharts/css/motion.css" rel="stylesheet" />
-<script src="/rmarkdown-libs/highcharts/highstock.js"></script>
-<script src="/rmarkdown-libs/highcharts/highcharts-3d.js"></script>
-<script src="/rmarkdown-libs/highcharts/highcharts-more.js"></script>
-<script src="/rmarkdown-libs/highcharts/modules/annotations.js"></script>
-<script src="/rmarkdown-libs/highcharts/modules/broken-axis.js"></script>
-<script src="/rmarkdown-libs/highcharts/modules/data.js"></script>
-<script src="/rmarkdown-libs/highcharts/modules/drilldown.js"></script>
-<script src="/rmarkdown-libs/highcharts/modules/exporting.js"></script>
-<script src="/rmarkdown-libs/highcharts/modules/funnel.js"></script>
-<script src="/rmarkdown-libs/highcharts/modules/heatmap.js"></script>
-<script src="/rmarkdown-libs/highcharts/modules/map.js"></script>
-<script src="/rmarkdown-libs/highcharts/modules/no-data-to-display.js"></script>
-<script src="/rmarkdown-libs/highcharts/modules/offline-exporting.js"></script>
-<script src="/rmarkdown-libs/highcharts/modules/solid-gauge.js"></script>
-<script src="/rmarkdown-libs/highcharts/modules/treemap.js"></script>
-<script src="/rmarkdown-libs/highcharts/plugins/annotations.js"></script>
-<script src="/rmarkdown-libs/highcharts/plugins/draggable-legend.js"></script>
-<script src="/rmarkdown-libs/highcharts/plugins/draggable-points.js"></script>
-<script src="/rmarkdown-libs/highcharts/plugins/export-csv.js"></script>
-<script src="/rmarkdown-libs/highcharts/plugins/grouped-categories.js"></script>
-<script src="/rmarkdown-libs/highcharts/plugins/motion.js"></script>
-<script src="/rmarkdown-libs/highcharts/plugins/pattern-fill-v2.js"></script>
-<script src="/rmarkdown-libs/highcharts/plugins/tooltip-delay.js"></script>
-<script src="/rmarkdown-libs/highcharts/custom/reset.js"></script>
-<script src="/rmarkdown-libs/highcharts/custom/symbols-extra.js"></script>
-<script src="/rmarkdown-libs/highcharts/custom/text-symbols.js"></script>
-<link href="/rmarkdown-libs/fontawesome/font-awesome.min.css" rel="stylesheet" />
-<link href="/rmarkdown-libs/htmlwdgtgrid/htmlwdgtgrid.css" rel="stylesheet" />
-<script src="/rmarkdown-libs/highchart-binding/highchart.js"></script>
+<script src="/rmarkdown-libs/pymjs/pym.v1.js"></script>
+<script src="/rmarkdown-libs/widgetframe-binding/widgetframe.js"></script>
 
 
 <p>They are are calling it “Day Zero”. From this date, household taps in Cape Town, one of South Africa’s largest cities, will be turned off by officials. Residents will instead have to queue for water at central distribution points. This rationing will be an attempt to prevent Cape Town from being the first major city in the modern world to run out of fresh water.</p>
@@ -52,45 +22,8 @@ draft: true
 <p>Reaching Day Zero would be a calamity. Public health, social cohesion and economic growth are all liable to suffer if the taps are turned off. Residents will sacrifice their productive time continually queuing for water. Poor hygiene will lead to the spread of disease. Tourists are likely to skip Cape Town and choose destinations where they are free to take a shower. Moreover, because having water available from the tap is always taken for granted, some of the broader consequences may well be unforeseen.</p>
 <p>Administering the process is also likely to be a nightmare. The current plan involves a single person collecting on behalf of their household. But, at the moment, there is no register of how many people live in each home. Four will be the working assumption and households of more than four members will have to register separately. Officials will have to plan carefully to minimise abuses. Even now there is a strong incentive for residents to stockpile in anticipation of harsh times ahead.</p>
 <p>Why is this happening? Drought is the main reason. Rainfall in the province has been well below average for the past three years. Data<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> from Cape Town International Airport show sharp declines each year starting in 2015. 2017 was an especially bad year with a 65% drop from the ten year average (see first chart). “Such severe multi-year droughts are very infrequent, occurring perhaps as rarely as once in a millennium” reckon<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a> Piotr Wolski, Bruce Hewitson and Chris Jack, all climate researchers at the University of Cape Town.</p>
-<pre class="r"><code>rainfall_data &lt;- data.frame(
-           Year = c(2007L, 2008L, 2009L, 2010L, 2011L, 2012L, 2013L, 2014L,
-                    2015L, 2016L, 2017L),
-        Station = c(688160L, 688160L, 688160L, 688160L, 688160L, 688160L,
-                    688160L, 688160L, 688160L, 688160L, 688160L),
-           PRCP = c(24.94, 21.62, 22.64, 14.23, 14.7, 15.61, 26.79, 20.09,
-                    12.64, 8.64, 5.98),
-           Date = c(&quot;2007-01-01&quot;, &quot;2008-01-01&quot;, &quot;2009-01-01&quot;, &quot;2010-01-01&quot;,
-                    &quot;2011-01-01&quot;, &quot;2012-01-01&quot;, &quot;2013-01-01&quot;, &quot;2014-01-01&quot;,
-                    &quot;2015-01-01&quot;, &quot;2016-01-01&quot;, &quot;2017-01-02&quot;),
-       Avr_Prcp = c(0.460187353629976, 0.265807962529274, 0.325526932084309,
-                    -0.166861826697892, -0.139344262295082,
-                    -0.0860655737704919, 0.568501170960187, 0.176229508196721, -0.259953161592506,
-                    -0.494145199063232, -0.649882903981265),
-   Avr_Prcp_Pct = c(46.0187353629976, 26.5807962529274, 32.5526932084309,
-                    -16.6861826697892, -13.9344262295082, -8.60655737704919,
-                    56.8501170960187, 17.6229508196721, -25.9953161592506,
-                    -49.4145199063232, -64.9882903981265))
-
-# rainfall_data &lt;- read_csv(&quot;https://raw.githubusercontent.com/jameslairdsmith/Home_and_dry/master/Rained_out.csv&quot;)
-
-# hchart(data, &quot;column&quot;, hcaes(x = as.character(Year), y = Avr_Prcp_Pct))
-# data
-
-# highchart() %&gt;% 
-#  hc_chart(type = &quot;column&quot;) %&gt;% 
-#  hc_add_series(data = rainfall_data, hcaes(x = &quot;Date&quot;, y = &quot;Avr_Prcp_Pct&quot;)) %&gt;% 
-  # hc_add_series(data = rainfall_data$Date) %&gt;% 
-#  hc_xAxis(categories = rainfall_data$Date) 
-
-#
-
-# lst &lt;- list(hchart(rainfall_data, &quot;column&quot;, hcaes(x = &quot;Date&quot;, y = &quot;Avr_Prcp_Pct&quot;)))
-
-# htmltools::tagList(lst)
-
-hchart(rainfall_data, &quot;column&quot;, hcaes(x = &quot;Date&quot;, y = &quot;Avr_Prcp_Pct&quot;))</code></pre>
-<div id="htmlwidget-1" style="width:100%;height:500px;" class="highchart html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":"Avr_Prcp_Pct"},"type":"linear"},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"turboThreshold":0,"showInLegend":false,"marker":{"enabled":true}},"treemap":{"layoutAlgorithm":"squarified"},"bubble":{"minSize":5,"maxSize":25},"scatter":{"marker":{"symbol":"circle"}}},"annotationsOptions":{"enabledButtons":false},"tooltip":{"delayForDisplay":10},"series":[{"group":"group","data":[{"Year":2007,"Station":688160,"PRCP":24.94,"Date":"2007-01-01","Avr_Prcp":0.460187353629976,"Avr_Prcp_Pct":46.0187353629976,"y":46.0187353629976,"name":"2007-01-01"},{"Year":2008,"Station":688160,"PRCP":21.62,"Date":"2008-01-01","Avr_Prcp":0.265807962529274,"Avr_Prcp_Pct":26.5807962529274,"y":26.5807962529274,"name":"2008-01-01"},{"Year":2009,"Station":688160,"PRCP":22.64,"Date":"2009-01-01","Avr_Prcp":0.325526932084309,"Avr_Prcp_Pct":32.5526932084309,"y":32.5526932084309,"name":"2009-01-01"},{"Year":2010,"Station":688160,"PRCP":14.23,"Date":"2010-01-01","Avr_Prcp":-0.166861826697892,"Avr_Prcp_Pct":-16.6861826697892,"y":-16.6861826697892,"name":"2010-01-01"},{"Year":2011,"Station":688160,"PRCP":14.7,"Date":"2011-01-01","Avr_Prcp":-0.139344262295082,"Avr_Prcp_Pct":-13.9344262295082,"y":-13.9344262295082,"name":"2011-01-01"},{"Year":2012,"Station":688160,"PRCP":15.61,"Date":"2012-01-01","Avr_Prcp":-0.0860655737704919,"Avr_Prcp_Pct":-8.60655737704919,"y":-8.60655737704919,"name":"2012-01-01"},{"Year":2013,"Station":688160,"PRCP":26.79,"Date":"2013-01-01","Avr_Prcp":0.568501170960187,"Avr_Prcp_Pct":56.8501170960187,"y":56.8501170960187,"name":"2013-01-01"},{"Year":2014,"Station":688160,"PRCP":20.09,"Date":"2014-01-01","Avr_Prcp":0.176229508196721,"Avr_Prcp_Pct":17.6229508196721,"y":17.6229508196721,"name":"2014-01-01"},{"Year":2015,"Station":688160,"PRCP":12.64,"Date":"2015-01-01","Avr_Prcp":-0.259953161592506,"Avr_Prcp_Pct":-25.9953161592506,"y":-25.9953161592506,"name":"2015-01-01"},{"Year":2016,"Station":688160,"PRCP":8.64,"Date":"2016-01-01","Avr_Prcp":-0.494145199063232,"Avr_Prcp_Pct":-49.4145199063232,"y":-49.4145199063232,"name":"2016-01-01"},{"Year":2017,"Station":688160,"PRCP":5.98,"Date":"2017-01-02","Avr_Prcp":-0.649882903981265,"Avr_Prcp_Pct":-64.9882903981265,"y":-64.9882903981265,"name":"2017-01-02"}],"type":"column"}],"xAxis":{"type":"category","title":{"text":"Date"},"categories":null}},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-1" style="width:100%;height:480px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"url":"/post/2018-02-23-explaining-cape-town-s-water-crisis_files/figure-html//widgets/widget_unnamed-chunk-1.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
 <div class="footnotes">
 <hr />
 <ol>
