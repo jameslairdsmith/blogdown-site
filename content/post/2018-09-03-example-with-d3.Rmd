@@ -31,7 +31,7 @@ data <- c(4, 8, 15, 16, 23, 42)
 
 // var totalWidth = document.getElementsByClassName("r2d3 html-widget html-widget-static-bound")[0].offsetWidth
 
-var width = Math.min(width, totalWidth);
+var width = Math.min(width, totalWidth*0.8);
 
 // var chart = d3.select("").attr("id","chart")
 
@@ -58,7 +58,7 @@ test.append('text')
 ```
 
 
-```{r}
+```{r eval=FALSE, include=FALSE}
 r2d3(data=c(0.3, 0.6, 0.8, 0.95, 0.40, 0.20), script = "extest.js")
 ```
 
