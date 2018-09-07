@@ -6,6 +6,10 @@ categories: ["R"]
 tags: ["R Markdown", "plot", "regression"]
 summary: "Create a simple website or blog in under 10 minutes."
 draft: true
+output:
+  blogdown::html_page:
+    toc: true
+
 ---
 
 ```{r setup, include=FALSE}
