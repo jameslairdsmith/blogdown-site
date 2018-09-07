@@ -831,6 +831,7 @@ article .article-metadata {
   display: block;
   position: relative;
   overflow: hidden;
+  max-width: 760px;   
 }
 
 /*************************************************
