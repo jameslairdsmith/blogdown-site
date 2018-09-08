@@ -1,0 +1,13 @@
+axisRed line{
+  stroke: red;
+}
+
+.axisRed path{
+  stroke: red;
+}
+
+.axisRed text{
+  font-size: 0.9rem;
+  color: black;
+  font-family: inherit;
+}

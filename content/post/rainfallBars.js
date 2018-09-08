@@ -56,11 +56,13 @@ svg.append("g")
       .attr("height", d => y(0) - y(d.prcp))
       .attr("width", barWidth);
   
-svg.append("g")
+svg.append("g").attr("class", "axisRed")
       .call(xAxis);
   
-svg.append("g")
+svg.append("g").attr("class", "axisRed")
       .call(yAxis);
+      
+// d3.selectAll(".tick text").attr("class","p");
 
 
 var test = svg.append("g");

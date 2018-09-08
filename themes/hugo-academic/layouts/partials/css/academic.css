@@ -84,6 +84,22 @@ ul, ol, dl {
   text-rendering: optimizeLegibility;
 }
 
+axis text {
+  font: 15px sans-serif;
+  color: red;
+}
+
+axisRed line{
+  stroke: red;
+}
+
+.axisRed path{
+  stroke: red;
+}
+
+.axisRed text{
+  fill: red;
+}
 
 html-widget-static-bound {
   max-width: 10px;
