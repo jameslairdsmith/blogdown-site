@@ -12,9 +12,9 @@ var parseTime = d3.timeParse("%Y-%m-%d");
 
 var dataLength = function(d) {return d.length};
 
-var barWidth = (width*0.9)/dataLength(data);
+var barWidth = (width*0.8)/dataLength(data);
 
-customDateTicks = width * 0.015
+var customDateTicks = width * 0.015;
 
 
 var x = d3.scaleTime()
