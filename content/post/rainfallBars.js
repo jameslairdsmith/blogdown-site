@@ -6,7 +6,7 @@ var totalWidth = document.getElementsByTagName('body')[0].offsetWidth;
 
 var width = Math.min(width, totalWidth*0.8);
 
-svg.attr("width", width);
+// svg.attr("width", width);   // This doesn't seem to work.
 
 var margin = ({top: 20, right: 0, bottom: 30, left: 40});
 

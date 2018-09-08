@@ -46,7 +46,9 @@ rainfall_data
 
 
 ```{r echo=FALSE, fig.cap="Chart 1", fig.subcap = "Fig SubCap", fig.scap= "Fig Scap"}
-r2d3(data=rainfall_data, script = "rainfallBars.js")
+l <- r2d3(data=rainfall_data, script = "rainfallBars.js")
+
+frameWidget(l)
 ```
 
 
