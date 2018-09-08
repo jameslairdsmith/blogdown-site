@@ -2,6 +2,12 @@
 //
 //
 
+// var svg = div.append("svg");
+
+// d3.select("#dambars").append("svg")
+
+// var svg = div.selectAll("div").append("svg");
+
 var totalWidth = document.getElementsByTagName('body')[0].offsetWidth;
 
 var width = Math.min(width, totalWidth*0.8);
