@@ -8,9 +8,13 @@
 
 // var svg = div.selectAll("div").append("svg");
 
+// var divWidth = document.getElementById("htmlwidget-1")[0].offsetWidth;
+
 var totalWidth = document.getElementsByTagName('body')[0].offsetWidth;
 
 var width = Math.min(width, totalWidth*0.8);
+
+// document.getElementById("htmlwidget-1").style.width = width;
 
 // svg.attr("width", width);   // This doesn't seem to work.
 

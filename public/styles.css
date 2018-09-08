@@ -88,6 +88,19 @@ ul, ol, dl {
   text-rendering: optimizeLegibility;
 }
 
+
+html-widget-static-bound {
+  max-width: 10px;
+}
+
+html-widget {
+  max-width: 10px;
+}
+
+r2d3 {
+  max-width: 10px;
+}
+
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Lato', sans-serif;
