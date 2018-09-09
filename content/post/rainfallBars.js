@@ -1,33 +1,31 @@
-
-//
 //
 
-// var svg = div.append("svg");
+//
 
-// d3.select("#dambars").append("svg")
-
-// var svg = div.selectAll("div").append("svg");
-
-// var divWidth = document.getElementById("htmlwidget-1")[0].offsetWidth;
+// width already exists.
 
 var totalWidth = document.getElementsByTagName('body')[0].offsetWidth;
 
-var width = Math.min(width, totalWidth*0.8);
+var remainder = totalWidth - width;
 
-// document.getElementById("htmlwidget-1").style.width = width;
+marginSpace = Math.max(0.1 * width, remainder);
 
-// svg.attr("width", width);   // This doesn't seem to work.
+var excess = Math.max(0.2 * width, width - 500);
 
-var margin = ({top: 20, right: 0, bottom: 30, left: 40});
+var margin = ({
+  top: 20, 
+  right: excess/2, 
+  bottom: 30, 
+  left: excess/2
+  });
 
 var parseTime = d3.timeParse("%Y-%m-%d");
 
 var dataLength = function(d) {return d.length};
 
-var barWidth = (width*0.8)/dataLength(data);
+var barWidth = ((width - excess)*0.8)/dataLength(data);
 
 var customDateTicks = width * 0.015;
-
 
 var x = d3.scaleTime()
     .domain(d3.extent(data, d => parseTime(d.date)))
@@ -62,13 +60,10 @@ svg.append("g").attr("class", "axisRed")
 svg.append("g").attr("class", "axisRed")
       .call(yAxis);
       
-// d3.selectAll(".tick text").attr("class","p");
-
-
 var test = svg.append("g");
 
 test.append('text')
-  .text(width)
+  .text(excess)
   .attr("y", height)
   .attr("x", width)
   .attr("text-anchor", "end");

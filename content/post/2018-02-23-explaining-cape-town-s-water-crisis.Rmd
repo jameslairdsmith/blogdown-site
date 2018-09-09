@@ -46,25 +46,14 @@ rainfall_data
 
 
 ```{r echo=FALSE}
-
 r2d3(data = rainfall_data, script = "rainfallBars.js",
      width =  "100%",
      sizing = sizingPolicy(defaultWidth = "100%")
      )
-#
-#frameWidget(l,width = "100%")
 ```
 
 
 
-```{r eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
-rainfall_data <- read_csv("https://raw.githubusercontent.com/jameslairdsmith/Home_and_dry/master/Rained_out.csv")
 
-l <- 
-  hchart(rainfall_data, "column", hcaes(x = "Date", y = "Avr_Prcp_Pct")) %>% 
-  hc_xAxis(title = list(text = NA), tickInterval=(24 * 3600 * 1000 * 365))
-
-frameWidget(l)
-```
 
 
