@@ -60,10 +60,20 @@ svg.append("g").attr("class", "axisRed")
 svg.append("g").attr("class", "axisRed")
       .call(yAxis);
       
+
+var title = svg.append("g").attr('class','h1').append('text')
+    .text("A Rainfall Title");
+    
+title.attr("y",title.node().getBBox().height)
+    .attr("x",5)
+    .attr("text-anchor", "start");
+    
+var dims = title.node().getBBox();
+
 var test = svg.append("g");
 
 test.append('text')
-  .text(excess)
+  .text(dims.height)
   .attr("y", height)
   .attr("x", width)
   .attr("text-anchor", "end");

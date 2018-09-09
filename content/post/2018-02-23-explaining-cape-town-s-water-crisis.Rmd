@@ -19,6 +19,7 @@ library(widgetframe)
 library(r2d3)
 ```
 
+# Heading
 
 They are are calling it “Day Zero”. From this date, household taps in Cape Town, one of South Africa's largest cities, will be turned off by officials. Residents will instead have to queue for water at central distribution points. This rationing will be an attempt to prevent Cape Town from being the first major city in the modern world to run out of fresh water.
 
@@ -28,7 +29,8 @@ Reaching Day Zero would be a calamity. Public health, social cohesion and econom
 
 Administering the process is also likely to be a nightmare. The current plan involves a single person collecting on behalf of their household. But, at the moment, there is no register of how many people live in each home. Four will be the working assumption and households of more than four members will have to register separately. Officials will have to plan carefully to minimise abuses. Even now there is a strong incentive for residents to stockpile in anticipation of harsh times ahead.
 
-Why is this happening? Drought is the main reason. Rainfall in the province has been well below average for the past three years. Data^[National Climatic Data Center. (2018). Global Service Summary of Day Data. [Data file and code]. Retrieved from ncdc.noaa.gov. Code available at https://goo.gl/jQUvGm.] from Cape Town International Airport show sharp declines each year starting in 2015. 2017 was an especially bad year with a 65% drop from the ten year average (see first chart). “Such severe multi-year droughts are very infrequent, occurring perhaps as rarely as once in a millennium” reckon^[Wolski, P., Hewitson, B. and Jack, C. (2018). Why Cape Town's drought was so hard to forecast. [online] The Conversation. Available at: https://goo.gl/hVb4Qg [Accessed 20 Feb. 2018].] Piotr Wolski, Bruce Hewitson and Chris Jack, all climate researchers at the University of Cape Town.
+
+Why is this happening? Drought is the main reason. Rainfall in the province has been well below average for the past three years. Data^[National Climatic Data Center. (2018). Global Service Summary of Day Data. [Data file and code]. Retrieved from ncdc.noaa.gov. Code available at https://goo.gl/jQUvGm.] from Cape Town International Airport show sharp declines each year starting in 2015. 2017 was an especially bad year with a 65% drop from the ten year average (see first chart). “Such severe multi-year droughts are very infrequent, occurring perhaps as rarely as once in a millennium” reckon^[Wolski, P., Hewitson, B. and Jack, C. (2018). Why Cape Town's drought was so hard to forecast. [online] The Conversation. Available at: https://goo.gl/hVb4Qg [Accessed 20 Feb. 2018].] Piotr Wolski, Bruce Hewitson and Chris Jack, all climate researchers at the University of Cape Town. T
 
 ```{r include=FALSE}
 rainfall_url <- "https://raw.githubusercontent.com/jameslairdsmith/Home_and_dry/master/Rained_out.csv"
@@ -49,7 +51,7 @@ rainfall_data
 r2d3(data = rainfall_data, script = "rainfallBars.js",
      width =  "100%",
      sizing = sizingPolicy(defaultWidth = "100%")
-     )
+     )#
 ```
 
 
