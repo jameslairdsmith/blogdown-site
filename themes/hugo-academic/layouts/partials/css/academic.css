@@ -70,7 +70,15 @@ p {
   font-size: 0.9rem;
 }
 
-div.footnotes p{
+.footnotes p{
+  text-align: left;
+}
+
+.footnotes {
+  text-align: left;
+}
+
+.references p{
   text-align: left;
 }
 

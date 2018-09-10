@@ -9,5 +9,24 @@ axisRed line{
 .axisRed text{
   font-size: 0.9rem;
   color: black;
-  font-family: inherit;
+  /* font-family: inherit;   */
+  font-family: 'Lato', sans-serif;
 }
+
+.head2 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  margin-bottom: .5rem;
+  line-height: 1.25;
+  color: #313131;
+  text-rendering: optimizeLegibility;
+  overflow-wrap: break-word; /* Ensures very long heading words do not overflow into content. */
+}
+
+.head2 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  fill: #313131;
+}
+
+
