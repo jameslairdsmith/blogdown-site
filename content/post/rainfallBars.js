@@ -155,6 +155,7 @@ svg.append("g")
       .attr("y", chooseBars)
       .attr("height", d => Math.abs(y(0)-y(d.avrPrcpPct)))
       .attr("width", barWidth);
+			
   
 svg.append("g").attr("class", "AxisStyle")
       .call(xAxis);
@@ -164,22 +165,5 @@ svg.append("g").attr("class", "AxisStyle")
       
       
 
-      
 
-//var title = svg.append("g").attr('class','h1').append('text')
-//    .text("A Rainfall Title");
-
-//title.attr("y",title.node().getBBox().height)
-//    .attr("x",5)
-//    .attr("text-anchor", "start");
-
-
-//var title = svg.append("g").append('h2').text("A Rainfall Title")
-//    .attr("y",10)
-//    .attr("x",10)
-//    .attr("text-anchor", "start");
-    
-
-    
-//var dims = title.node().getBBox();
 
