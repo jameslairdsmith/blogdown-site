@@ -36,7 +36,7 @@ var title = svg.append("g")
       
 var subtitle = svg.append("g").attr('class','ChartSubHeading').append('text')
       .attr("dy", "1")
-      .text("Percentage difference from ten year average");
+      .text("Percentage difference from ten-year average");
       
 subtitle.attr("y",subtitle.node().getBBox().height + title.node().getBBox().height*1.1)
     //.attr("x",0)
