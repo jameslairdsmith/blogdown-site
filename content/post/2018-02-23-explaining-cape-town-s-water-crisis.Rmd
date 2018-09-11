@@ -12,7 +12,7 @@ summary: " "
 draft: false
 bibliography: clothing-search.bib
 link-citations: true
-csl: ieee.csl
+csl: ieee-with-url.csl
 ---
 
 ```{r setup, include=FALSE}
