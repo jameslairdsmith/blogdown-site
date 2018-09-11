@@ -9,7 +9,7 @@ header:
   caption: ''
   image: ''
 summary: " "
-draft: true
+draft: false
 bibliography: clothing-search.bib
 link-citations: true
 ---
@@ -49,7 +49,8 @@ rainfall_data
 ```{r echo=FALSE}
 r2d3(data = rainfall_data, script = "rainfallBars.js",
      width =  "100%",
-     sizing = sizingPolicy(defaultWidth = "100%")
+     sizing = sizingPolicy(defaultWidth = "100%"),
+     css = "standardChartStyle.css"
      )
 ```
 
