@@ -12,7 +12,7 @@ summary: " "
 draft: false
 bibliography: clothing-search.bib
 link-citations: true
-csl: ieee-with-url.csl
+csl: cell-numeric-superscript.csl
 ---
 
 ```{r setup, include=FALSE}
@@ -24,7 +24,7 @@ library(r2d3)
 
 They are are calling it “Day Zero”. From this date, household taps in Cape Town, one of South Africa's largest cities, will be turned off by officials. Residents will instead have to queue for water at central distribution points. This rationing will be an attempt to prevent Cape Town from being the first major city in the modern world to run out of fresh water.
 
-Exactly when Day Zero will occur is uncertain, but official estimates say it will be sometime in the next three to four months. At the time of writing, the projected date has been pushed out to early July 2018^[According to recent statements by the Executive Mayor [@neilson_defeating_2018].], but that is likely to change. “While we must still do everything possible to prevent this ghastly eventuality, my focus has shifted to overseeing plans for the day the taps run dry” writes^[Zille, H. (2018). From the Inside: The Countdown to Day Zero. [online] Daily Maverick. Available at: https://goo.gl/SCjPf7 [Accessed 20 Feb. 2018].] Helen Zille, the province’s leader.
+Exactly when Day Zero will occur is uncertain, but official estimates say it will be sometime in the next three to four months. At the time of writing, the projected date has been pushed out to early July 2018 [@neilson_defeating_2018], but that is likely to change. “While we must still do everything possible to prevent this ghastly eventuality, my focus has shifted to overseeing plans for the day the taps run dry” writes^[Zille, H. (2018). From the Inside: The Countdown to Day Zero. [online] Daily Maverick. Available at: https://goo.gl/SCjPf7 [Accessed 20 Feb. 2018].] Helen Zille, the province’s leader.
 
 Reaching Day Zero would be a calamity. Public health, social cohesion and economic growth are all liable to suffer if the taps are turned off. Residents will sacrifice their productive time continually queuing for water. Poor hygiene will lead to the spread of disease. Tourists are likely to skip Cape Town and choose destinations where they are free to take a shower. Moreover, because having water available from the tap is always taken for granted, some of the broader consequences may well be unforeseen.
 
@@ -55,6 +55,16 @@ r2d3(data = rainfall_data, script = "rainfallBars.js",
      )
 ```
 
+Almost all Cape Town's water is fed from reservoir dams in the surrounding areas of the province. While there are 13 of these in total, only 6 are large enough to store a significant amount. Under normal circumstances, Cape Town relies on these dams filling up during the rainy winter months so that capacity can be drawn upon during the drier months. Often this occurs with a healthy surplus, but even this has eroded with the recent stretch of low rainfall. According to data^[City of Cape Town. (2018). Dam levels. [Data file and code]. Retrieved from https://goo.gl/DVHi2Q. Code available at https://goo.gl/e5Voy3.] provided by the city, the annual winter peak level has declined significantly each year for the last three years (see second chart). Most of the bottom 10% of capacity is unusable. The dams reached a peak of just over 35% during the winter of 2017; at the time of writing, they are at 25%.
+
+```{r echo=FALSE}
+r2d3(data = rainfall_data, script = "damLevelBars.js",
+     container = "div",
+     width =  "100%",
+     sizing = sizingPolicy(defaultWidth = "100%"),
+     css = "standardChartStyle.css"
+     )#
+```
 
 ## References
 
