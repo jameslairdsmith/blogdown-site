@@ -1,5 +1,5 @@
 .AxisStyle line{
-  stroke: white;
+  stroke: black;
 }
 
 .AxisStyle path{
@@ -7,9 +7,11 @@
 }
 
 .AxisStyle text{
-  font-size: 0.9rem;
-  color: black;
-  /* font-family: inherit;   */
+  font-size: 0.9rem;  
+  /*font-size: inherit;*/
+  color: red;
+  fill: #313131;
+  /*font-family: inherit;   */
   font-family: 'Lato', sans-serif;
 }
 
@@ -17,8 +19,8 @@
  /* font-family: 'Lato', sans-serif;   */
   font-family: inherit;
  /* font-weight: 400;    */
-  margin-bottom: .05rem;
-  line-height: 120%;
+  margin-bottom: .5rem;  
+  line-height: 120%;     
   color: #313131;
   text-rendering: optimizeLegibility;
   overflow-wrap: break-word; /* Ensures very long heading words do not overflow into content. */
@@ -40,4 +42,10 @@
   /*font-family: 'Lato', sans-serif; */
   font-style: italic;
   margin-bottom: .5rem;
+}
+
+.Source {
+  font-size: 0.65rem;
+  font-family: inherit;
+  fill: rgb(112, 112, 112);
 }

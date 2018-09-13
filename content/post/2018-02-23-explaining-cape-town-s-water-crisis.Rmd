@@ -20,6 +20,7 @@ library(tidyverse)
 library(highcharter)
 library(widgetframe)
 library(r2d3)
+library(lubridate)
 ```
 
 They are are calling it “Day Zero”. From this date, household taps in Cape Town, one of South Africa's largest cities, will be turned off by officials. Residents will instead have to queue for water at central distribution points. This rationing will be an attempt to prevent Cape Town from being the first major city in the modern world to run out of fresh water.
@@ -57,13 +58,32 @@ r2d3(data = rainfall_data, script = "rainfallBars.js",
 
 Almost all Cape Town's water is fed from reservoir dams in the surrounding areas of the province. While there are 13 of these in total, only 6 are large enough to store a significant amount. Under normal circumstances, Cape Town relies on these dams filling up during the rainy winter months so that capacity can be drawn upon during the drier months. Often this occurs with a healthy surplus, but even this has eroded with the recent stretch of low rainfall. According to data^[City of Cape Town. (2018). Dam levels. [Data file and code]. Retrieved from https://goo.gl/DVHi2Q. Code available at https://goo.gl/e5Voy3.] provided by the city, the annual winter peak level has declined significantly each year for the last three years (see second chart). Most of the bottom 10% of capacity is unusable. The dams reached a peak of just over 35% during the winter of 2017; at the time of writing, they are at 25%.
 
+```{r include=FALSE}
+dam_levels_url <- "https://raw.githubusercontent.com/jameslairdsmith/Home_and_dry/master/Waving_Goodbye.csv"
+dam_levels_data <- read_csv(dam_levels_url) %>% 
+  mutate(Date = ymd(Date)) %>% 
+  filter(
+    Year != 2019,
+    Percent_Fill != 0
+    ) %>% 
+  rename(
+    date = Date,
+    pctFill = Percent_Fill,
+    year = Year,
+    month = Month,
+  ) %>% 
+  arrange(date)
+dam_levels_data
+```
+
+
 ```{r echo=FALSE}
-r2d3(data = rainfall_data, script = "damLevelBars.js",
+r2d3(data = dam_levels_data, script = "damLevelBars.js",
      container = "div",
      width =  "100%",
      sizing = sizingPolicy(defaultWidth = "100%"),
      css = "standardChartStyle.css"
-     )#
+     )
 ```
 
 ## References
