@@ -78,7 +78,7 @@ var svg = div.append("svg")
 // ------ Setting the margins ---------------//
 {
   var margin = ({
-  top: 0.05 * height, 
+  top: 0.03 * height, 
   right: 0.02 * workingWidth, 
   bottom: 0.02 * height,
   left: 0.02 * workingWidth
@@ -96,7 +96,7 @@ var svg = div.append("svg")
       .append('text')
       .attr("dy",0)   // must be specified for the text wrapping function to work.
       .text("Western Cape dam levels")
-      .call(wrap, workingWidth - margin.left - margin.right)
+      //.call(wrap, workingWidth - margin.left - margin.right)
       .attr("transform", `translate(${margin.left},${margin.top})`)
       .attr("dominant-baseline","hanging");
 }
