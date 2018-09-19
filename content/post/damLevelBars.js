@@ -91,13 +91,14 @@ var svg = div.append("svg")
 {
 // ------ Adding the Title ---------------//
 {
-  var title = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`)
+  var title = svg.append("g")
       .attr('class','ChartHeading')
       .append('text')
       .attr("dy",0)   // must be specified for the text wrapping function to work.
-      .attr("dominant-baseline","hanging")
       .text("Western Cape dam levels")
-      .call(wrap, workingWidth - margin.left - margin.right);
+      .call(wrap, workingWidth - margin.left - margin.right)
+      .attr("transform", `translate(${margin.left},${margin.top})`)
+      .attr("dominant-baseline","hanging");
 }
 
 // ------ Adding the Subtitle ---------------//
@@ -194,5 +195,6 @@ svg.append("g").attr("class", "AxisStyle")
            //.attr("class", "line")
            .attr("d", line)
            .attr("stroke", "none")
-           .attr("fill","grey");
+           .attr("fill","grey")
+           .attr("transform",`translate(${1.5},${0})`) ;
 }
