@@ -198,3 +198,5 @@ svg.append("g").attr("class", "AxisStyle")
            .attr("fill","grey")
            .attr("transform",`translate(${1.5},${0})`) ;
 }
+
+var box = svg.append("rect").attr("fill","black").attr("x",0).attr("y",0).attr("height", 20).attr("width", 20)
