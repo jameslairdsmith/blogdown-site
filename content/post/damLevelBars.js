@@ -78,7 +78,7 @@ var svg = div.append("svg")
 // ------ Setting the margins ---------------//
 {
   var margin = ({
-  top: 15,//0.03 * height, 
+  top: 0.04 * height, 
   right: 0.02 * workingWidth, 
   bottom: 0.02 * height,
   left: 0.02 * workingWidth
@@ -95,7 +95,7 @@ var svg = div.append("svg")
       .attr('class','ChartHeading')
       .append('text')
       .attr("dy",0)   // must be specified for the text wrapping function to work.
-      .text("Western Cape dam levels are very very very very low.")
+      .text("Western Cape dam levels")
       .call(wrap, workingWidth - margin.left - margin.right)
       .attr("transform", `translate(${margin.left},${margin.top})`)
       .attr("dominant-baseline","hanging");
@@ -201,4 +201,4 @@ svg.append("g").attr("class", "AxisStyle")
 
 //var box = svg.append("rect").attr("fill","black").attr("x",0).attr("y",0).attr("height", 20).attr("width", 20)
 
-var test = svg.append("text").text(margin.top).attr("x", 20).attr("y", 20);
+//var test = svg.append("text").text(margin.top).attr("x", 20).attr("y", 20);
