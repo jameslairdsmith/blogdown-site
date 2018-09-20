@@ -95,7 +95,7 @@ var svg = div.append("svg")
       .attr('class','ChartHeading')
       .append('text')
       .attr("dy",0)   // must be specified for the text wrapping function to work.
-      .text("Western Cape dam levels")
+      .text("Western Cape dam levels are very very very very low.")
       .call(wrap, workingWidth - margin.left - margin.right)
       .attr("transform", `translate(${margin.left},${margin.top})`)
       .attr("dominant-baseline","hanging");
