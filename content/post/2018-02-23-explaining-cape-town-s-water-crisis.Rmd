@@ -84,7 +84,7 @@ r2d3(data = dam_levels_data, script = "damLevelBars.js",
      width =  "100%",
      sizing = sizingPolicy(defaultWidth = "100%"),
      css = "standardChartStyle.css"
-     )
+     )#
 ```
 
 ## References

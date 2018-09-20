@@ -16,8 +16,8 @@
 }
 
 .ChartHeading {
- /* font-family: 'Lato', sans-serif;   */
-  font-family: inherit;
+  font-family: 'Lato', sans-serif;   
+ /* font-family: inherit; */
  /* font-weight: 400;    */
   margin-bottom: .5rem;  
   line-height: 120%;     
