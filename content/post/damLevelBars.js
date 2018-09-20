@@ -4,7 +4,7 @@
 // ------ Preliminaries ---------------//
 {
 {
-var div = div.attr("align","center");   // Setting the div element to centre alignment.
+var div = div.attr("align","center").attr("overflow", "visible");   // Setting the div element to centre alignment.
 
 function wrap(text, width) {
   text.each(function() {
