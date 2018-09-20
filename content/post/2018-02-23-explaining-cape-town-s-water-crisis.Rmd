@@ -76,6 +76,7 @@ dam_levels_data <- read_csv(dam_levels_url) %>%
 dam_levels_data
 ```
 
+## Western Cape dam levels 
 
 ```{r echo=FALSE}
 r2d3(data = dam_levels_data, script = "damLevelBars.js",
