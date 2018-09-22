@@ -21,6 +21,7 @@ library(highcharter)
 library(widgetframe)
 library(r2d3)
 library(lubridate)
+library(htmltools)
 ```
 
 They are are calling it “Day Zero”. From this date, household taps in Cape Town, one of South Africa's largest cities, will be turned off by officials. Residents will instead have to queue for water at central distribution points. This rationing will be an attempt to prevent Cape Town from being the first major city in the modern world to run out of fresh water.
@@ -85,6 +86,22 @@ r2d3(data = dam_levels_data, script = "damLevelBars.js",
      css = "standardChartStyle.css"
      )#
 ```
+
+## Vega Lite
+
+```{r echo=FALSE}
+r2d3(data = dam_levels_data, script = "vegalitechart.js",
+     container = "div",
+     width =  "100%",
+     sizing = sizingPolicy(defaultWidth = "100%"),
+     css = "standardChartStyle.css"
+     #dependencies = htmlDependency(
+    #    name = "vega_embed",
+    #    version = "3.19.2", 
+    #    src = "https://cdn.jsdelivr.net/npm/vega-embed@3.19.2") 
+     )#
+```
+
 
 ## References
 
