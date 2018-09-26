@@ -1,0 +1,102 @@
+<html>
+<head>
+  <title>Embedding Vega-Lite</title>
+  <script src="https://d3js.org/d3.v5.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega@4.2.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@3.0.0-rc6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.19.2"></script>
+  
+<style>
+
+.role-axis-label {
+  font-size: 0.9rem;
+  fill: "red";
+  color: "red";
+}
+
+
+</style>
+
+</head>
+
+
+
+
+<body>
+  <div id="block" align="center">
+    <h2 align="left" id="head2">Rainfall at Cape Town International Airport</h2>
+    <p align="left" id="head3">Percentage difference from ten-year average</p>
+  </div>
+  <div id="vis" align="center" class="role-axis-label"></div>
+  <p align="right" id="source">Source: ncdc.noaa.gov</p>
+
+  <script type="text/javascript">
+  
+    var width = document.getElementById("vis").offsetWidth;
+  
+    var maxWidth = 550; // setting the maximum width of the chart.
+    //var width = 300;
+
+    var getWorkingWidth = function(width,maxWidth){
+                                                if(width < maxWidth)
+                                                {return 1 * width}
+                                                else{return maxWidth}
+                                              };
+
+    var workingWidth = getWorkingWidth(width, maxWidth);
+    
+    var height = Math.max(2/3 * workingWidth, 350)
+    
+    //var height = 7/10 * workingWidth
+    
+    //document.getElementById("block").setAttribute("style", `width: ${workingWidth}px`);
+    
+    var leftMargin = (width - workingWidth)/2;
+    
+    var rightMargin = leftMargin;
+    
+    document.getElementById("head2")
+    .setAttribute("style", `margin-left: ${leftMargin}px; margin-right: ${rightMargin}px`);
+    
+    document.getElementById("head3")
+    .setAttribute("style", `margin-left: ${leftMargin}px; margin-right: ${rightMargin}px; margin-bottom: 0; text-align:left;`);
+    
+    document.getElementById("source")
+    .setAttribute("style", `margin-left: ${leftMargin}px; margin-right: ${rightMargin}px; margin-bottom: 0; text-align:right;`);
+    
+    
+    //var subFontSize = document.getElementById("head3").style.fontSize;
+    
+    var el = document.getElementById('head3');
+    var style = window.getComputedStyle(el, null).getPropertyValue('font-size');
+    var fontFamily = window.getComputedStyle(el, null).getPropertyValue('font-family');
+    var subFontSize = parseFloat(style); 
+  
+    var yourVlSpec = {
+      "$schema": "https://vega.github.io/schema/vega-lite/v2.0.json",
+      "width": workingWidth,
+      "height": height,
+      "autosize": {
+        "type": "fit",
+        "contains": "padding"
+      },
+      "description": "A simple bar chart with embedded data.",
+      "data":  {"url":"https://raw.githubusercontent.com/jameslairdsmith/Home_and_dry/master/Rained_out.csv"},
+      "mark": "bar",
+      "encoding": {
+        "x": {"field": "Year", "type": "ordinal",
+        "axis": {"title": null, "labelFontSize": subFontSize, "labelFont": fontFamily}},
+        "y": {"field": "Avr_Prcp_Pct", "type": "quantitative", 
+        "axis": {"title": null, "tickCount": 6, "labelFontSize": subFontSize, "labelFont": fontFamily}}
+        }
+    }
+    
+    var opt = {
+      "actions": false
+    }
+    vegaEmbed("#vis", yourVlSpec, opt);
+    
+    
+  </script>
+</body>
+</html>

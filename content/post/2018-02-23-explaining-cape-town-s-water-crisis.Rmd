@@ -58,7 +58,7 @@ r2d3(data = rainfall_data, script = "rainfallBars.js",
 ```
 
 ```{r, echo=FALSE}
-htmltools::includeHTML("vegalitechart.html")
+htmltools::includeHTML("html_files/vegalitechart_files.html")#
 ```
 
 Almost all Cape Town's water is fed from reservoir dams in the surrounding areas of the province. While there are 13 of these in total, only 6 are large enough to store a significant amount. Under normal circumstances, Cape Town relies on these dams filling up during the rainy winter months so that capacity can be drawn upon during the drier months. Often this occurs with a healthy surplus, but even this has eroded with the recent stretch of low rainfall. According to data^[City of Cape Town. (2018). Dam levels. [Data file and code]. Retrieved from https://goo.gl/DVHi2Q. Code available at https://goo.gl/e5Voy3.] provided by the city, the annual winter peak level has declined significantly each year for the last three years (see second chart). Most of the bottom 10% of capacity is unusable. The dams reached a peak of just over 35% during the winter of 2017; at the time of writing, they are at 25%.
