@@ -295,7 +295,7 @@ test.append(&amp;#39;text&amp;#39;)
         &#34;x&#34;: {&#34;field&#34;: &#34;Date&#34;, &#34;type&#34;: &#34;temporal&#34;,
         &#34;axis&#34;: {
           &#34;title&#34;: null, 
-          &#34;labelFontSize&#34;: subFontSize-4,
+          &#34;labelFontSize&#34;: subFontSize-3,
           &#34;labelFont&#34;: fontFamily,
           &#34;ticks&#34;: false,
           &#34;format&#34;:&#34;%y&#34;,
@@ -305,7 +305,7 @@ test.append(&amp;#39;text&amp;#39;)
         &#34;axis&#34;: {
           &#34;title&#34;: null,
           &#34;tickCount&#34;: 6,
-          &#34;labelFontSize&#34;: subFontSize-4,
+          &#34;labelFontSize&#34;: subFontSize-3,
           &#34;labelFont&#34;: fontFamily,
           &#34;format&#34;:&#34;%&#34;,
           &#34;grid&#34;:false,
