@@ -270,13 +270,24 @@ test.append(&amp;#39;text&amp;#39;)
       },
       &#34;description&#34;: &#34;A simple bar chart with embedded data.&#34;,
       &#34;data&#34;:  {&#34;url&#34;:&#34;https://raw.githubusercontent.com/jameslairdsmith/Home_and_dry/master/Rained_out.csv&#34;},
+      &#34;transform&#34;: [
+          {&#34;calculate&#34;: &#34;datum.Avr_Prcp_Pct/100&#34;, &#34;as&#34;: &#34;Avr_Prcp_Pct2&#34;}
+      ],
       &#34;mark&#34;: &#34;bar&#34;,
       &#34;encoding&#34;: {
-        &#34;x&#34;: {&#34;field&#34;: &#34;Year&#34;, &#34;type&#34;: &#34;ordinal&#34;,
-        &#34;axis&#34;: {&#34;title&#34;: null, &#34;labelFontSize&#34;: subFontSize, &#34;labelFont&#34;: fontFamily}},
-        &#34;y&#34;: {&#34;field&#34;: &#34;Avr_Prcp_Pct&#34;, &#34;type&#34;: &#34;quantitative&#34;, 
-        &#34;axis&#34;: {&#34;title&#34;: null, &#34;tickCount&#34;: 6, &#34;labelFontSize&#34;: subFontSize, &#34;labelFont&#34;: fontFamily}}
-        }
+        &#34;x&#34;: {&#34;field&#34;: &#34;Date&#34;, &#34;type&#34;: &#34;temporal&#34;,
+        &#34;axis&#34;: {&#34;title&#34;: null, &#34;labelFontSize&#34;: subFontSize-5, &#34;labelFont&#34;: fontFamily, &#34;format&#34;:&#34;%y&#34;, &#34;grid&#34;:false, &#34;domain&#34;:false}},
+        &#34;y&#34;: {&#34;field&#34;: &#34;Avr_Prcp_Pct2&#34;, &#34;type&#34;: &#34;quantitative&#34;, 
+        &#34;axis&#34;: {&#34;title&#34;: null, &#34;tickCount&#34;: 6, &#34;labelFontSize&#34;: subFontSize-5, &#34;labelFont&#34;: fontFamily, &#34;format&#34;:&#34;%&#34;, &#34;grid&#34;:false, &#34;tickSize&#34;:-workingWidth, &#34;tickColor&#34;:&#34;white&#34;, &#34;labelPadding&#34;:workingWidth, &#34;domain&#34;:false}}
+        },
+      &#34;config&#34;: {
+        &#34;bar&#34;: {&#34;continuousBandSize&#34;:workingWidth/16},
+        &#34;style&#34;: {
+          &#34;cell&#34;: {
+              &#34;stroke&#34;: &#34;transparent&#34;,
+            }
+          },
+        },
     }
     
     var opt = {

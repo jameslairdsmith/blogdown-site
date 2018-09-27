@@ -111,13 +111,24 @@ csl: cell-numeric-superscript.csl
       },
       "description": "A simple bar chart with embedded data.",
       "data":  {"url":"https://raw.githubusercontent.com/jameslairdsmith/Home_and_dry/master/Rained_out.csv"},
+      "transform": [
+          {"calculate": "datum.Avr_Prcp_Pct/100", "as": "Avr_Prcp_Pct2"}
+      ],
       "mark": "bar",
       "encoding": {
-        "x": {"field": "Year", "type": "ordinal",
-        "axis": {"title": null, "labelFontSize": subFontSize, "labelFont": fontFamily}},
-        "y": {"field": "Avr_Prcp_Pct", "type": "quantitative", 
-        "axis": {"title": null, "tickCount": 6, "labelFontSize": subFontSize, "labelFont": fontFamily}}
-        }
+        "x": {"field": "Date", "type": "temporal",
+        "axis": {"title": null, "labelFontSize": subFontSize-5, "labelFont": fontFamily, "format":"%y", "grid":false, "domain":false}},
+        "y": {"field": "Avr_Prcp_Pct2", "type": "quantitative", 
+        "axis": {"title": null, "tickCount": 6, "labelFontSize": subFontSize-5, "labelFont": fontFamily, "format":"%", "grid":false, "tickSize":-workingWidth, "tickColor":"white", "labelPadding":workingWidth, "domain":false}}
+        },
+      "config": {
+        "bar": {"continuousBandSize":workingWidth/16},
+        "style": {
+          "cell": {
+              "stroke": "transparent",
+            }
+          },
+        },
     }
     
     var opt = {
