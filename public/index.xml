@@ -212,7 +212,7 @@ test.append(&amp;#39;text&amp;#39;)
 
 &lt;body&gt;
   &lt;div id=&#34;block&#34; align=&#34;center&#34;&gt;
-    &lt;h2 align=&#34;left&#34; id=&#34;head2&#34;&gt;Rainfall at Cape Town International Airport&lt;/h2&gt;
+    &lt;h3 align=&#34;left&#34; id=&#34;head2&#34;&gt;Rainfall at Cape Town International Airport&lt;/h3&gt;
     &lt;p align=&#34;left&#34; id=&#34;head3&#34;&gt;Percentage difference from ten-year average&lt;/p&gt;
   &lt;/div&gt;
   &lt;div id=&#34;vis&#34; align=&#34;center&#34; class=&#34;role-axis-label&#34;&gt;&lt;/div&gt;
@@ -244,13 +244,29 @@ test.append(&amp;#39;text&amp;#39;)
     var rightMargin = leftMargin;
     
     document.getElementById(&#34;head2&#34;)
-    .setAttribute(&#34;style&#34;, `margin-left: ${leftMargin}px; margin-right: ${rightMargin}px`);
+    .setAttribute(
+      &#34;style&#34;,`
+      margin-left: ${leftMargin}px;
+      margin-right: ${rightMargin}px`);
     
     document.getElementById(&#34;head3&#34;)
-    .setAttribute(&#34;style&#34;, `margin-left: ${leftMargin}px; margin-right: ${rightMargin}px; margin-bottom: 0; text-align:left;`);
+    .setAttribute(
+      &#34;style&#34;,`
+      margin-left: ${leftMargin}px;
+      margin-right: ${rightMargin}px;
+      font-style: italic;
+      //margin-bottom: 0;
+      text-align:left;`);
     
     document.getElementById(&#34;source&#34;)
-    .setAttribute(&#34;style&#34;, `margin-left: ${leftMargin}px; margin-right: ${rightMargin}px; margin-bottom: 0; text-align:right;`);
+    .setAttribute(
+      &#34;style&#34;, `
+      margin-left: ${leftMargin}px; 
+      margin-right: ${rightMargin}px;
+      font-size: 0.7rem;
+      color: #696969;
+      //margin-bottom: 0; 
+      text-align:right;`);
     
     
     //var subFontSize = document.getElementById(&#34;head3&#34;).style.fontSize;
@@ -274,11 +290,30 @@ test.append(&amp;#39;text&amp;#39;)
           {&#34;calculate&#34;: &#34;datum.Avr_Prcp_Pct/100&#34;, &#34;as&#34;: &#34;Avr_Prcp_Pct2&#34;}
       ],
       &#34;mark&#34;: &#34;bar&#34;,
+      
       &#34;encoding&#34;: {
         &#34;x&#34;: {&#34;field&#34;: &#34;Date&#34;, &#34;type&#34;: &#34;temporal&#34;,
-        &#34;axis&#34;: {&#34;title&#34;: null, &#34;labelFontSize&#34;: subFontSize-5, &#34;labelFont&#34;: fontFamily, &#34;format&#34;:&#34;%y&#34;, &#34;grid&#34;:false, &#34;domain&#34;:false}},
+        &#34;axis&#34;: {
+          &#34;title&#34;: null, 
+          &#34;labelFontSize&#34;: subFontSize-4,
+          &#34;labelFont&#34;: fontFamily,
+          &#34;ticks&#34;: false,
+          &#34;format&#34;:&#34;%y&#34;,
+          &#34;grid&#34;:false,
+          &#34;domain&#34;:false}},
         &#34;y&#34;: {&#34;field&#34;: &#34;Avr_Prcp_Pct2&#34;, &#34;type&#34;: &#34;quantitative&#34;, 
-        &#34;axis&#34;: {&#34;title&#34;: null, &#34;tickCount&#34;: 6, &#34;labelFontSize&#34;: subFontSize-5, &#34;labelFont&#34;: fontFamily, &#34;format&#34;:&#34;%&#34;, &#34;grid&#34;:false, &#34;tickSize&#34;:-workingWidth, &#34;tickColor&#34;:&#34;white&#34;, &#34;labelPadding&#34;:workingWidth, &#34;domain&#34;:false}}
+        &#34;axis&#34;: {
+          &#34;title&#34;: null,
+          &#34;tickCount&#34;: 6,
+          &#34;labelFontSize&#34;: subFontSize-4,
+          &#34;labelFont&#34;: fontFamily,
+          &#34;format&#34;:&#34;%&#34;,
+          &#34;grid&#34;:false,
+          &#34;tickSize&#34;:-workingWidth,
+          &#34;tickColor&#34;:&#34;white&#34;,
+          &#34;labelPadding&#34;:workingWidth,
+          &#34;domain&#34;:false}},
+        &#34;color&#34;: {&#34;value&#34;: &#34;grey&#34;}
         },
       &#34;config&#34;: {
         &#34;bar&#34;: {&#34;continuousBandSize&#34;:workingWidth/16},

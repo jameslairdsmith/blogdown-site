@@ -53,7 +53,7 @@ csl: cell-numeric-superscript.csl
 
 <body>
   <div id="block" align="center">
-    <h2 align="left" id="head2">Rainfall at Cape Town International Airport</h2>
+    <h3 align="left" id="head2">Rainfall at Cape Town International Airport</h3>
     <p align="left" id="head3">Percentage difference from ten-year average</p>
   </div>
   <div id="vis" align="center" class="role-axis-label"></div>
@@ -85,13 +85,29 @@ csl: cell-numeric-superscript.csl
     var rightMargin = leftMargin;
     
     document.getElementById("head2")
-    .setAttribute("style", `margin-left: ${leftMargin}px; margin-right: ${rightMargin}px`);
+    .setAttribute(
+      "style",`
+      margin-left: ${leftMargin}px;
+      margin-right: ${rightMargin}px`);
     
     document.getElementById("head3")
-    .setAttribute("style", `margin-left: ${leftMargin}px; margin-right: ${rightMargin}px; margin-bottom: 0; text-align:left;`);
+    .setAttribute(
+      "style",`
+      margin-left: ${leftMargin}px;
+      margin-right: ${rightMargin}px;
+      font-style: italic;
+      //margin-bottom: 0;
+      text-align:left;`);
     
     document.getElementById("source")
-    .setAttribute("style", `margin-left: ${leftMargin}px; margin-right: ${rightMargin}px; margin-bottom: 0; text-align:right;`);
+    .setAttribute(
+      "style", `
+      margin-left: ${leftMargin}px; 
+      margin-right: ${rightMargin}px;
+      font-size: 0.7rem;
+      color: #696969;
+      //margin-bottom: 0; 
+      text-align:right;`);
     
     
     //var subFontSize = document.getElementById("head3").style.fontSize;
@@ -115,11 +131,30 @@ csl: cell-numeric-superscript.csl
           {"calculate": "datum.Avr_Prcp_Pct/100", "as": "Avr_Prcp_Pct2"}
       ],
       "mark": "bar",
+      
       "encoding": {
         "x": {"field": "Date", "type": "temporal",
-        "axis": {"title": null, "labelFontSize": subFontSize-5, "labelFont": fontFamily, "format":"%y", "grid":false, "domain":false}},
+        "axis": {
+          "title": null, 
+          "labelFontSize": subFontSize-4,
+          "labelFont": fontFamily,
+          "ticks": false,
+          "format":"%y",
+          "grid":false,
+          "domain":false}},
         "y": {"field": "Avr_Prcp_Pct2", "type": "quantitative", 
-        "axis": {"title": null, "tickCount": 6, "labelFontSize": subFontSize-5, "labelFont": fontFamily, "format":"%", "grid":false, "tickSize":-workingWidth, "tickColor":"white", "labelPadding":workingWidth, "domain":false}}
+        "axis": {
+          "title": null,
+          "tickCount": 6,
+          "labelFontSize": subFontSize-4,
+          "labelFont": fontFamily,
+          "format":"%",
+          "grid":false,
+          "tickSize":-workingWidth,
+          "tickColor":"white",
+          "labelPadding":workingWidth,
+          "domain":false}},
+        "color": {"value": "grey"}
         },
       "config": {
         "bar": {"continuousBandSize":workingWidth/16},
