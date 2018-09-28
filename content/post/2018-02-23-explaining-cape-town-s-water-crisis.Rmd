@@ -82,7 +82,7 @@ dam_levels_data
 ```
 
 ```{r, echo=FALSE}
-htmltools::includeHTML("ct_rain_files/ct_dam_levels.html")#
+htmltools::includeHTML("ct_rain_files/ct_dam_levels.html")
 ```
 
 ```{r eval=FALSE, include=FALSE}

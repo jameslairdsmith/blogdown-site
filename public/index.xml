@@ -350,7 +350,7 @@ test.append(&amp;#39;text&amp;#39;)
 
 &lt;body&gt;
   &lt;div id=&#34;damlevelsblock&#34; align=&#34;center&#34;&gt;
-    &lt;h3 align=&#34;left&#34; id=&#34;damlevelshead&#34;&gt;Western Cape Dam Levels&lt;/h3&gt;
+    &lt;h3 align=&#34;left&#34; id=&#34;damlevelshead&#34;&gt;Western Cape dam levels&lt;/h3&gt;
     &lt;p align=&#34;left&#34; id=&#34;damlevelssubhead&#34;&gt;Percentage of total capacity&lt;/p&gt;
   &lt;/div&gt;
   &lt;div id=&#34;damlevelsvis&#34; align=&#34;center&#34; class=&#34;role-axis-label&#34;&gt;&lt;/div&gt;
