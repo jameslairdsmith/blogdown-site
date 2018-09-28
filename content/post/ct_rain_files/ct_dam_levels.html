@@ -23,16 +23,16 @@
 
 
 <body>
-  <div id="block" align="center">
-    <h3 align="left" id="head2">Rainfall at Cape Town International Airport</h3>
-    <p align="left" id="head3">Percentage difference from ten-year average</p>
+  <div id="damlevelsblock" align="center">
+    <h3 align="left" id="damlevelshead">Western Cape Dam Levels</h3>
+    <p align="left" id="damlevelssubhead">Percentage of total capacity</p>
   </div>
-  <div id="vis" align="center" class="role-axis-label"></div>
-  <p align="right" id="source">Source: ncdc.noaa.gov</p>
+  <div id="damlevelsvis" align="center" class="role-axis-label"></div>
+  <p align="right" id="damlevlessource">Source: City of Cape Town</p>
 
   <script type="text/javascript">
   
-    var width = document.getElementById("vis").offsetWidth;
+    var width = document.getElementById("damlevelsvis").offsetWidth;
   
     var maxWidth = 550; // setting the maximum width of the chart.
     //var width = 300;
@@ -48,29 +48,28 @@
     var height = Math.max(2/3 * workingWidth, 350)
     
     //var height = 7/10 * workingWidth
-    
-    //document.getElementById("block").setAttribute("style", `width: ${workingWidth}px`);
+  
     
     var leftMargin = (width - workingWidth)/2;
     
     var rightMargin = leftMargin;
     
-    document.getElementById("head2")
+    document.getElementById("damlevelshead")
     .setAttribute(
       "style",`
       margin-left: ${leftMargin}px;
       margin-right: ${rightMargin}px`);
     
-    document.getElementById("head3")
+    document.getElementById("damlevelssubhead")
     .setAttribute(
       "style",`
       margin-left: ${leftMargin}px;
       margin-right: ${rightMargin}px;
       font-style: italic;
-      //margin-bottom: 0;
+      margin-bottom: 0;
       text-align:left;`);
     
-    document.getElementById("source")
+    document.getElementById("damlevlessource")
     .setAttribute(
       "style", `
       margin-left: ${leftMargin}px; 
@@ -81,9 +80,7 @@
       text-align:right;`);
     
     
-    //var subFontSize = document.getElementById("head3").style.fontSize;
-    
-    var el = document.getElementById('head3');
+    var el = document.getElementById('damlevelssubhead');
     var style = window.getComputedStyle(el, null).getPropertyValue('font-size');
     var fontFamily = window.getComputedStyle(el, null).getPropertyValue('font-family');
     var subFontSize = parseFloat(style); 
@@ -97,33 +94,37 @@
         "contains": "padding"
       },
       "description": "A simple bar chart with embedded data.",
-      "data":  {"url":"https://raw.githubusercontent.com/jameslairdsmith/Home_and_dry/master/Rained_out.csv"},
+      "data": {"url":"https://raw.githubusercontent.com/jameslairdsmith/Home_and_dry/master/Waving_Goodbye.csv"},
       "transform": [
-          {"calculate": "datum.Avr_Prcp_Pct/100", "as": "Avr_Prcp_Pct2"}
+          {"filter": {"field": "Percent_Fill", "gt": 0}},
+         // {"timeUnit": "year", "field": "Date", "as": "year"}
       ],
-      "mark": "bar",
+      "mark": "area",
       
       "encoding": {
-        "x": {"field": "Date", "type": "temporal",
+        "x": {"field": "Date", "type": "temporal","timeUnit": "yearmonth",
         "axis": {
           "title": null, 
           "labelFontSize": subFontSize-3,
           "labelFont": fontFamily,
           "ticks": false,
-          "format":"%y",
+          "format":"%Y",
+          "tickCount": 6,
+          "labelPadding": 15, 
           "grid":false,
           "domain":false}},
-        "y": {"field": "Avr_Prcp_Pct2", "type": "quantitative", 
+        "y": {"field": "Percent_Fill", "type": "quantitative", 
         "axis": {
           "title": null,
           "tickCount": 6,
           "labelFontSize": subFontSize-3,
           "labelFont": fontFamily,
           "format":"%",
-          "grid":false,
-          "tickSize":-workingWidth,
-          "tickColor":"white",
-          "labelPadding":workingWidth,
+          "grid": true,
+          "ticks": false,
+     //     "tickSize":-workingWidth,
+     //     "tickColor":"white",
+          "labelPadding": 15,
           "domain":false}},
         "color": {"value": "grey"}
         },
@@ -138,9 +139,10 @@
     }
     
     var opt = {
-      "actions": false
+      "actions": false,
+      "tooltip": false
     }
-    vegaEmbed("#vis", yourVlSpec, opt);
+    vegaEmbed("#damlevelsvis", yourVlSpec, opt);
     
     
   </script>
