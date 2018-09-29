@@ -80,7 +80,8 @@ p {
 }
 
 .footnotes ol{
-  padding-inline-start: 2em;
+  padding-left: 2em;
+/*  padding-inline-start: 2em;   */
 }
 
 .footnotes {
