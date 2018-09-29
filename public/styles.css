@@ -79,6 +79,10 @@ p {
   font-size: 0.7rem;
 }
 
+.footnotes ol{
+  padding-inline-start: 25px;
+}
+
 .footnotes {
   text-align: left;
   font-size: 0.7rem;
