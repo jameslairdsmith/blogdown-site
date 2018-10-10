@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Audience Building at the FT</title>
+    <meta charset="utf-8">
+    <meta name="author" content="James Laird-Smith" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Audience Building at the FT
+### James Laird-Smith
+### 2018/10/10
+
+---
+
+
+
+
+# Core Objectives
+
+--
+
+- Increasing traffic
+
+- Improving quality of traffic
+
+--
+
+- Initiatives
+  1. Increasing video views,
+  1. Allowing first click free viewing of articles from social media,
+  1. Increasing the awareness of gifted articles,
+  1. Free viewing of archived articles,
+  1. Invite a friend to a free weeks access to the FT,
+  1. Display marketing campaign
+
+
+
+---
+
+# Analysis approach
+
+- Different mediums have idiosyncratic properties.
+
+- The trick is to ensure comparability of these mediums.
+
+  - Centralisation of data is required.
+
+--
+
+- Try to proxy for three key measures of each initiative.
+
+--
+
+- **Cost**
+    - Opportunity cost
+    - Actual
+  
+- **Benefit**
+    - Conversion to subscriptions of various types
+    - Referrals
+  
+- **Retention**
+  
+
+---
+
+# Tools and techniques
+
+--
+
+- Teasers (free-click, gifted articles, free archive viewing, invite a friend)
+  
+  - **Cost**: hard to measure, requires placing an oppertunity cost on the articles being read by non-retained users.
+  - **Benfit**: conversion simple to measure through the digital platform.
+--
+    
+- Digital marketing: adverts for videos etc.
+  
+  - **Cost**: simple to measure directly.
+  - **Benefit**: conversion can be tricky to measure, but can be understood with Markov Chain Methods.
+--
+
+- Non Digital (display marketing):
+    
+  - **Cost**: simple to measure directly.
+  - **Benefit**: conversion difficult to measure
+    - Main tools include:
+      - signup surveys,
+      - promo codes.
+    
+---
+
+# Initiative KPIs
+
+## Simple
+  
+$$ \text{Short term success KPI} = Benefit - Cost $$
+
+$$ \text{Long term success KPI} = (Benefit \times Retention) - Cost $$
+
+- Caveat: this process may well be non-linear.
+
+
+
+## Refined
+
+$$ \frac{\Delta Benefit}{\Delta Cost} $$
+
+---
+
+# Implementation
+
+- Make changes gradually to avoid over-committing to any one intitive.
+
+--
+
+- Don't reduce any initiative to zero.
+
+  - It is difficult to re-establish resources and relationships that are completely dismantled.
+  
+--
+
+- Usefully, this also works to manage the impact on stakeholders whose initiatives are less effective at present.
+  
+  - Gives them time to improve it.
+  
+  - Allows them to transition.
+  
+    - Ensures staff and moral are retained.
+    
+    - Ensures they can share their insights and expertise in new teams.
+
+---
+
+# Continuous testing and monitoring
+
+--
+
+- Retention
+
+  - The longer they stay, the greater their Customer Lifetime Value (CLV).
+  - Churn can be modelled using Logistic Regression.
+  
+--
+
+- Targeting
+
+  - Once a person is a subscriber, you can advertise to them if they are at risk of leaving. You can use information on the articles they have viewed to do so based on their interests.
+--
+
+- Monitor risk and sustainability of initiatives
+
+  - Changes in policies and competitiveness of the major players (eg. Google, Facebook etc.)
+  
+
+
+---
+
+
+
+class: center, middle
+
+
+# Thank You
+
+Questions?
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script>
+(function() {
+  var i, text, code, codes = document.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+})();
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
