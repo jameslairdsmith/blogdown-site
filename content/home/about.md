@@ -11,7 +11,8 @@ weight = 5
 [interests]
   interests = [
     "Finance",
-    "Data visualisation"
+    "Data visualisation",
+    "Statistics"
 #    "Text mining"
   ]
 
