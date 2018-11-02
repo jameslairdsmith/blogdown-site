@@ -20,6 +20,321 @@
     </item>
     
     <item>
+      <title>James&#39; unofficial guide to attending WUDC Cape Town 2019</title>
+      <link>/post/james-guide-to-attending-ct-worlds/</link>
+      <pubDate>Fri, 02 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/james-guide-to-attending-ct-worlds/</guid>
+      <description>&lt;p&gt;The World Universities Debating Championships (WUDC) this year is being hosted at the University of Cape Town (UCT), where I was enrolled for both my undergraduate and postgraduate degrees. For those, like me, who are attending the competition, I thought it would be useful if I put together some thoughts on what it will be like once you get there. These thoughts are catalogued below. Please note that, although I did attend the university for a good long time, this is a decidedly unofficial guide designed for supplementary information only. Please defer to the Organising Committee (Org Comm) for all the official information regarding the competition.&lt;/p&gt;
+&lt;div id=&#34;arriving&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Arriving&lt;/h2&gt;
+&lt;p&gt;UCT has a few campuses. You only need to worry about one of them and that is the &lt;strong&gt;Lower Campus&lt;/strong&gt;. This is where the university’s residences are located and where all the participants will be staying.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;getting-around&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Getting around&lt;/h2&gt;
+&lt;p&gt;Uber works in Cape Town the same way it does in many cities around the world. This makes getting around relatively easy.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;what-to-wear&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;What to wear&lt;/h2&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Embedding Vega-Lite&lt;/title&gt;
+  &lt;script src=&#34;https://d3js.org/d3.v5.js&#34;&gt;&lt;/script&gt;
+  &lt;script src=&#34;https://cdn.jsdelivr.net/npm/vega@4.2.0&#34;&gt;&lt;/script&gt;
+  &lt;script src=&#34;https://cdn.jsdelivr.net/npm/vega-lite@3.0.0-rc6&#34;&gt;&lt;/script&gt;
+  &lt;script src=&#34;https://cdn.jsdelivr.net/npm/vega-embed@3.19.2&#34;&gt;&lt;/script&gt;
+  
+&lt;style&gt;
+
+.role-axis-label {
+  font-size: 0.9rem;
+  fill: &#34;red&#34;;
+  color: &#34;red&#34;;
+}
+
+
+&lt;/style&gt;
+
+&lt;/head&gt;
+
+
+
+
+&lt;body&gt;
+  &lt;div id=&#34;rainblock&#34; align=&#34;center&#34;&gt;
+    &lt;h3 align=&#34;left&#34; id=&#34;rainhead&#34;&gt;Rainfall at Cape Town International Airport&lt;/h3&gt;
+    &lt;p align=&#34;left&#34; id=&#34;rainsubhead&#34;&gt;Percentage difference from ten-year average&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div id=&#34;rainvis&#34; align=&#34;center&#34; class=&#34;role-axis-label&#34;&gt;&lt;/div&gt;
+  &lt;p align=&#34;right&#34; id=&#34;rainsource&#34;&gt;Source: ncdc.noaa.gov&lt;/p&gt;
+
+  &lt;script type=&#34;text/javascript&#34;&gt;
+  
+    var width = document.getElementById(&#34;rainvis&#34;).offsetWidth;
+  
+    var maxWidth = 550; // setting the maximum width of the chart.
+    //var width = 300;
+
+    var getWorkingWidth = function(width,maxWidth){
+                                                if(width &lt; maxWidth)
+                                                {return 1 * width}
+                                                else{return maxWidth}
+                                              };
+
+    var workingWidth = getWorkingWidth(width, maxWidth);
+    
+    var height = Math.max(2/3 * workingWidth, 350)
+    
+    //var height = 7/10 * workingWidth
+    
+    var leftMargin = (width - workingWidth)/2;
+    
+    var rightMargin = leftMargin;
+    
+    document.getElementById(&#34;rainhead&#34;)
+    .setAttribute(
+      &#34;style&#34;,`
+      margin-left: ${leftMargin}px;
+      margin-right: ${rightMargin}px`);
+    
+    document.getElementById(&#34;rainsubhead&#34;)
+    .setAttribute(
+      &#34;style&#34;,`
+      margin-left: ${leftMargin}px;
+      margin-right: ${rightMargin}px;
+      font-style: italic;
+      //margin-bottom: 0;
+      text-align:left;`);
+    
+    document.getElementById(&#34;rainsource&#34;)
+    .setAttribute(
+      &#34;style&#34;, `
+      margin-left: ${leftMargin}px; 
+      margin-right: ${rightMargin}px;
+      font-size: 0.7rem;
+      color: #696969;
+      //margin-bottom: 0; 
+      text-align:right;`);
+    
+    var el = document.getElementById(&#39;rainsubhead&#39;);
+    var style = window.getComputedStyle(el, null).getPropertyValue(&#39;font-size&#39;);
+    var fontFamily = window.getComputedStyle(el, null).getPropertyValue(&#39;font-family&#39;);
+    var subFontSize = parseFloat(style); 
+  
+    var yourVlSpec = {
+      &#34;$schema&#34;: &#34;https://vega.github.io/schema/vega-lite/v2.0.json&#34;,
+      &#34;width&#34;: workingWidth,
+      &#34;height&#34;: height,
+      &#34;autosize&#34;: {
+        &#34;type&#34;: &#34;fit&#34;,
+        &#34;contains&#34;: &#34;padding&#34;
+      },
+      &#34;description&#34;: &#34;A simple bar chart with embedded data.&#34;,
+      &#34;data&#34;:  {&#34;url&#34;:&#34;https://raw.githubusercontent.com/jameslairdsmith/Home_and_dry/master/Rained_out.csv&#34;},
+      &#34;transform&#34;: [
+          {&#34;calculate&#34;: &#34;datum.Avr_Prcp_Pct/100&#34;, &#34;as&#34;: &#34;Avr_Prcp_Pct2&#34;}
+      ],
+      &#34;mark&#34;: &#34;bar&#34;,
+      
+      &#34;encoding&#34;: {
+        &#34;x&#34;: {&#34;field&#34;: &#34;Date&#34;, &#34;type&#34;: &#34;temporal&#34;,
+        &#34;axis&#34;: {
+          &#34;title&#34;: null, 
+          &#34;labelFontSize&#34;: subFontSize-3,
+          &#34;labelFont&#34;: fontFamily,
+          &#34;ticks&#34;: false,
+          &#34;format&#34;:&#34;%y&#34;,
+          &#34;grid&#34;:false,
+          &#34;domain&#34;:false}},
+        &#34;y&#34;: {&#34;field&#34;: &#34;Avr_Prcp_Pct2&#34;, &#34;type&#34;: &#34;quantitative&#34;, 
+        &#34;axis&#34;: {
+          &#34;title&#34;: null,
+          &#34;tickCount&#34;: 6,
+          &#34;labelFontSize&#34;: subFontSize-3,
+          &#34;labelFont&#34;: fontFamily,
+          &#34;format&#34;:&#34;%&#34;,
+          &#34;grid&#34;:false,
+          &#34;tickSize&#34;:-workingWidth,
+          &#34;tickColor&#34;:&#34;white&#34;,
+          &#34;labelPadding&#34;:workingWidth,
+          &#34;domain&#34;:false}},
+        &#34;color&#34;: {&#34;value&#34;: &#34;grey&#34;}
+        },
+      &#34;config&#34;: {
+        &#34;bar&#34;: {&#34;continuousBandSize&#34;:workingWidth/16},
+        &#34;style&#34;: {
+          &#34;cell&#34;: {
+              &#34;stroke&#34;: &#34;transparent&#34;,
+            }
+          },
+        },
+    }
+    
+    var opt = {
+      &#34;actions&#34;: false,
+      &#34;tooltip&#34;: false
+    }
+    vegaEmbed(&#34;#rainvis&#34;, yourVlSpec, opt);
+    
+    
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Embedding Vega-Lite&lt;/title&gt;
+  &lt;script src=&#34;https://d3js.org/d3.v5.js&#34;&gt;&lt;/script&gt;
+  &lt;script src=&#34;https://cdn.jsdelivr.net/npm/vega@4.2.0&#34;&gt;&lt;/script&gt;
+  &lt;script src=&#34;https://cdn.jsdelivr.net/npm/vega-lite@3.0.0-rc6&#34;&gt;&lt;/script&gt;
+  &lt;script src=&#34;https://cdn.jsdelivr.net/npm/vega-embed@3.19.2&#34;&gt;&lt;/script&gt;
+  
+&lt;style&gt;
+
+.role-axis-label {
+  font-size: 0.9rem;
+  fill: &#34;red&#34;;
+  color: &#34;red&#34;;
+}
+
+
+&lt;/style&gt;
+
+&lt;/head&gt;
+
+
+
+
+&lt;body&gt;
+  &lt;div id=&#34;damlevelsblock&#34; align=&#34;center&#34;&gt;
+    &lt;h3 align=&#34;left&#34; id=&#34;damlevelshead&#34;&gt;Western Cape dam levels&lt;/h3&gt;
+    &lt;p align=&#34;left&#34; id=&#34;damlevelssubhead&#34;&gt;Percentage of total capacity&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div id=&#34;damlevelsvis&#34; align=&#34;center&#34; class=&#34;role-axis-label&#34;&gt;&lt;/div&gt;
+  &lt;p align=&#34;right&#34; id=&#34;damlevlessource&#34;&gt;Source: City of Cape Town&lt;/p&gt;
+
+  &lt;script type=&#34;text/javascript&#34;&gt;
+  
+    var width = document.getElementById(&#34;damlevelsvis&#34;).offsetWidth;
+  
+    var maxWidth = 550; // setting the maximum width of the chart.
+    //var width = 300;
+
+    var getWorkingWidth = function(width,maxWidth){
+                                                if(width &lt; maxWidth)
+                                                {return 1 * width}
+                                                else{return maxWidth}
+                                              };
+
+    var workingWidth = getWorkingWidth(width, maxWidth);
+    
+    var height = Math.max(2/3 * workingWidth, 350)
+    
+    //var height = 7/10 * workingWidth
+  
+    
+    var leftMargin = (width - workingWidth)/2;
+    
+    var rightMargin = leftMargin;
+    
+    document.getElementById(&#34;damlevelshead&#34;)
+    .setAttribute(
+      &#34;style&#34;,`
+      margin-left: ${leftMargin}px;
+      margin-right: ${rightMargin}px`);
+    
+    document.getElementById(&#34;damlevelssubhead&#34;)
+    .setAttribute(
+      &#34;style&#34;,`
+      margin-left: ${leftMargin}px;
+      margin-right: ${rightMargin}px;
+      font-style: italic;
+      margin-bottom: 0;
+      text-align:left;`);
+    
+    document.getElementById(&#34;damlevlessource&#34;)
+    .setAttribute(
+      &#34;style&#34;, `
+      margin-left: ${leftMargin}px; 
+      margin-right: ${rightMargin}px;
+      font-size: 0.7rem;
+      color: #696969;
+      //margin-bottom: 0; 
+      text-align:right;`);
+    
+    
+    var el = document.getElementById(&#39;damlevelssubhead&#39;);
+    var style = window.getComputedStyle(el, null).getPropertyValue(&#39;font-size&#39;);
+    var fontFamily = window.getComputedStyle(el, null).getPropertyValue(&#39;font-family&#39;);
+    var subFontSize = parseFloat(style); 
+  
+    var yourVlSpec = {
+      &#34;$schema&#34;: &#34;https://vega.github.io/schema/vega-lite/v2.0.json&#34;,
+      &#34;width&#34;: workingWidth,
+      &#34;height&#34;: height,
+      &#34;autosize&#34;: {
+        &#34;type&#34;: &#34;fit&#34;,
+        &#34;contains&#34;: &#34;padding&#34;
+      },
+      &#34;description&#34;: &#34;A simple bar chart with embedded data.&#34;,
+      &#34;data&#34;: {&#34;url&#34;:&#34;https://raw.githubusercontent.com/jameslairdsmith/Home_and_dry/master/Waving_Goodbye.csv&#34;},
+      &#34;transform&#34;: [
+          {&#34;filter&#34;: {&#34;field&#34;: &#34;Percent_Fill&#34;, &#34;gt&#34;: 0}},
+         // {&#34;timeUnit&#34;: &#34;year&#34;, &#34;field&#34;: &#34;Date&#34;, &#34;as&#34;: &#34;year&#34;}
+      ],
+      &#34;mark&#34;: &#34;area&#34;,
+      
+      &#34;encoding&#34;: {
+        &#34;x&#34;: {&#34;field&#34;: &#34;Date&#34;, &#34;type&#34;: &#34;temporal&#34;,&#34;timeUnit&#34;: &#34;yearmonth&#34;,
+        &#34;axis&#34;: {
+          &#34;title&#34;: null, 
+          &#34;labelFontSize&#34;: subFontSize-3,
+          &#34;labelFont&#34;: fontFamily,
+          &#34;ticks&#34;: false,
+          &#34;format&#34;:&#34;%Y&#34;,
+          &#34;tickCount&#34;: 6,
+          &#34;labelPadding&#34;: 15, 
+          &#34;grid&#34;:false,
+          &#34;domain&#34;:false}},
+        &#34;y&#34;: {&#34;field&#34;: &#34;Percent_Fill&#34;, &#34;type&#34;: &#34;quantitative&#34;, 
+        &#34;axis&#34;: {
+          &#34;title&#34;: null,
+          &#34;tickCount&#34;: 6,
+          &#34;labelFontSize&#34;: subFontSize-3,
+          &#34;labelFont&#34;: fontFamily,
+          &#34;format&#34;:&#34;%&#34;,
+          &#34;grid&#34;: true,
+          &#34;ticks&#34;: false,
+     //     &#34;tickSize&#34;:-workingWidth,
+     //     &#34;tickColor&#34;:&#34;white&#34;,
+          &#34;labelPadding&#34;: 15,
+          &#34;domain&#34;:false}},
+        &#34;color&#34;: {&#34;value&#34;: &#34;grey&#34;}
+        },
+      &#34;config&#34;: {
+        &#34;bar&#34;: {&#34;continuousBandSize&#34;:workingWidth/16},
+        &#34;style&#34;: {
+          &#34;cell&#34;: {
+              &#34;stroke&#34;: &#34;transparent&#34;,
+            }
+          },
+        },
+    }
+    
+    var opt = {
+      &#34;actions&#34;: false,
+      &#34;tooltip&#34;: false
+    }
+    vegaEmbed(&#34;#damlevelsvis&#34;, yourVlSpec, opt);
+    
+    
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>The future of non-fiction reading</title>
       <link>/post/the-future-of-non-fiction-reading/</link>
       <pubDate>Sun, 07 Oct 2018 00:00:00 +0000</pubDate>

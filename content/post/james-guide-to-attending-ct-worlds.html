@@ -1,0 +1,325 @@
+---
+title: James' unofficial guide to attending WUDC Cape Town 2019
+author: "James Laird-Smith"
+date: '2018-11-02'
+slug: james-guide-to-attending-ct-worlds
+categories: []
+tags: []
+header:
+  caption: ''
+  image: ''
+summary: " "
+draft: true
+bibliography: clothing-search.bib
+link-citations: true
+csl: cell-numeric-superscript.csl
+---
+
+
+
+<p>The World Universities Debating Championships (WUDC) this year is being hosted at the University of Cape Town (UCT), where I was enrolled for both my undergraduate and postgraduate degrees. For those, like me, who are attending the competition, I thought it would be useful if I put together some thoughts on what it will be like once you get there. These thoughts are catalogued below. Please note that, although I did attend the university for a good long time, this is a decidedly unofficial guide designed for supplementary information only. Please defer to the Organising Committee (Org Comm) for all the official information regarding the competition.</p>
+<div id="arriving" class="section level2">
+<h2>Arriving</h2>
+<p>UCT has a few campuses. You only need to worry about one of them and that is the <strong>Lower Campus</strong>. This is where the university’s residences are located and where all the participants will be staying.</p>
+</div>
+<div id="getting-around" class="section level2">
+<h2>Getting around</h2>
+<p>Uber works in Cape Town the same way it does in many cities around the world. This makes getting around relatively easy.</p>
+</div>
+<div id="what-to-wear" class="section level2">
+<h2>What to wear</h2>
+<html>
+<head>
+  <title>Embedding Vega-Lite</title>
+  <script src="https://d3js.org/d3.v5.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega@4.2.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@3.0.0-rc6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.19.2"></script>
+  
+<style>
+
+.role-axis-label {
+  font-size: 0.9rem;
+  fill: "red";
+  color: "red";
+}
+
+
+</style>
+
+</head>
+
+
+
+
+<body>
+  <div id="rainblock" align="center">
+    <h3 align="left" id="rainhead">Rainfall at Cape Town International Airport</h3>
+    <p align="left" id="rainsubhead">Percentage difference from ten-year average</p>
+  </div>
+  <div id="rainvis" align="center" class="role-axis-label"></div>
+  <p align="right" id="rainsource">Source: ncdc.noaa.gov</p>
+
+  <script type="text/javascript">
+  
+    var width = document.getElementById("rainvis").offsetWidth;
+  
+    var maxWidth = 550; // setting the maximum width of the chart.
+    //var width = 300;
+
+    var getWorkingWidth = function(width,maxWidth){
+                                                if(width < maxWidth)
+                                                {return 1 * width}
+                                                else{return maxWidth}
+                                              };
+
+    var workingWidth = getWorkingWidth(width, maxWidth);
+    
+    var height = Math.max(2/3 * workingWidth, 350)
+    
+    //var height = 7/10 * workingWidth
+    
+    var leftMargin = (width - workingWidth)/2;
+    
+    var rightMargin = leftMargin;
+    
+    document.getElementById("rainhead")
+    .setAttribute(
+      "style",`
+      margin-left: ${leftMargin}px;
+      margin-right: ${rightMargin}px`);
+    
+    document.getElementById("rainsubhead")
+    .setAttribute(
+      "style",`
+      margin-left: ${leftMargin}px;
+      margin-right: ${rightMargin}px;
+      font-style: italic;
+      //margin-bottom: 0;
+      text-align:left;`);
+    
+    document.getElementById("rainsource")
+    .setAttribute(
+      "style", `
+      margin-left: ${leftMargin}px; 
+      margin-right: ${rightMargin}px;
+      font-size: 0.7rem;
+      color: #696969;
+      //margin-bottom: 0; 
+      text-align:right;`);
+    
+    var el = document.getElementById('rainsubhead');
+    var style = window.getComputedStyle(el, null).getPropertyValue('font-size');
+    var fontFamily = window.getComputedStyle(el, null).getPropertyValue('font-family');
+    var subFontSize = parseFloat(style); 
+  
+    var yourVlSpec = {
+      "$schema": "https://vega.github.io/schema/vega-lite/v2.0.json",
+      "width": workingWidth,
+      "height": height,
+      "autosize": {
+        "type": "fit",
+        "contains": "padding"
+      },
+      "description": "A simple bar chart with embedded data.",
+      "data":  {"url":"https://raw.githubusercontent.com/jameslairdsmith/Home_and_dry/master/Rained_out.csv"},
+      "transform": [
+          {"calculate": "datum.Avr_Prcp_Pct/100", "as": "Avr_Prcp_Pct2"}
+      ],
+      "mark": "bar",
+      
+      "encoding": {
+        "x": {"field": "Date", "type": "temporal",
+        "axis": {
+          "title": null, 
+          "labelFontSize": subFontSize-3,
+          "labelFont": fontFamily,
+          "ticks": false,
+          "format":"%y",
+          "grid":false,
+          "domain":false}},
+        "y": {"field": "Avr_Prcp_Pct2", "type": "quantitative", 
+        "axis": {
+          "title": null,
+          "tickCount": 6,
+          "labelFontSize": subFontSize-3,
+          "labelFont": fontFamily,
+          "format":"%",
+          "grid":false,
+          "tickSize":-workingWidth,
+          "tickColor":"white",
+          "labelPadding":workingWidth,
+          "domain":false}},
+        "color": {"value": "grey"}
+        },
+      "config": {
+        "bar": {"continuousBandSize":workingWidth/16},
+        "style": {
+          "cell": {
+              "stroke": "transparent",
+            }
+          },
+        },
+    }
+    
+    var opt = {
+      "actions": false,
+      "tooltip": false
+    }
+    vegaEmbed("#rainvis", yourVlSpec, opt);
+    
+    
+  </script>
+</body>
+</html>
+<html>
+<head>
+  <title>Embedding Vega-Lite</title>
+  <script src="https://d3js.org/d3.v5.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega@4.2.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@3.0.0-rc6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.19.2"></script>
+  
+<style>
+
+.role-axis-label {
+  font-size: 0.9rem;
+  fill: "red";
+  color: "red";
+}
+
+
+</style>
+
+</head>
+
+
+
+
+<body>
+  <div id="damlevelsblock" align="center">
+    <h3 align="left" id="damlevelshead">Western Cape dam levels</h3>
+    <p align="left" id="damlevelssubhead">Percentage of total capacity</p>
+  </div>
+  <div id="damlevelsvis" align="center" class="role-axis-label"></div>
+  <p align="right" id="damlevlessource">Source: City of Cape Town</p>
+
+  <script type="text/javascript">
+  
+    var width = document.getElementById("damlevelsvis").offsetWidth;
+  
+    var maxWidth = 550; // setting the maximum width of the chart.
+    //var width = 300;
+
+    var getWorkingWidth = function(width,maxWidth){
+                                                if(width < maxWidth)
+                                                {return 1 * width}
+                                                else{return maxWidth}
+                                              };
+
+    var workingWidth = getWorkingWidth(width, maxWidth);
+    
+    var height = Math.max(2/3 * workingWidth, 350)
+    
+    //var height = 7/10 * workingWidth
+  
+    
+    var leftMargin = (width - workingWidth)/2;
+    
+    var rightMargin = leftMargin;
+    
+    document.getElementById("damlevelshead")
+    .setAttribute(
+      "style",`
+      margin-left: ${leftMargin}px;
+      margin-right: ${rightMargin}px`);
+    
+    document.getElementById("damlevelssubhead")
+    .setAttribute(
+      "style",`
+      margin-left: ${leftMargin}px;
+      margin-right: ${rightMargin}px;
+      font-style: italic;
+      margin-bottom: 0;
+      text-align:left;`);
+    
+    document.getElementById("damlevlessource")
+    .setAttribute(
+      "style", `
+      margin-left: ${leftMargin}px; 
+      margin-right: ${rightMargin}px;
+      font-size: 0.7rem;
+      color: #696969;
+      //margin-bottom: 0; 
+      text-align:right;`);
+    
+    
+    var el = document.getElementById('damlevelssubhead');
+    var style = window.getComputedStyle(el, null).getPropertyValue('font-size');
+    var fontFamily = window.getComputedStyle(el, null).getPropertyValue('font-family');
+    var subFontSize = parseFloat(style); 
+  
+    var yourVlSpec = {
+      "$schema": "https://vega.github.io/schema/vega-lite/v2.0.json",
+      "width": workingWidth,
+      "height": height,
+      "autosize": {
+        "type": "fit",
+        "contains": "padding"
+      },
+      "description": "A simple bar chart with embedded data.",
+      "data": {"url":"https://raw.githubusercontent.com/jameslairdsmith/Home_and_dry/master/Waving_Goodbye.csv"},
+      "transform": [
+          {"filter": {"field": "Percent_Fill", "gt": 0}},
+         // {"timeUnit": "year", "field": "Date", "as": "year"}
+      ],
+      "mark": "area",
+      
+      "encoding": {
+        "x": {"field": "Date", "type": "temporal","timeUnit": "yearmonth",
+        "axis": {
+          "title": null, 
+          "labelFontSize": subFontSize-3,
+          "labelFont": fontFamily,
+          "ticks": false,
+          "format":"%Y",
+          "tickCount": 6,
+          "labelPadding": 15, 
+          "grid":false,
+          "domain":false}},
+        "y": {"field": "Percent_Fill", "type": "quantitative", 
+        "axis": {
+          "title": null,
+          "tickCount": 6,
+          "labelFontSize": subFontSize-3,
+          "labelFont": fontFamily,
+          "format":"%",
+          "grid": true,
+          "ticks": false,
+     //     "tickSize":-workingWidth,
+     //     "tickColor":"white",
+          "labelPadding": 15,
+          "domain":false}},
+        "color": {"value": "grey"}
+        },
+      "config": {
+        "bar": {"continuousBandSize":workingWidth/16},
+        "style": {
+          "cell": {
+              "stroke": "transparent",
+            }
+          },
+        },
+    }
+    
+    var opt = {
+      "actions": false,
+      "tooltip": false
+    }
+    vegaEmbed("#damlevelsvis", yourVlSpec, opt);
+    
+    
+  </script>
+</body>
+</html>
+</div>
