@@ -24,7 +24,9 @@ library(lubridate)
 library(htmltools)
 ```
 
-The World Universities Debating Championships (WUDC) this year is being hosted at the University of Cape Town (UCT), where I was enrolled for both my undergraduate and postgraduate degrees. For those, like me, who are attending the competition, I thought it would be useful if I put together some thoughts on what it will be like once you get there. These thoughts are catalogued below. Please note that, although I did attend the university for a good long time, this is a decidedly unofficial guide designed for supplementary information only. Please defer to the Organising Committee (Org Comm) for all the official information regarding the competition.
+The World Universities Debating Championships (WUDC) this year is being hosted at the University of Cape Town (UCT), where I was enrolled for both my undergraduate and postgraduate degrees. For those (like me) who are attending the competition, I thought it would be useful if I published some thoughts on what it will be like once you get there. These thoughts are catalogued below. 
+
+Please note that (although I did attend the university for a good long time) this is a decidedly unofficial guide designed for supplementary information only. Please defer to the Organising Committee (Org Comm) for all the official information regarding the competition.
 
 ## Arriving
 
@@ -46,18 +48,24 @@ Uber works in Cape Town the same way it does in many cities around the world. Th
 htmltools::includeHTML("ct_rain_files/ct_rain.html")
 ```
 
+## Will there be water?
+
+Some readers will be aware that Cape Town experienced an historic drought for the past three years before 2018. This meant that the (usually reliable) buffer of water housed in the surrounding resovoir dams was significantly eroded. This lead the city authorities to impose water restrictions along with a host of other measures to reduce water useage.
+
+The good news is that the situation has improved significantly during 2018 where rain levels returned to normal levels. This has meant that resovoir levels have imporved dramatically and water restrictions have been lifted.
 
 ```{r, echo=FALSE}
 htmltools::includeHTML("ct_rain_files/ct_dam_levels.html")
 ```
 
-```{r eval=FALSE, include=FALSE}
-r2d3(data = dam_levels_data, script = "damLevelBars.js",
-     container = "div",
-     width =  "100%",
-     sizing = sizingPolicy(defaultWidth = "100%"),
-     css = "standardChartStyle.css"
-     )#
-```
 
+## Buying stuff
+
+The tournament will be catering for almost all of the participant's meals and accomodation. If you are going to be travelling either before or after the tournament or just buying something in general, you may need to take stock of how much currency you need.
+
+The good news is that South Africa's currency is relatively weak.
+
+```{r, echo=FALSE}
+htmltools::includeHTML("ppp_files/ppp.html")#
+```
 
