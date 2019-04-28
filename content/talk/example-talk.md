@@ -1,20 +1,20 @@
 +++
-title = "Example Talk"
+title = "Introducing the `scheduleR` package"
 date = 2017-01-01T00:00:00  # Schedule page publish date.
 draft = false
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-time_start = 2030-06-01T13:00:00
+time_start = 2019-09-11T15:00:00
 time_end = 2030-06-01T15:00:00
 
 # Abstract and optional shortened version.
 abstract = ""
-abstract_short = ""
+abstract_short = "Making recurring calendar events a little easier"
 
 # Name of event and optional event URL.
-event = "Academic Theme Conference"
-event_url = "https://example.org"
+event = "EARL London"
+event_url = "https://earlconf.com/"
 
 # Location of event.
 location = "London, United Kingdom"
@@ -27,7 +27,7 @@ selected = false
 #   Simply enter your project's filename without extension.
 #   E.g. `projects = ["deep-learning"]` references `content/project/deep-learning.md`.
 #   Otherwise, set `projects = []`.
-projects = ["deep-learning"]
+projects = []
 
 # Tags (optional).
 #   Set `tags = []` for no tags, or use the form `tags = ["A Tag", "Another Tag"]` for one or more tags.
