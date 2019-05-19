@@ -13,6 +13,18 @@
     
     
     <item>
+      <title>Customising CV/resume pagedown style</title>
+      <link>/post/customising-cv-resume-pagedown-style/</link>
+      <pubDate>Sun, 19 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/customising-cv-resume-pagedown-style/</guid>
+      <description>This will hopefully be helpful for those looking to make their pagedown CV look a little nicer, but don’t want to have to go through the trial and error involved in CSS changes.
+Here is some CSS that should appear, but not run:
+.blocks { break-inside: avoid; } This will get the bullet points to line up nicely:
+[data-id=&amp;quot;main&amp;quot;] li { margin-left: 20px; list-style-position: inside; } </description>
+    </item>
+    
+    <item>
       <title>James&#39; unofficial guide to attending WUDC Cape Town 2019</title>
       <link>/post/james-guide-to-attending-ct-worlds/</link>
       <pubDate>Fri, 02 Nov 2018 00:00:00 +0000</pubDate>

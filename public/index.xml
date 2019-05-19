@@ -20,6 +20,27 @@
     </item>
     
     <item>
+      <title>Customising CV/resume pagedown style</title>
+      <link>/post/customising-cv-resume-pagedown-style/</link>
+      <pubDate>Sun, 19 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/customising-cv-resume-pagedown-style/</guid>
+      <description>&lt;p&gt;This will hopefully be helpful for those looking to make their pagedown CV
+look a little nicer, but don’t want to have to go through the trial and
+error involved in CSS changes.&lt;/p&gt;
+&lt;p&gt;Here is some CSS that should appear, but not run:&lt;/p&gt;
+&lt;pre class=&#34;css&#34;&gt;&lt;code&gt;.blocks {
+  break-inside: avoid;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This will get the bullet points to line up nicely:&lt;/p&gt;
+&lt;pre class=&#34;css&#34;&gt;&lt;code&gt;[data-id=&amp;quot;main&amp;quot;] li  {
+  margin-left: 20px; 
+  list-style-position: inside;
+}&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
       <title>James&#39; unofficial guide to attending WUDC Cape Town 2019</title>
       <link>/post/james-guide-to-attending-ct-worlds/</link>
       <pubDate>Fri, 02 Nov 2018 00:00:00 +0000</pubDate>
@@ -1316,16 +1337,6 @@ Figure 1: A fancy pie chart.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Mobile visual clothing search</title>
-      <link>/publication/clothing-search/</link>
-      <pubDate>Mon, 01 Jul 2013 00:00:00 +0100</pubDate>
-      
-      <guid>/publication/clothing-search/</guid>
-      <description>&lt;p&gt;More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
 </description>
     </item>
     

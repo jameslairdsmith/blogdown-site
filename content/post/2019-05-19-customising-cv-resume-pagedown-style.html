@@ -1,0 +1,27 @@
+---
+title: Customising CV/resume pagedown style
+author: James Laird-Smith
+date: '2019-05-19'
+slug: customising-cv-resume-pagedown-style
+categories: []
+tags: []
+header:
+  caption: ''
+  image: ''
+draft: true
+---
+
+
+
+<p>This will hopefully be helpful for those looking to make their pagedown CV
+look a little nicer, but don’t want to have to go through the trial and
+error involved in CSS changes.</p>
+<p>Here is some CSS that should appear, but not run:</p>
+<pre class="css"><code>.blocks {
+  break-inside: avoid;
+}</code></pre>
+<p>This will get the bullet points to line up nicely:</p>
+<pre class="css"><code>[data-id=&quot;main&quot;] li  {
+  margin-left: 20px; 
+  list-style-position: inside;
+}</code></pre>
