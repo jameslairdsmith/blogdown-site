@@ -13,6 +13,15 @@
     
     
     <item>
+      <title>Sandbox</title>
+      <link>/post/sandbox/</link>
+      <pubDate>Fri, 24 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/sandbox/</guid>
+      <description>library(tidyverse) ## ── Attaching packages ─────────────────────────────────────────────────────────────────────────── tidyverse 1.2.1 ── ## ✔ ggplot2 3.0.0 ✔ purrr 0.3.0 ## ✔ tibble 1.4.2 ✔ dplyr 0.7.8 ## ✔ tidyr 0.8.2 ✔ stringr 1.3.1 ## ✔ readr 1.1.1 ✔ forcats 0.3.0 ## ── Conflicts ────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ── ## ✖ dplyr::filter() masks stats::filter() ## ✖ dplyr::lag() masks stats::lag() library(htmltools) doc &amp;lt;- tags$html( tags$head( tags$title(&amp;#39;My first page&amp;#39;)), tags$body( h1(&amp;#39;My first heading&amp;#39;), p(&amp;#39;My first paragraph, with some &amp;#39;, strong(&amp;#39;bold&amp;#39;), &amp;#39; text.</description>
+    </item>
+    
+    <item>
       <title>Customising CV/resume pagedown style</title>
       <link>/post/customising-cv-resume-pagedown-style/</link>
       <pubDate>Sun, 19 May 2019 00:00:00 +0000</pubDate>

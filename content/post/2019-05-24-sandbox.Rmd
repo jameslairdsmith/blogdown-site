@@ -1,0 +1,134 @@
+---
+title: Sandbox
+author: James Laird-Smith
+date: '2019-05-24'
+slug: sandbox
+categories: []
+tags: []
+header:
+  caption: ''
+  image: ''
+draft: true
+---
+
+```{r}
+library(tidyverse)
+library(htmltools)
+```
+
+```{r}
+doc <- 
+  tags$html(
+    tags$head(
+      tags$title('My first page')),
+    tags$body(
+      h1('My first heading'),
+      p('My first paragraph, with some ', strong('bold'), ' text.'),
+      div(class='article-metadata', 'Here is a div with an article metadata attribute'),
+      div(id='myDiv', class='simpleDiv', 'Here is a div with some attributes.'))
+)
+
+cat(as.character(doc))
+#doc
+```
+
+```{r}
+make_html <- function(){doc <- 
+  tags$html(
+    tags$head(
+      tags$title('My first page')),
+    tags$body(
+      h1('My first heading'),
+      p('My first paragraph, with some ', strong('bold'), ' text.'),
+      div(class='article-metadata', 'Here is a div with an article metadata attribute'),
+      div(id='myDiv', class='simpleDiv', 'Here is a div with some attributes.'))
+)
+
+#cat(as.character(doc))
+doc}
+```
+
+
+```{r}
+make_html()
+```
+
+```{r}
+tags$html(
+    tags$head(
+      tags$title('My first page')),
+    tags$body(
+      h1('My first heading'),
+      p('My first paragraph, with some ', strong('bold'), ' text.'),
+      div(class='article-metadata', 'Here is a div with an article metadata attribute'),
+      div(id='myDiv', class='simpleDiv', 'Here is a div with some attributes.')))
+```
+
+```{r}
+test <-
+  tags$html(
+  tags$head(
+    tags$title('Embedding Vega-Lite'),
+    tags$script(src="https://d3js.org/d3.v5.js"),
+    tags$script(src="https://cdn.jsdelivr.net/npm/vega@4.2.0"),
+    tags$script(src="https://cdn.jsdelivr.net/npm/vega-lite@3.0.0-rc6"),
+    tags$script(src="https://cdn.jsdelivr.net/npm/vega-embed@3.19.2"),
+    tags$style(paste0(".role-axis-label {",
+      css(
+        font.size = paste0(0.9, 'rem'),
+        fill = 'red',
+        color = 'red'), "}")
+    )
+  ),
+  tags$body(
+    tags$script(src="https://d3js.org/d3.v5.js"),
+    tags$script(src="https://cdn.jsdelivr.net/npm/vega@4.2.0"),
+    tags$script(src="https://cdn.jsdelivr.net/npm/vega-lite@3.0.0-rc6"),
+    tags$script(src="https://cdn.jsdelivr.net/npm/vega-embed@3.19.2"),
+    tags$div(id="pppblock", align="center",
+      tags$h3(align="left", id="ppphead", "Purchasing Power Parity (PPP)"),
+      tags$p(align="left", id="pppsubhead", 'Difference from South Africa, 2017')
+    ),
+    tags$div(id="pppvis", align="center", class="role-axis-label"),
+    tags$p(align="right", id="pppsource", 'Source: Eurostat-OECD'),
+    #tags$script(type="text/javascript", includeScript(""sandbox_files/sandbox.js""))
+    includeScript("sandbox_files/sandbox.js", type="text/javascript")
+  )
+)
+
+test
+#test
+```
+
+
+```{r}
+test <-
+  tags$html(
+  tags$header(
+    tags$title('Embedding Vega-Lite'),
+    tags$script(src="https://d3js.org/d3.v5.js"),
+    tags$script(src="https://cdn.jsdelivr.net/npm/vega@4.2.0"),
+    tags$script(src="https://cdn.jsdelivr.net/npm/vega-lite@3.0.0-rc6"),
+    tags$script(src="https://cdn.jsdelivr.net/npm/vega-embed@3.19.2"),
+    tags$style(paste0(".role-axis-label {",
+      css(
+        font.size = paste0(0.9, 'rem'),
+        fill = 'red',
+        color = 'red'), "}")
+    )
+  ),
+  tags$body(
+    tags$div(id="pppblock2", align="center",
+      tags$h3(align="left", id="ppphead2", "Purchasing Power Parity (PPP)"),
+      tags$p(align="left", id="pppsubhead2", 'Difference from South Africa, 2017')
+    ),
+    tags$div(id="pppvis2", align="center", class="role-axis-label"),
+    tags$p(align="right", id="pppsource2", 'Source: Eurostat-OECD'),
+    #tags$script(type="text/javascript", includeScript(""sandbox_files/sandbox.js""))
+    includeScript("sandbox_files/sandbox2.js", type="text/javascript")
+  )
+)
+
+test
+#test
+```

@@ -20,6 +20,400 @@
     </item>
     
     <item>
+      <title>Sandbox</title>
+      <link>/post/sandbox/</link>
+      <pubDate>Fri, 24 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/sandbox/</guid>
+      <description>&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ── Attaching packages ─────────────────────────────────────────────────────────────────────────── tidyverse 1.2.1 ──&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ✔ ggplot2 3.0.0     ✔ purrr   0.3.0
+## ✔ tibble  1.4.2     ✔ dplyr   0.7.8
+## ✔ tidyr   0.8.2     ✔ stringr 1.3.1
+## ✔ readr   1.1.1     ✔ forcats 0.3.0&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ── Conflicts ────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(htmltools)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;doc &amp;lt;- 
+  tags$html(
+    tags$head(
+      tags$title(&amp;#39;My first page&amp;#39;)),
+    tags$body(
+      h1(&amp;#39;My first heading&amp;#39;),
+      p(&amp;#39;My first paragraph, with some &amp;#39;, strong(&amp;#39;bold&amp;#39;), &amp;#39; text.&amp;#39;),
+      div(class=&amp;#39;article-metadata&amp;#39;, &amp;#39;Here is a div with an article metadata attribute&amp;#39;),
+      div(id=&amp;#39;myDiv&amp;#39;, class=&amp;#39;simpleDiv&amp;#39;, &amp;#39;Here is a div with some attributes.&amp;#39;))
+)
+
+cat(as.character(doc))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## &amp;lt;html&amp;gt;
+##   &amp;lt;body&amp;gt;
+##     &amp;lt;h1&amp;gt;My first heading&amp;lt;/h1&amp;gt;
+##     &amp;lt;p&amp;gt;
+##       My first paragraph, with some 
+##       &amp;lt;strong&amp;gt;bold&amp;lt;/strong&amp;gt;
+##        text.
+##     &amp;lt;/p&amp;gt;
+##     &amp;lt;div class=&amp;quot;article-metadata&amp;quot;&amp;gt;Here is a div with an article metadata attribute&amp;lt;/div&amp;gt;
+##     &amp;lt;div id=&amp;quot;myDiv&amp;quot; class=&amp;quot;simpleDiv&amp;quot;&amp;gt;Here is a div with some attributes.&amp;lt;/div&amp;gt;
+##   &amp;lt;/body&amp;gt;
+## &amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#doc&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;make_html &amp;lt;- function(){doc &amp;lt;- 
+  tags$html(
+    tags$head(
+      tags$title(&amp;#39;My first page&amp;#39;)),
+    tags$body(
+      h1(&amp;#39;My first heading&amp;#39;),
+      p(&amp;#39;My first paragraph, with some &amp;#39;, strong(&amp;#39;bold&amp;#39;), &amp;#39; text.&amp;#39;),
+      div(class=&amp;#39;article-metadata&amp;#39;, &amp;#39;Here is a div with an article metadata attribute&amp;#39;),
+      div(id=&amp;#39;myDiv&amp;#39;, class=&amp;#39;simpleDiv&amp;#39;, &amp;#39;Here is a div with some attributes.&amp;#39;))
+)
+
+#cat(as.character(doc))
+doc}&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;make_html()&lt;/code&gt;&lt;/pre&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;h1&gt;My first heading&lt;/h1&gt;
+&lt;p&gt;
+My first paragraph, with some 
+&lt;strong&gt;bold&lt;/strong&gt;
+ text.
+&lt;/p&gt;
+&lt;div class=&#34;article-metadata&#34;&gt;Here is a div with an article metadata attribute&lt;/div&gt;
+&lt;div id=&#34;myDiv&#34; class=&#34;simpleDiv&#34;&gt;Here is a div with some attributes.&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tags$html(
+    tags$head(
+      tags$title(&amp;#39;My first page&amp;#39;)),
+    tags$body(
+      h1(&amp;#39;My first heading&amp;#39;),
+      p(&amp;#39;My first paragraph, with some &amp;#39;, strong(&amp;#39;bold&amp;#39;), &amp;#39; text.&amp;#39;),
+      div(class=&amp;#39;article-metadata&amp;#39;, &amp;#39;Here is a div with an article metadata attribute&amp;#39;),
+      div(id=&amp;#39;myDiv&amp;#39;, class=&amp;#39;simpleDiv&amp;#39;, &amp;#39;Here is a div with some attributes.&amp;#39;)))&lt;/code&gt;&lt;/pre&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;h1&gt;My first heading&lt;/h1&gt;
+&lt;p&gt;
+My first paragraph, with some 
+&lt;strong&gt;bold&lt;/strong&gt;
+ text.
+&lt;/p&gt;
+&lt;div class=&#34;article-metadata&#34;&gt;Here is a div with an article metadata attribute&lt;/div&gt;
+&lt;div id=&#34;myDiv&#34; class=&#34;simpleDiv&#34;&gt;Here is a div with some attributes.&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;test &amp;lt;-
+  tags$html(
+  tags$head(
+    tags$title(&amp;#39;Embedding Vega-Lite&amp;#39;),
+    tags$script(src=&amp;quot;https://d3js.org/d3.v5.js&amp;quot;),
+    tags$script(src=&amp;quot;https://cdn.jsdelivr.net/npm/vega@4.2.0&amp;quot;),
+    tags$script(src=&amp;quot;https://cdn.jsdelivr.net/npm/vega-lite@3.0.0-rc6&amp;quot;),
+    tags$script(src=&amp;quot;https://cdn.jsdelivr.net/npm/vega-embed@3.19.2&amp;quot;),
+    tags$style(paste0(&amp;quot;.role-axis-label {&amp;quot;,
+      css(
+        font.size = paste0(0.9, &amp;#39;rem&amp;#39;),
+        fill = &amp;#39;red&amp;#39;,
+        color = &amp;#39;red&amp;#39;), &amp;quot;}&amp;quot;)
+    )
+  ),
+  tags$body(
+    tags$script(src=&amp;quot;https://d3js.org/d3.v5.js&amp;quot;),
+    tags$script(src=&amp;quot;https://cdn.jsdelivr.net/npm/vega@4.2.0&amp;quot;),
+    tags$script(src=&amp;quot;https://cdn.jsdelivr.net/npm/vega-lite@3.0.0-rc6&amp;quot;),
+    tags$script(src=&amp;quot;https://cdn.jsdelivr.net/npm/vega-embed@3.19.2&amp;quot;),
+    tags$div(id=&amp;quot;pppblock&amp;quot;, align=&amp;quot;center&amp;quot;,
+      tags$h3(align=&amp;quot;left&amp;quot;, id=&amp;quot;ppphead&amp;quot;, &amp;quot;Purchasing Power Parity (PPP)&amp;quot;),
+      tags$p(align=&amp;quot;left&amp;quot;, id=&amp;quot;pppsubhead&amp;quot;, &amp;#39;Difference from South Africa, 2017&amp;#39;)
+    ),
+    tags$div(id=&amp;quot;pppvis&amp;quot;, align=&amp;quot;center&amp;quot;, class=&amp;quot;role-axis-label&amp;quot;),
+    tags$p(align=&amp;quot;right&amp;quot;, id=&amp;quot;pppsource&amp;quot;, &amp;#39;Source: Eurostat-OECD&amp;#39;),
+    #tags$script(type=&amp;quot;text/javascript&amp;quot;, includeScript(&amp;quot;&amp;quot;sandbox_files/sandbox.js&amp;quot;&amp;quot;))
+    includeScript(&amp;quot;sandbox_files/sandbox.js&amp;quot;, type=&amp;quot;text/javascript&amp;quot;)
+  )
+)
+
+test&lt;/code&gt;&lt;/pre&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;script src=&#34;https://d3js.org/d3.v5.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdn.jsdelivr.net/npm/vega@4.2.0&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdn.jsdelivr.net/npm/vega-lite@3.0.0-rc6&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdn.jsdelivr.net/npm/vega-embed@3.19.2&#34;&gt;&lt;/script&gt;
+&lt;div id=&#34;pppblock&#34; align=&#34;center&#34;&gt;
+&lt;h3 align=&#34;left&#34; id=&#34;ppphead&#34;&gt;Purchasing Power Parity (PPP)&lt;/h3&gt;
+&lt;p align=&#34;left&#34; id=&#34;pppsubhead&#34;&gt;Difference from South Africa, 2017&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;pppvis&#34; align=&#34;center&#34; class=&#34;role-axis-label&#34;&gt;&lt;/div&gt;
+&lt;p align=&#34;right&#34; id=&#34;pppsource&#34;&gt;Source: Eurostat-OECD&lt;/p&gt;
+&lt;script type=&#34;text/javascript&#34;&gt;var width = document.getElementById(&#34;pppvis&#34;).offsetWidth;
+  
+    var maxWidth = 550; // setting the maximum width of the chart.
+    //var width = 300;
+
+    var getWorkingWidth = function(width,maxWidth){
+                                                if(width &lt; maxWidth)
+                                                {return 1 * width}
+                                                else{return maxWidth}
+                                              };
+
+    var workingWidth = getWorkingWidth(width, maxWidth);
+    
+    var height = Math.max(2/3 * workingWidth, 500)
+    
+    //var height = 7/10 * workingWidth
+  
+    
+    var leftMargin = (width - workingWidth)/2;
+    
+    var rightMargin = leftMargin;
+    
+    document.getElementById(&#34;ppphead&#34;)
+    .setAttribute(
+      &#34;style&#34;,`
+      margin-left: ${leftMargin}px;
+      margin-right: ${rightMargin}px`);
+    
+    document.getElementById(&#34;pppsubhead&#34;)
+    .setAttribute(
+      &#34;style&#34;,`
+      margin-left: ${leftMargin}px;
+      margin-right: ${rightMargin}px;
+      font-style: italic;
+      margin-bottom: 10;
+      text-align:left;`);
+    
+    document.getElementById(&#34;pppsource&#34;)
+    .setAttribute(
+      &#34;style&#34;, `
+      margin-left: ${leftMargin}px; 
+      margin-right: ${rightMargin}px;
+      font-size: 0.7rem;
+      color: #696969;
+      //margin-bottom: 0; 
+      text-align:right;`);
+    
+    
+    var el = document.getElementById(&#39;pppsubhead&#39;);
+    var style = window.getComputedStyle(el, null).getPropertyValue(&#39;font-size&#39;);
+    var fontFamily = window.getComputedStyle(el, null).getPropertyValue(&#39;font-family&#39;);
+    var subFontSize = parseFloat(style); 
+  
+    var yourVlSpec = {
+  &#34;$schema&#34;: &#34;https://vega.github.io/schema/vega-lite/v3.json&#34;,
+  &#34;width&#34;: workingWidth,
+      &#34;height&#34;: height,
+      &#34;autosize&#34;: {
+        &#34;type&#34;: &#34;fit&#34;,
+        &#34;contains&#34;: &#34;padding&#34;
+      },
+  &#34;data&#34;: {
+    &#34;url&#34;: &#34;https://gist.githubusercontent.com/jameslairdsmith/68081008a67515d3d565482816d78508/raw/d3acd665c1119def9386b25e4bca903a0038595a/clean_country_ppp.csv&#34;
+  },
+  &#34;transform&#34;: [{&#34;calculate&#34;: &#34;datum.ZAF_adj_ppp-0&#34;, &#34;as&#34;: &#34;ZAF_adj_ppp2&#34;}],
+  &#34;mark&#34;: &#34;bar&#34;,
+  &#34;encoding&#34;: {
+    &#34;x&#34;: {
+      &#34;field&#34;: &#34;ZAF_adj_ppp2&#34;,
+      &#34;type&#34;: &#34;quantitative&#34;,
+      &#34;scale&#34;: {&#34;domain&#34;: [-1.5, 9]},
+      &#34;axis&#34;:{
+        &#34;labelFontSize&#34;: subFontSize-3,
+        &#34;labelFont&#34;: fontFamily,
+        &#34;title&#34;: null
+      }
+    },
+    &#34;y&#34;: {
+      &#34;field&#34;: &#34;country_name&#34;,
+      &#34;type&#34;: &#34;nominal&#34;,
+      &#34;sort&#34;: {&#34;op&#34;: &#34;sum&#34;, &#34;field&#34;: &#34;ZAF_adj_ppp2&#34;, &#34;order&#34;:&#34;descending&#34;},
+      &#34;axis&#34;:{
+        &#34;labelFontSize&#34;: subFontSize-3,
+        &#34;labelFont&#34;: fontFamily,
+        &#34;title&#34;: null
+      }  
+    },
+    &#34;color&#34;: {
+      &#34;field&#34;: &#34;continent&#34;,
+      &#34;type&#34;: &#34;nominal&#34;,
+      &#34;legend&#34;: {
+        &#34;labelFontSize&#34;: subFontSize-3,
+        &#34;labelFont&#34;: fontFamily,
+        &#34;title&#34;: null,
+        &#34;orient&#34;:&#34;bottom-right&#34;
+      }
+    }
+  }
+}
+    
+    var opt = {
+      &#34;actions&#34;: false,
+      &#34;tooltip&#34;: false
+    }
+    vegaEmbed(&#34;#pppvis&#34;, yourVlSpec, opt);&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#test&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;test &amp;lt;-
+  tags$html(
+  tags$header(
+    tags$title(&amp;#39;Embedding Vega-Lite&amp;#39;),
+    tags$script(src=&amp;quot;https://d3js.org/d3.v5.js&amp;quot;),
+    tags$script(src=&amp;quot;https://cdn.jsdelivr.net/npm/vega@4.2.0&amp;quot;),
+    tags$script(src=&amp;quot;https://cdn.jsdelivr.net/npm/vega-lite@3.0.0-rc6&amp;quot;),
+    tags$script(src=&amp;quot;https://cdn.jsdelivr.net/npm/vega-embed@3.19.2&amp;quot;),
+    tags$style(paste0(&amp;quot;.role-axis-label {&amp;quot;,
+      css(
+        font.size = paste0(0.9, &amp;#39;rem&amp;#39;),
+        fill = &amp;#39;red&amp;#39;,
+        color = &amp;#39;red&amp;#39;), &amp;quot;}&amp;quot;)
+    )
+  ),
+  tags$body(
+    tags$div(id=&amp;quot;pppblock2&amp;quot;, align=&amp;quot;center&amp;quot;,
+      tags$h3(align=&amp;quot;left&amp;quot;, id=&amp;quot;ppphead2&amp;quot;, &amp;quot;Purchasing Power Parity (PPP)&amp;quot;),
+      tags$p(align=&amp;quot;left&amp;quot;, id=&amp;quot;pppsubhead2&amp;quot;, &amp;#39;Difference from South Africa, 2017&amp;#39;)
+    ),
+    tags$div(id=&amp;quot;pppvis2&amp;quot;, align=&amp;quot;center&amp;quot;, class=&amp;quot;role-axis-label&amp;quot;),
+    tags$p(align=&amp;quot;right&amp;quot;, id=&amp;quot;pppsource2&amp;quot;, &amp;#39;Source: Eurostat-OECD&amp;#39;),
+    #tags$script(type=&amp;quot;text/javascript&amp;quot;, includeScript(&amp;quot;&amp;quot;sandbox_files/sandbox.js&amp;quot;&amp;quot;))
+    includeScript(&amp;quot;sandbox_files/sandbox2.js&amp;quot;, type=&amp;quot;text/javascript&amp;quot;)
+  )
+)
+
+test&lt;/code&gt;&lt;/pre&gt;
+&lt;html&gt;
+&lt;header&gt;
+&lt;title&gt;Embedding Vega-Lite&lt;/title&gt;
+&lt;script src=&#34;https://d3js.org/d3.v5.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdn.jsdelivr.net/npm/vega@4.2.0&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdn.jsdelivr.net/npm/vega-lite@3.0.0-rc6&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdn.jsdelivr.net/npm/vega-embed@3.19.2&#34;&gt;&lt;/script&gt;
+&lt;style&gt;.role-axis-label {font-size:0.9rem;fill:red;color:red;}&lt;/style&gt;
+&lt;/header&gt;
+&lt;body&gt;
+&lt;div id=&#34;pppblock2&#34; align=&#34;center&#34;&gt;
+&lt;h3 align=&#34;left&#34; id=&#34;ppphead2&#34;&gt;Purchasing Power Parity (PPP)&lt;/h3&gt;
+&lt;p align=&#34;left&#34; id=&#34;pppsubhead2&#34;&gt;Difference from South Africa, 2017&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;pppvis2&#34; align=&#34;center&#34; class=&#34;role-axis-label&#34;&gt;&lt;/div&gt;
+&lt;p align=&#34;right&#34; id=&#34;pppsource2&#34;&gt;Source: Eurostat-OECD&lt;/p&gt;
+&lt;script type=&#34;text/javascript&#34;&gt;var width = document.getElementById(&#34;pppvis2&#34;).offsetWidth;
+  
+    var maxWidth = 550; // setting the maximum width of the chart.
+    //var width = 300;
+
+    var getWorkingWidth = function(width,maxWidth){
+                                                if(width &lt; maxWidth)
+                                                {return 1 * width}
+                                                else{return maxWidth}
+                                              };
+
+    var workingWidth = getWorkingWidth(width, maxWidth);
+    
+    var height = Math.max(2/3 * workingWidth, 500)
+    
+    //var height = 7/10 * workingWidth
+  
+    
+    var leftMargin = (width - workingWidth)/2;
+    
+    var rightMargin = leftMargin;
+    
+    document.getElementById(&#34;ppphead2&#34;)
+    .setAttribute(
+      &#34;style&#34;,`
+      margin-left: ${leftMargin}px;
+      margin-right: ${rightMargin}px`);
+    
+    document.getElementById(&#34;pppsubhead2&#34;)
+    .setAttribute(
+      &#34;style&#34;,`
+      margin-left: ${leftMargin}px;
+      margin-right: ${rightMargin}px;
+      font-style: italic;
+      margin-bottom: 10;
+      text-align:left;`);
+    
+    document.getElementById(&#34;pppsource2&#34;)
+    .setAttribute(
+      &#34;style&#34;, `
+      margin-left: ${leftMargin}px; 
+      margin-right: ${rightMargin}px;
+      font-size: 0.7rem;
+      color: #696969;
+      //margin-bottom: 0; 
+      text-align:right;`);
+    
+    
+    var el = document.getElementById(&#39;pppsubhead2&#39;);
+    var style = window.getComputedStyle(el, null).getPropertyValue(&#39;font-size&#39;);
+    var fontFamily = window.getComputedStyle(el, null).getPropertyValue(&#39;font-family&#39;);
+    var subFontSize = parseFloat(style); 
+  
+    var yourVlSpec = {
+  &#34;$schema&#34;: &#34;https://vega.github.io/schema/vega-lite/v3.json&#34;,
+  &#34;width&#34;: workingWidth,
+      &#34;height&#34;: height,
+      &#34;autosize&#34;: {
+        &#34;type&#34;: &#34;fit&#34;,
+        &#34;contains&#34;: &#34;padding&#34;
+      },
+  &#34;data&#34;: {
+    &#34;url&#34;: &#34;https://gist.githubusercontent.com/jameslairdsmith/68081008a67515d3d565482816d78508/raw/d3acd665c1119def9386b25e4bca903a0038595a/clean_country_ppp.csv&#34;
+  },
+  &#34;transform&#34;: [{&#34;calculate&#34;: &#34;datum.ZAF_adj_ppp-0&#34;, &#34;as&#34;: &#34;ZAF_adj_ppp2&#34;}],
+  &#34;mark&#34;: &#34;bar&#34;,
+  &#34;encoding&#34;: {
+    &#34;x&#34;: {
+      &#34;field&#34;: &#34;ZAF_adj_ppp2&#34;,
+      &#34;type&#34;: &#34;quantitative&#34;,
+      &#34;scale&#34;: {&#34;domain&#34;: [-1.5, 9]},
+      &#34;axis&#34;:{
+        &#34;labelFontSize&#34;: subFontSize-3,
+        &#34;labelFont&#34;: fontFamily,
+        &#34;title&#34;: null
+      }
+    },
+    &#34;y&#34;: {
+      &#34;field&#34;: &#34;country_name&#34;,
+      &#34;type&#34;: &#34;nominal&#34;,
+      &#34;sort&#34;: {&#34;op&#34;: &#34;sum&#34;, &#34;field&#34;: &#34;ZAF_adj_ppp2&#34;, &#34;order&#34;:&#34;descending&#34;},
+      &#34;axis&#34;:{
+        &#34;labelFontSize&#34;: subFontSize-3,
+        &#34;labelFont&#34;: fontFamily,
+        &#34;title&#34;: null
+      }  
+    },
+    &#34;color&#34;: {
+      &#34;field&#34;: &#34;continent&#34;,
+      &#34;type&#34;: &#34;nominal&#34;,
+      &#34;legend&#34;: {
+        &#34;labelFontSize&#34;: subFontSize-3,
+        &#34;labelFont&#34;: fontFamily,
+        &#34;title&#34;: null,
+        &#34;orient&#34;:&#34;bottom-right&#34;
+      }
+    }
+  }
+}
+    
+    var opt = {
+      &#34;actions&#34;: false,
+      &#34;tooltip&#34;: false
+    }
+    vegaEmbed(&#34;#pppvis2&#34;, yourVlSpec, opt);&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#test&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Customising CV/resume pagedown style</title>
       <link>/post/customising-cv-resume-pagedown-style/</link>
       <pubDate>Sun, 19 May 2019 00:00:00 +0000</pubDate>
@@ -1281,62 +1675,6 @@ git submodule update --init --recursive
       
       <guid>/publication/person-re-identification/</guid>
       <description>&lt;p&gt;More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Hello R Markdown</title>
-      <link>/post/2015-07-23-r-rmarkdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      
-      <guid>/post/2015-07-23-r-rmarkdown/</guid>
-      <description>&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#r-markdown&#34;&gt;R Markdown&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#including-plots&#34;&gt;Including Plots&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;r-markdown&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;R Markdown&lt;/h1&gt;
-&lt;p&gt;This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;a href=&#34;http://rmarkdown.rstudio.com&#34; class=&#34;uri&#34;&gt;http://rmarkdown.rstudio.com&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;You can embed an R code chunk like this:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(cars)
-##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00
-
-fit &amp;lt;- lm(dist ~ speed, data = cars)
-fit
-## 
-## Call:
-## lm(formula = dist ~ speed, data = cars)
-## 
-## Coefficients:
-## (Intercept)        speed  
-##     -17.579        3.932&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;including-plots&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Including Plots&lt;/h1&gt;
-&lt;p&gt;You can also embed plots. See Figure &lt;a href=&#34;#fig:pie&#34;&gt;1&lt;/a&gt; for example:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mar = c(0, 1, 0, 1))
-pie(
-  c(280, 60, 20),
-  c(&amp;#39;Sky&amp;#39;, &amp;#39;Sunny side of pyramid&amp;#39;, &amp;#39;Shady side of pyramid&amp;#39;),
-  col = c(&amp;#39;#0292D8&amp;#39;, &amp;#39;#F7EA39&amp;#39;, &amp;#39;#C4B632&amp;#39;),
-  init.angle = -50, border = NA
-)&lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:pie&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/2015-07-23-r-rmarkdown_files/figure-html/pie-1.png&#34; alt=&#34;A fancy pie chart.&#34; width=&#34;672&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;
-Figure 1: A fancy pie chart.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
 </description>
     </item>
     
