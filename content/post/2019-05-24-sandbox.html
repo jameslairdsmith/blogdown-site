@@ -120,7 +120,7 @@ My first paragraph, with some
     ),
     tags$div(id=&quot;pppvis&quot;, align=&quot;center&quot;, class=&quot;role-axis-label&quot;),
     tags$p(align=&quot;right&quot;, id=&quot;pppsource&quot;, &#39;Source: Eurostat-OECD&#39;),
-    #tags$script(type=&quot;text/javascript&quot;, includeScript(&quot;&quot;sandbox_files/sandbox.js&quot;&quot;))
+    tags$script(type=&quot;text/javascript&quot;, &quot;var maxWidth = 500&quot;),
     includeScript(&quot;sandbox_files/sandbox.js&quot;, type=&quot;text/javascript&quot;)
   )
 )
@@ -138,9 +138,10 @@ test</code></pre>
 </div>
 <div id="pppvis" align="center" class="role-axis-label"></div>
 <p align="right" id="pppsource">Source: Eurostat-OECD</p>
+<script type="text/javascript">var maxWidth = 500</script>
 <script type="text/javascript">var width = document.getElementById("pppvis").offsetWidth;
   
-    var maxWidth = 550; // setting the maximum width of the chart.
+    //var maxWidth = 550; // setting the maximum width of the chart.
     //var width = 300;
 
     var getWorkingWidth = function(width,maxWidth){

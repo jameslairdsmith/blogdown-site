@@ -132,7 +132,7 @@ My first paragraph, with some
     ),
     tags$div(id=&amp;quot;pppvis&amp;quot;, align=&amp;quot;center&amp;quot;, class=&amp;quot;role-axis-label&amp;quot;),
     tags$p(align=&amp;quot;right&amp;quot;, id=&amp;quot;pppsource&amp;quot;, &amp;#39;Source: Eurostat-OECD&amp;#39;),
-    #tags$script(type=&amp;quot;text/javascript&amp;quot;, includeScript(&amp;quot;&amp;quot;sandbox_files/sandbox.js&amp;quot;&amp;quot;))
+    tags$script(type=&amp;quot;text/javascript&amp;quot;, &amp;quot;var maxWidth = 500&amp;quot;),
     includeScript(&amp;quot;sandbox_files/sandbox.js&amp;quot;, type=&amp;quot;text/javascript&amp;quot;)
   )
 )
@@ -150,9 +150,10 @@ test&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;pppvis&#34; align=&#34;center&#34; class=&#34;role-axis-label&#34;&gt;&lt;/div&gt;
 &lt;p align=&#34;right&#34; id=&#34;pppsource&#34;&gt;Source: Eurostat-OECD&lt;/p&gt;
+&lt;script type=&#34;text/javascript&#34;&gt;var maxWidth = 500&lt;/script&gt;
 &lt;script type=&#34;text/javascript&#34;&gt;var width = document.getElementById(&#34;pppvis&#34;).offsetWidth;
   
-    var maxWidth = 550; // setting the maximum width of the chart.
+    //var maxWidth = 550; // setting the maximum width of the chart.
     //var width = 300;
 
     var getWorkingWidth = function(width,maxWidth){

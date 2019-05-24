@@ -1,6 +1,6 @@
 var width = document.getElementById("pppvis").offsetWidth;
   
-    var maxWidth = 550; // setting the maximum width of the chart.
+    //var maxWidth = 550; // setting the maximum width of the chart.
     //var width = 300;
 
     var getWorkingWidth = function(width,maxWidth){

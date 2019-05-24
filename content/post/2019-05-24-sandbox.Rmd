@@ -91,7 +91,7 @@ test <-
     ),
     tags$div(id="pppvis", align="center", class="role-axis-label"),
     tags$p(align="right", id="pppsource", 'Source: Eurostat-OECD'),
-    #tags$script(type="text/javascript", includeScript(""sandbox_files/sandbox.js""))
+    tags$script(type="text/javascript", "var maxWidth = 500"),
     includeScript("sandbox_files/sandbox.js", type="text/javascript")
   )
 )
