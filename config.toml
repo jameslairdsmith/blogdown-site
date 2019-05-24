@@ -333,6 +333,7 @@ enableGitInfo = false
  [[menu.main]]
     name = "CV"
     url = "CV/pagedown_cv.html"
+    #url = '(CV/pagedown_cv.html){target="_blank"}'
     weight = 9
 
  [[menu.main]]
