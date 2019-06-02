@@ -21,6 +21,14 @@
     margin-bottom: 0.4rem;
 }
 
+.details .location {
+    margin-bottom: 0.4rem;
+}
+
 .details p {
     margin-top: 0px;
+}
+
+.break-after-me {
+  break-after: page;
 }
