@@ -27,7 +27,7 @@
       <pubDate>Sun, 19 May 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/customising-cv-resume-pagedown-style/</guid>
-      <description>This will hopefully be helpful for those looking to make their pagedown CV look a little nicer, but don’t want to have to go through the trial and error involved in CSS changes.
+      <description> This will hopefully be helpful for those looking to make their pagedown CV look a little nicer, but don’t want to have to go through the trial and error involved in CSS changes.
 Here is some CSS that should appear, but not run:
 .blocks { break-inside: avoid; } This will get the bullet points to line up nicely:
 [data-id=&amp;quot;main&amp;quot;] li { margin-left: 20px; list-style-position: inside; } </description>
@@ -39,8 +39,7 @@ Here is some CSS that should appear, but not run:
       <pubDate>Fri, 02 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/james-guide-to-attending-ct-worlds/</guid>
-      <description>The World Universities Debating Championships (WUDC) this year is being hosted at the University of Cape Town (UCT), where I was enrolled for both my undergraduate and postgraduate degrees. For those (like me) who are attending the competition, I thought it would be useful if I published some thoughts on what it will be like once you get there. These thoughts are catalogued below.
-Please note that (although I did attend the university for a good long time) this is a decidedly unofficial guide designed for supplementary information only.</description>
+      <description></description>
     </item>
     
     <item>
@@ -49,9 +48,7 @@ Please note that (although I did attend the university for a good long time) thi
       <pubDate>Sun, 07 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/the-future-of-non-fiction-reading/</guid>
-      <description>Modern scholars will never be able to read many of the works by the anchient Greeks and Romans. The only way we know of these documents is because of their epitome.
-Epitomes are not abridgements, which are selected quotations of a work.
-They are also typically longer and deeper than a summary or synopsis, although there is no technical definition to deliniate the length required for one to become the other.</description>
+      <description></description>
     </item>
     
     <item>
@@ -60,7 +57,7 @@ They are also typically longer and deeper than a summary or synopsis, although t
       <pubDate>Sat, 29 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/web-platforms-should-be-better-at-handling-mixed-content/</guid>
-      <description>You experience it every day. You log onto one of many of your newsfeeds and you are innundated with content. But not all of it is the kind of content you want to see. If you are lucky, this uninteresting content will be infrequent enough that it isn&amp;rsquo;t a struggle to simply scroll past it. Regrettably, this isn&amp;rsquo;t always the case; in fact, content has become so ubundent that it&amp;rsquo;s harder and harder to parse it for the kind you are interested in.</description>
+      <description>Web platforms should be better at handling different categories of content</description>
     </item>
     
     <item>
@@ -69,8 +66,7 @@ They are also typically longer and deeper than a summary or synopsis, although t
       <pubDate>Sun, 16 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/why-i-do-photography/</guid>
-      <description>I can&amp;rsquo;t remember when it was. I know it was my birthday, but I can&amp;rsquo;t remember which. Reaching these quasi-random calendar dates always provides ample stimulus for introspection. While engulfed in this sentiment, I decided I needed a hobby.
- I&amp;rsquo;m still unclear as to exactly why I thought this; other birthdays had come and gone without such a realisation. Exactly what made me think this is unclear to me now and may have been unlcear to me even then.</description>
+      <description>I explain my reasons for taking up the hobby</description>
     </item>
     
     <item>
@@ -79,7 +75,7 @@ They are also typically longer and deeper than a summary or synopsis, although t
       <pubDate>Mon, 03 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/example-with-d3/</guid>
-      <description>{&#34;x&#34;:{&#34;data&#34;:[4,8,15,16,23,42],&#34;type&#34;:&#34;numeric&#34;,&#34;container&#34;:&#34;svg&#34;,&#34;options&#34;:null,&#34;script&#34;:&#34;var d3Script = function(d3, r2d3, data, svg, width, height, options, theme, console) {\nthis.d3 = d3;\n\nsvg = d3.select(svg.node());\n\n// var totalWidth = document.getElementById(\&#34;htmlwidget-1\&#34;).offsetWidth\n\n var totalWidth = document.getElementsByTagName(&#39;body&#39;)[0].offsetWidth\n\n// var width = totalWidth*1;\n\n// var totalWidth = document.getElementsByClassName(\&#34;r2d3 html-widget html-widget-static-bound\&#34;)[0].offsetWidth\n\nvar width = Math.min(width, totalWidth*0.8);\n\n// var chart = d3.select(\&#34;\&#34;).attr(\&#34;id\&#34;,\&#34;chart\&#34;)\n\n// var totalWidth = document.getElementById(\&#34;chart\&#34;).offsetWidth\n\n// var width = totalWidth*0.8;\n\nsvg.selectAll(&#39;rect&#39;)\n .data(data)\n .enter()\n .append(&#39;rect&#39;)\n .attr(&#39;width&#39;, function(d) { return d * 1; })\n .attr(&#39;height&#39;, &#39;20px&#39;)\n .</description>
+      <description>Example using D3.</description>
     </item>
     
     <item>
@@ -88,8 +84,7 @@ They are also typically longer and deeper than a summary or synopsis, although t
       <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/explaining-cape-town-s-water-crisis/</guid>
-      <description>They are are calling it “Day Zero”. From this date, household taps in Cape Town, one of South Africa’s largest cities, will be turned off by officials. Residents will instead have to queue for water at central distribution points. This rationing will be an attempt to prevent Cape Town from being the first major city in the modern world to run out of fresh water.
-Exactly when Day Zero will occur is uncertain, but official estimates say it will be sometime in the next three to four months.</description>
+      <description></description>
     </item>
     
     <item>
@@ -98,10 +93,7 @@ Exactly when Day Zero will occur is uncertain, but official estimates say it wil
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0100</pubDate>
       
       <guid>/post/getting-started/</guid>
-      <description>Academic is a framework to help you create a beautiful website quickly. Perfect for personal sites, blogs, or business/project sites. Check out the latest demo of what you&amp;rsquo;ll get in less than 10 minutes. Then head on over to the Quick Start guide or take a look at the Release Notes.
-
-Key features:
- Easily manage various content including homepage, blog posts, publications, talks, and projects Extensible via color themes and widgets/plugins Write in Markdown for easy formatting and code highlighting, with LaTeX for mathematical expressions Social/academic network linking, Google Analytics, and Disqus comments Responsive and mobile friendly Simple and refreshing one page design Multilingual and easy to customize  Color Themes Academic is available in different color themes and font themes.</description>
+      <description>Create a beautifully simple website or blog in under 10 minutes.</description>
     </item>
     
     <item>
@@ -110,9 +102,7 @@ Key features:
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
       <guid>/post/2015-07-23-r-rmarkdown/</guid>
-      <description>R Markdown Including Plots   R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-You can embed an R code chunk like this:
-summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.</description>
+      <description>Create a simple website or blog in under 10 minutes.</description>
     </item>
     
   </channel>

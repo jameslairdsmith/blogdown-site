@@ -265,6 +265,8 @@ enableGitInfo = false
     icon_pack = "fa"
     link = "//instagram.com/jameslairdsmith/"
     
+
+    
   #[[params.social]]
   #  icon = "youtube"
   #  icon_pack = "fa"
@@ -275,8 +277,17 @@ enableGitInfo = false
     icon = "flickr"
     icon_pack = "fa"
     link = "//flickr.com/photos/128032987@N05/"
-  
-  
+    
+  [[params.social]]
+    icon = "orcid"
+    icon_pack = "ai"
+    link = "//orcid.org/0000-0003-1175-4046"
+    
+  [[params.social]]
+    icon = "linkedin"
+    icon_pack = "fa" 
+    link = "//linkedin.com/in/jameslairdsmith/"
+
     
   #[[params.social]]
   #  icon = "google-plus"
