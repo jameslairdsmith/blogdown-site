@@ -2,6 +2,7 @@
 # Projects widget.
 widget = "projects"
 active = true
+#headless = false
 date = 2016-04-20T00:00:00
 
 title = "Projects"
@@ -14,6 +15,10 @@ weight = 50
 # Display content from the following folder.
 # For example, `folder = "project"` displays content from `content/project/`.
 folder = "project"
+
+[design]
+# Choose how many columns the section has. Valid values: 1 or 2.
+columns = "2"
 
 # View.
 # Customize how projects are displayed.
