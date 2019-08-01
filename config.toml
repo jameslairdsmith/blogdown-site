@@ -328,6 +328,11 @@ enableGitInfo = false
   name = "Projects"
   url = "/projectspage"
   weight = 4
+  
+[[menu.main]]
+  name = "Portfolio"
+  url = "/portfoliopage"
+  weight = 5
 
 #[[menu.main]]
 #  name = "Teaching"
