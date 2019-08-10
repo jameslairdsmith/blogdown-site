@@ -245,10 +245,6 @@ enableGitInfo = false
 #    icon_pack = "ai"
 #    link = "https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ"
 
-  [[params.social]]
-    icon = "github"
-    icon_pack = "fa"
-    link = "//github.com/jameslairdsmith"
     
   [[params.social]]
     icon = "stack-overflow"
@@ -265,6 +261,8 @@ enableGitInfo = false
     icon_pack = "fa"
     link = "//instagram.com/jameslairdsmith/"
     
+  
+    
 
     
   #[[params.social]]
@@ -277,6 +275,11 @@ enableGitInfo = false
     icon = "flickr"
     icon_pack = "fa"
     link = "//flickr.com/photos/128032987@N05/"
+    
+  [[params.social]]
+    icon = "500px"
+    icon_pack = "fa"
+    link = "//500px.com/jameslaird-smith"
     
   [[params.social]]
     icon = "orcid"
@@ -293,6 +296,10 @@ enableGitInfo = false
     icon_pack = "fa" 
     link = "//linkedin.com/in/jameslairdsmith/"
 
+  [[params.social]]
+    icon = "github"
+    icon_pack = "fa"
+    link = "//github.com/jameslairdsmith"
     
   #[[params.social]]
   #  icon = "google-plus"
