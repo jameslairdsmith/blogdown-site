@@ -359,16 +359,23 @@ enableGitInfo = false
  #Link to a PDF of your resume/CV from the menu.
  #To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
  [[menu.main]]
+    name = "Talks"
+    url = "/talk"
+    weight = 7
+
+ [[menu.main]]
+    name = "Wonkblog"
+    url = "https://jameslairdsmith.github.io/wonkblog/"
+    weight = 8
+ 
+ [[menu.main]]
     name = "CV"
     url = "https://jameslairdsmith.github.io/curriculum_vitae/"
     #url = "CV/pagedown_cv.html"
     #url = '(CV/pagedown_cv.html){target="_blank"}'
     weight = 9
 
- [[menu.main]]
-    name = "Talks"
-    url = "/talk"
-    weight = 8
+
 
 # Search.
 [params.search]
