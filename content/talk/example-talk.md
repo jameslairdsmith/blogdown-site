@@ -1,16 +1,16 @@
 +++
-title = "Introducing the {scheduler} package"
+title = "Introducing the {gs} package"
 date = 2017-01-01T00:00:00  # Schedule page publish date.
 draft = false
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-time_start = 2019-09-11T15:00:00
-time_end = 2030-06-01T15:00:00
+time_start = 2019-09-12T13:30:00
+time_end = 2019-09-12T15:00:00
 
 # Abstract and optional shortened version.
 abstract = ""
-abstract_short = "Making recurring calendar events a little easier"
+abstract_short = "A grammar of recurring calendar events."
 
 # Name of event and optional event URL.
 event = "EARL London"
@@ -47,10 +47,10 @@ highlight = true
 
 # Featured image
 # Place your image in the `static/img/` folder and reference its filename below, e.g. `image = "example.jpg"`.
-[header]
-image = "headers/bubbles-wide.jpg"
-caption = "My caption :smile:"
+#[header]
+#image = "gs_hex_sticker.png"
+#caption = ":"
 
 +++
 
-Embed your slides or video here using [shortcodes](https://sourcethemes.com/academic/post/writing-markdown-latex/). Further details can easily be added using *Markdown* and $\rm \LaTeX$ math code.
+
