@@ -14,15 +14,6 @@
     
     <item>
       <title>External Project</title>
-      <link>/portfolio/example-external-project/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0100</pubDate>
-      
-      <guid>/portfolio/example-external-project/</guid>
-      <description>An example of linking directly to an external project website using &lt;code&gt;external_link&lt;/code&gt;.</description>
-    </item>
-    
-    <item>
-      <title>External Project</title>
       <link>/project/example-external-project/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0100</pubDate>
       

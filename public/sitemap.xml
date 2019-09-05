@@ -3,8 +3,6 @@
     
   
     
-  
-    
     <url>
     
       <loc>/</loc>
@@ -114,14 +112,6 @@
     
     <url>
     
-      <loc>/portfoliopage/</loc>
-      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
       <loc>/post/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
@@ -154,66 +144,16 @@
     
     <url>
     
-      <loc>/tags/demo/</loc>
-      <lastmod>2016-04-27T00:00:00+01:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/tags/demo-learning/</loc>
-      <lastmod>2016-04-27T00:00:00+01:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/portfolio/deep-learning/</loc>
-      <lastmod>2016-04-27T00:00:00+01:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/project/deep-learning/</loc>
-      <lastmod>2016-04-27T00:00:00+01:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/portfolio/example-external-project/</loc>
-      <lastmod>2016-04-27T00:00:00+01:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/project/example-external-project/</loc>
-      <lastmod>2016-04-27T00:00:00+01:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/portfolio/</loc>
-      <lastmod>2016-04-27T00:00:00+01:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
       <loc>/project/</loc>
+      <lastmod>2016-04-27T00:00:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/r-packages/</loc>
       <lastmod>2016-04-27T00:00:00+01:00</lastmod>
       <priority>0</priority>
     </url>
@@ -225,6 +165,14 @@
       <loc>/tags/</loc>
       <lastmod>2018-01-13T00:00:00+00:00</lastmod>
       <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/project/gs/</loc>
+      <lastmod>2016-04-27T00:00:00+01:00</lastmod>
     </url>
     
   

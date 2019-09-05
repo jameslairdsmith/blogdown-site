@@ -13,20 +13,11 @@
     
     
     <item>
-      <title>Demo</title>
-      <link>/tags/demo/</link>
+      <title>R packages</title>
+      <link>/tags/r-packages/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0100</pubDate>
       
-      <guid>/tags/demo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Demo Learning</title>
-      <link>/tags/demo-learning/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0100</pubDate>
-      
-      <guid>/tags/demo-learning/</guid>
+      <guid>/tags/r-packages/</guid>
       <description></description>
     </item>
     

@@ -39,12 +39,12 @@ filter_default = 0
   tag = "*"
 
 [[filter]]
-  name = "Demo Learning"
-  tag = "Demo Learning"
+  name = "R packages"
+  tag = "R packages"
 
-[[filter]]
-  name = "Other"
-  tag = "Demo"
+# [[filter]]
+#   name = "Other"
+#   tag = "Demo"
 
 +++
 
