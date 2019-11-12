@@ -362,18 +362,23 @@ enableGitInfo = false
     name = "Talks"
     url = "/talk"
     weight = 7
+    
+ [[menu.main]]
+    name = "Debate"
+    url = "https://jameslairdsmith.github.io/debateCV"
+    weight = 8
 
  [[menu.main]]
     name = "Wonkblog"
     url = "https://jameslairdsmith.github.io/wonkblog/"
-    weight = 8
+    weight = 9
  
  [[menu.main]]
     name = "CV"
     url = "https://jameslairdsmith.github.io/curriculum_vitae/"
     #url = "CV/pagedown_cv.html"
     #url = '(CV/pagedown_cv.html){target="_blank"}'
-    weight = 9
+    weight = 10
 
 
 
