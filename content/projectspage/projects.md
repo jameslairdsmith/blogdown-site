@@ -5,7 +5,7 @@ active = true
 #headless = false
 date = 2016-04-20T00:00:00
 
-title = "Projects"
+title = "Software"
 subtitle = "My personal projects."
 
 # Order that this section will appear in.

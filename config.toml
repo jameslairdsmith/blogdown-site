@@ -337,9 +337,14 @@ enableGitInfo = false
   weight = 3
 
 [[menu.main]]
-  name = "Projects"
+  name = "Software"
   url = "/projectspage"
   weight = 4
+  
+[[menu.main]]
+  name = "Projects"
+  url = "https://jameslairdsmith.github.io/projects_site/"
+  weight = 5
   
 #[[menu.main]]
 #  name = "Portfolio"
