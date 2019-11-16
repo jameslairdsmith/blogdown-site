@@ -341,9 +341,14 @@ enableGitInfo = false
   url = "/projectspage"
   weight = 4
   
+#[[menu.main]]
+#  name = "Projects"
+#  url = "https://jameslairdsmith.github.io/projects_site/"
+#  weight = 5
+  
 [[menu.main]]
-  name = "Projects"
-  url = "https://jameslairdsmith.github.io/projects_site/"
+  name = "Charts"
+  url = "/chartpage"
   weight = 5
   
 #[[menu.main]]

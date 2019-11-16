@@ -3,6 +3,8 @@
     
   
     
+  
+    
     <url>
     
       <loc>/</loc>
@@ -104,6 +106,14 @@
     
     <url>
     
+      <loc>/chartpage/</loc>
+      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>/talk/example-talk/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
@@ -138,6 +148,32 @@
     
       <loc>/projectspage/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/chart/iran-economy/</loc>
+      <lastmod>2016-04-27T00:00:00+01:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/chart/</loc>
+      <lastmod>2016-04-27T00:00:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/economics/</loc>
+      <lastmod>2016-04-27T00:00:00+01:00</lastmod>
+      <priority>0</priority>
     </url>
     
   
