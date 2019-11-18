@@ -1441,7 +1441,161 @@ error involved in CSS changes.&lt;/p&gt;
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0100</pubDate>
       
       <guid>/chart/iran-economy/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;/img/iran_gdp_chart.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;head&gt;
+  &lt;title&gt;Embedding Vega-Lite&lt;/title&gt;
+  &lt;script src=&#34;https://d3js.org/d3.v5.js&#34;&gt;&lt;/script&gt;
+  &lt;script src=&#34;https://cdn.jsdelivr.net/npm/vega@5.7.3&#34;&gt;&lt;/script&gt;
+  &lt;script src=&#34;https://cdn.jsdelivr.net/npm/vega-lite@4.0.0-beta.11&#34;&gt;&lt;/script&gt;
+  &lt;script src=&#34;https://cdn.jsdelivr.net/npm/vega-embed@6.0.0&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;style&gt;
+.role-axis-label {
+  font-size: 0.9rem;
+  fill: &#34;red&#34;;
+  color: &#34;red&#34;;
+  }
+  
+.article-container {
+    max-width: 800;
+}
+&lt;/style&gt;
+
+&lt;p&gt;&lt;/head&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;body&gt;&lt;/p&gt;
+
+&lt;div id=&#34;rainblock&#34; align=&#34;center&#34;&gt;
+    &lt;h3 align=&#34;left&#34; id=&#34;irangdphead&#34;&gt;Iran&#39;s economy: battered by sanctions&lt;/h3&gt;
+    &lt;p align=&#34;left&#34; id=&#34;irangdpsubhead&#34;&gt;Change in real GDP, annual %&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;div id=&#34;irangdpvis&#34; align=&#34;center&#34; class=&#34;role-axis-label&#34;&gt;&lt;/div&gt;
+&lt;p align=&#34;right&#34; id=&#34;irangdpsource&#34;&gt;Source: World Bank&lt;/p&gt;&lt;/p&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+
+width = document.getElementById(&#34;irangdpvis&#34;).offsetWidth;
+
+maxWidth = 800;
+
+getWorkingWidth = function(width,maxWidth){
+                                                if(width &lt; maxWidth)
+                                                {return 1 * width}
+                                                else{return maxWidth}
+                                              };
+                                              
+workingWidth = getWorkingWidth(width, maxWidth);
+
+height = Math.max(2/3 * workingWidth, 350);
+
+leftMargin = (width - workingWidth)/2;
+
+rightMargin = leftMargin;
+
+document.getElementById(&#34;irangdphead&#34;)
+    .setAttribute(
+      &#34;style&#34;,`
+      margin-left: ${leftMargin}px;
+      margin-right: ${rightMargin}px`);
+      
+document.getElementById(&#34;irangdpsubhead&#34;)
+    .setAttribute(
+      &#34;style&#34;,`
+      margin-left: ${leftMargin}px;
+      margin-right: ${rightMargin}px;
+      font-style: italic;
+      //margin-bottom: 0;
+      text-align:left;`);
+      
+document.getElementById(&#34;irangdpsource&#34;)
+    .setAttribute(
+      &#34;style&#34;, `
+      margin-left: ${leftMargin}px; 
+      margin-right: ${rightMargin}px;
+      font-size: 0.7rem;
+      color: #696969;
+      //margin-bottom: 0; 
+      text-align:right;`);
+      
+document.getElementById(&#34;irangdpvis&#34;)
+    .setAttribute(
+      &#34;style&#34;, `
+      margin-left: ${leftMargin}px; 
+      margin-right: ${rightMargin}px;
+      // font-size: 0.7rem;
+      // color: #696969;
+      // margin-bottom: 0; 
+      //text-align:right;`
+);
+
+el = document.getElementById(&#39;irangdpsubhead&#39;);
+
+style = window.getComputedStyle(el, null).getPropertyValue(&#39;font-size&#39;);
+
+fontFamily = window.getComputedStyle(el, null).getPropertyValue(&#39;font-family&#39;);
+
+subFontSize = parseFloat(style); 
+
+yourVlSpec = ({
+      &#34;$schema&#34;: &#34;https://vega.github.io/schema/vega-lite/v4.0.json&#34;,
+      &#34;width&#34;: workingWidth,
+      &#34;height&#34;: height,
+      &#34;autosize&#34;: {
+        &#34;type&#34;: &#34;fit&#34;,
+        &#34;contains&#34;: &#34;padding&#34;
+      },
+      &#34;description&#34;: &#34;A simple bar chart with embedded data.&#34;,
+      &#34;data&#34;:  {&#34;url&#34;:&#34;https://raw.githubusercontent.com/jameslairdsmith/iran_worldbank_data/master/current_iran_indicators.csv&#34;},
+      &#34;transform&#34;: [
+          {&#34;calculate&#34;: &#34;datum.annual_gdp_growth/100&#34;, &#34;as&#34;: &#34;annual_gdp_growth2&#34;}
+      ],
+      &#34;mark&#34;: &#34;bar&#34;,
+      
+      &#34;encoding&#34;: {
+        &#34;x&#34;: {&#34;field&#34;: &#34;year&#34;, &#34;type&#34;: &#34;temporal&#34;, 
+        &#34;axis&#34;: {
+          &#34;title&#34;: null, 
+          &#34;labelFontSize&#34;: subFontSize-3,
+          &#34;labelFont&#34;: fontFamily,
+          &#34;ticks&#34;: false,
+          &#34;grid&#34;:false,
+          &#34;labelExpr&#34;: &#34;if(datum.label == &#39;2010&#39;, datum.label, timeFormat(datum.value, &#39;%y&#39;))&#34;,
+          &#34;labelFlush&#34;: false,
+          &#34;domain&#34;:false}},
+        &#34;y&#34;: {&#34;field&#34;: &#34;annual_gdp_growth2&#34;, &#34;type&#34;: &#34;quantitative&#34;, 
+        &#34;axis&#34;: {
+          &#34;title&#34;: null,
+          &#34;tickCount&#34;: 6,
+          &#34;labelFontSize&#34;: subFontSize-3,
+          &#34;labelFont&#34;: fontFamily,
+          &#34;format&#34;:&#34;%&#34;,
+          &#34;grid&#34;:false,
+          &#34;tickSize&#34;:-workingWidth,
+          &#34;tickColor&#34;:&#34;white&#34;,
+          &#34;labelPadding&#34;:workingWidth,
+          &#34;domain&#34;:false}},
+        &#34;color&#34;: {&#34;value&#34;: &#34;grey&#34;}
+        },
+      &#34;config&#34;: {
+        &#34;bar&#34;: {&#34;continuousBandSize&#34;:workingWidth/16},
+        &#34;style&#34;: {
+          &#34;cell&#34;: {
+              &#34;stroke&#34;: &#34;transparent&#34;,
+            }
+          },
+        },
+    })
+    
+opt = ({
+      &#34;actions&#34;: false,
+      &#34;tooltip&#34;: false
+    })
+    
+vegaEmbed(&#34;#irangdpvis&#34;, yourVlSpec, opt);
+
+&lt;/script&gt;
+
+&lt;p&gt;&lt;/body&gt;&lt;/p&gt;
 </description>
     </item>
     
