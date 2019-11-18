@@ -59,7 +59,7 @@ math = false
 
 width = document.getElementById("irangdpvis").offsetWidth;
 
-maxWidth = 800;
+maxWidth = 750;
 
 getWorkingWidth = function(width,maxWidth){
                                                 if(width < maxWidth)
@@ -160,7 +160,7 @@ yourVlSpec = ({
         "color": {"value": "grey"}
         },
       "config": {
-        "bar": {"continuousBandSize":workingWidth/16},
+        "bar": {"continuousBandSize":workingWidth/18},
         "style": {
           "cell": {
               "stroke": "transparent",
