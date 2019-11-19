@@ -37,10 +37,6 @@ math = false
   fill: "red";
   color: "red";
   }
-  
-.article-container {
-    max-width: 800;
-}
 </style>
 
 </head>
@@ -59,7 +55,7 @@ math = false
 
 width = document.getElementById("irangdpvis").offsetWidth;
 
-maxWidth = 750;
+maxWidth = 650;
 
 getWorkingWidth = function(width,maxWidth){
                                                 if(width < maxWidth)

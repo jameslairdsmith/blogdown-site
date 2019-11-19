@@ -1454,10 +1454,6 @@ error involved in CSS changes.&lt;/p&gt;
   fill: &#34;red&#34;;
   color: &#34;red&#34;;
   }
-  
-.article-container {
-    max-width: 800;
-}
 &lt;/style&gt;
 
 &lt;p&gt;&lt;/head&gt;&lt;/p&gt;
@@ -1476,7 +1472,7 @@ error involved in CSS changes.&lt;/p&gt;
 
 width = document.getElementById(&#34;irangdpvis&#34;).offsetWidth;
 
-maxWidth = 750;
+maxWidth = 650;
 
 getWorkingWidth = function(width,maxWidth){
                                                 if(width &lt; maxWidth)
