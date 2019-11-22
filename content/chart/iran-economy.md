@@ -147,7 +147,7 @@ xAxis = {title: "Fiscal year ending",
          labelPadding: 6,
          titleFontSize: subFontSize - 3,
          titleFont: fontFamily,
-         titlePadding: 0,
+         titlePadding: -4,
          domain:false,
          ticks: false};
          
