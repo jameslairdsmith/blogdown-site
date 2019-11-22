@@ -6,7 +6,7 @@ date = 2016-04-27T00:00:00
 #title = "Sanctions hammer Iran's economy"
 
 # Project summary to display on homepage.
-#summary = "A chart showing the effect sanctions against Iran has had on its GDP"
+summary = "Iran's economy: battered by sanctions"
 
 # Optional image to display on homepage (relative to `static/img/` folder).
 image_preview = "iran_gdp_chart.png"
@@ -21,8 +21,6 @@ tags = ["Economics"]
 # Does the project detail page use math formatting?
 math = false
 
-# ![](/img/iran_gdp_chart.png)
-
 +++
 <head>
   <title>Embedding Vega-Lite</title>
@@ -31,43 +29,37 @@ math = false
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.0.0-beta.11"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.0.0"></script>
   
-<style>
-.role-axis-label {
-  font-size: 0.9rem;
-  fill: "red";
-  color: "red";
-  }
-</style>
-
 </head>
 
 <body>
 
-<div id="rainblock" align="center">
+<div id="headingblock" align="center">
     <h3 align="left" id="irangdphead">Iran's economy: battered by sanctions</h3>
     <p align="left" id="irangdpsubhead">Change in real GDP, annual %</p>
 </div>
 
-<div id="irangdpvis" align="center" class="role-axis-label"></div>
-<p align="right" id="irangdpsource">Source: World Bank</p>
+<div id="irangdpvis" align="center"></div>
+<p align="left" id="irangdpsource">Source for data, estimates and forecast: World Bank</p> 
 
 <script type="text/javascript">
 
 width = document.getElementById("irangdpvis").offsetWidth;
 
-maxWidth = 650;
+maxWidth = 630;
 
-getWorkingWidth = function(width,maxWidth){
-                                                if(width < maxWidth)
-                                                {return 1 * width}
-                                                else{return maxWidth}
-                                              };
-                                              
-workingWidth = getWorkingWidth(width, maxWidth);
+getWorkingWidth = function(width,maxWidth){if(width < maxWidth)
+                                          {return 1 * width}
+                                          else {return maxWidth}};
+                                          
+plotWidth = getWorkingWidth(width, maxWidth);
 
-height = Math.max(2/3 * workingWidth, 350);
+aspectRatio = 0.75;
 
-leftMargin = (width - workingWidth)/2;
+plotMaxHeight = 350;
+
+plotHight =  Math.max(aspectRatio * plotWidth, plotMaxHeight);
+
+leftMargin = (width - plotWidth)/2;
 
 rightMargin = leftMargin;
 
@@ -94,7 +86,7 @@ document.getElementById("irangdpsource")
       font-size: 0.7rem;
       color: #696969;
       //margin-bottom: 0; 
-      text-align:right;`);
+      text-align:left;`);
       
 document.getElementById("irangdpvis")
     .setAttribute(
@@ -115,62 +107,157 @@ fontFamily = window.getComputedStyle(el, null).getPropertyValue('font-family');
 
 subFontSize = parseFloat(style); 
 
-yourVlSpec = ({
-      "$schema": "https://vega.github.io/schema/vega-lite/v4.0.json",
-      "width": workingWidth,
-      "height": height,
-      "autosize": {
-        "type": "fit",
-        "contains": "padding"
+url_string = "https://raw.githubusercontent.com/jameslairdsmith/iran_worldbank_data/master/current_iran_indicators.csv";
+
+rectDataRaw =  [
+  {"start": "2018-06-30", "end": "2020-06-30", "event": "Estimates"},
+  {"start": "2020-06-30", "end": "2022-06-15", "event": "Forecasts"}
+];
+
+eventDates =  [
+  {"eventDate": "2016-01-16", "eventDescription": "Nuclear deal implemented \u2192 ", "yVal": "0.12"},
+  {"eventDate": "2018-01-11", "eventDescription": "Trump sanctions take effect \u2192 ", "yVal": "-0.0925"}
+];
+
+makeGdpPercent = {calculate: "datum.annual_gdp_growth/100", "as": "annual_gdp_growth_perc"};
+
+getTextMidpoint = {calculate: "(datum.start + datum.end)/2", "as": "midPoint"};
+
+makeFirstDateLong = "if(datum.label == '2010', datum.label, timeFormat(datum.value, '%y'))";
+
+yAxis = {title: null,
+         tickCount: 8,
+         ticks: false,
+         domain:false,
+         labelFontSize: subFontSize - 3,
+         labelFont: fontFamily,
+         labelPadding: 5,
+         orient: "right",
+         grid: true,
+         format: "%"};
+         
+xAxis = {title: "Fiscal year ending",
+         grid: false,
+         labelExpr: makeFirstDateLong,
+         labelFontSize: subFontSize - 3,
+         labelFont: fontFamily,
+         maxExtent: 40,
+         orient: "bottom",
+         minExtent: 40,
+         labelPadding: 6,
+         titleFontSize: subFontSize - 3,
+         titleFont: fontFamily,
+         domain:false,
+         ticks: false};
+         
+yEncoding = {field: "annual_gdp_growth_perc",
+              type: "quantitative",
+              scale: {domain: [-0.12, 0.15]},
+              axis: yAxis};
+              
+xEncoding = {field: "year",
+              axis: xAxis,
+              scale: {domain: ["2010-01-01", "2022-01-01"]},
+              type: "temporal"};
+              
+rectLegend = {orient: "top", 
+               title: null, 
+               labelFont: fontFamily,
+               labelFontSize: subFontSize - 3};
+               
+rectEncoding = {
+  x: {field: "start", type: "temporal"},
+  x2: {field: "end"},
+  fillOpacity: {value: 0.2},
+  color: {field: "event",
+          type: "nominal",
+          scale: {"range": ["#969696", "#c7c7c7"]},
+          legend: rectLegend}};
+          
+textEncoding = {
+  x: {field: "midPoint", type: "temporal"},
+  y: {value: 60},
+  text: {field: "event", type: "nominal"}
+};
+
+vLineEncoding = {
+  x: {field: "eventDate", type: "temporal"}
+};
+
+labelEncoding = {
+      x: {field: "eventDate", type: "temporal"},
+      y: {field: "yVal", type: "quantitative"},
+      text: {field: "eventDescription", 
+             legend: null,
+             type: "nominal"}
+};
+
+barMark = {
+      mark: {type: "bar"},
+      data: {url: url_string},
+      transform: [makeGdpPercent],
+      encoding: {
+        y: yEncoding,
+        x: xEncoding,
+        fillOpacity: {value: 1},
+        color: {value: "#595959"}}
+};
+
+rectMark = {
+    mark: {type: "rect"},
+    data: {values: rectDataRaw},
+    encoding: rectEncoding
+};
+
+vLineMark = {
+  mark: {type: "rule"},
+  data: {values: eventDates},
+  encoding: vLineEncoding
+};
+
+labelMark = {
+  mark: {type: "text",
+         font: fontFamily,
+         fontSize: subFontSize - 5,
+         align: "right"},
+  data: {values: eventDates},
+  encoding: labelEncoding
+};
+
+ruleConfig = {
+    strokeDash: [6,4],
+    color: "grey"
+};
+
+barWidthMutiple = 16.5;
+
+barWidth = plotWidth/barWidthMutiple;
+
+plotConfig = {
+  bar: {continuousBandSize: barWidth},
+  rule: ruleConfig,
+  style: {cell: {stroke: "transparent"}}
+};
+
+plot = {
+  $schema: "https://vega.github.io/schema/vega-lite/v4.json",
+  width: plotWidth,
+  height: plotHight,
+  autosize: {
+        type: "fit",
+        contains: "padding"
       },
-      "description": "A simple bar chart with embedded data.",
-      "data":  {"url":"https://raw.githubusercontent.com/jameslairdsmith/iran_worldbank_data/master/current_iran_indicators.csv"},
-      "transform": [
-          {"calculate": "datum.annual_gdp_growth/100", "as": "annual_gdp_growth2"}
-      ],
-      "mark": "bar",
-      
-      "encoding": {
-        "x": {"field": "year", "type": "temporal", 
-        "axis": {
-          "title": null, 
-          "labelFontSize": subFontSize-3,
-          "labelFont": fontFamily,
-          "ticks": false,
-          "grid":false,
-          "labelExpr": "if(datum.label == '2010', datum.label, timeFormat(datum.value, '%y'))",
-          "labelFlush": false,
-          "domain":false}},
-        "y": {"field": "annual_gdp_growth2", "type": "quantitative", 
-        "axis": {
-          "title": null,
-          "tickCount": 6,
-          "labelFontSize": subFontSize-3,
-          "labelFont": fontFamily,
-          "format":"%",
-          "grid":false,
-          "tickSize":-workingWidth,
-          "tickColor":"white",
-          "labelPadding":workingWidth,
-          "domain":false}},
-        "color": {"value": "grey"}
-        },
-      "config": {
-        "bar": {"continuousBandSize":workingWidth/18},
-        "style": {
-          "cell": {
-              "stroke": "transparent",
-            }
-          },
-        },
-    })
-    
+  layer:[barMark, rectMark, vLineMark, labelMark],
+  config: plotConfig
+};
+
 opt = ({
       "actions": false,
       "tooltip": false
-    })
+    });
     
-vegaEmbed("#irangdpvis", yourVlSpec, opt);
+vegaEmbed("#irangdpvis", plot, opt);
+
 
 </script>
 
