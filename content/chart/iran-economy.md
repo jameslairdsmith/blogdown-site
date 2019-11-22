@@ -110,8 +110,8 @@ subFontSize = parseFloat(style);
 url_string = "https://raw.githubusercontent.com/jameslairdsmith/iran_worldbank_data/master/current_iran_indicators.csv";
 
 rectDataRaw =  [
-  {"start": "2018-06-30", "end": "2020-06-30", "event": "Estimates"},
-  {"start": "2020-06-30", "end": "2022-06-15", "event": "Forecasts"}
+  {"start": "2018-06-30", "end": "2020-06-30", "event": "Estimate"},
+  {"start": "2020-06-30", "end": "2022-06-15", "event": "Forecast"}
 ];
 
 eventDates =  [
