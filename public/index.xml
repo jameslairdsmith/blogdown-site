@@ -1505,7 +1505,7 @@ document.getElementById(&#34;irangdpsource&#34;)
       font-size: 0.7rem;
       color: #696969;
       //margin-bottom: 0; 
-      text-align:right;`);
+      text-align:left;`);
       
 document.getElementById(&#34;irangdpvis&#34;)
     .setAttribute(

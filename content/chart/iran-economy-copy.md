@@ -86,7 +86,7 @@ document.getElementById("irangdpsource")
       font-size: 0.7rem;
       color: #696969;
       //margin-bottom: 0; 
-      text-align:right;`);
+      text-align:left;`);
       
 document.getElementById("irangdpvis")
     .setAttribute(
