@@ -22,6 +22,7 @@ tags = ["Economics"]
 math = false
 
 +++
+<html>
 <head>
   <title>Embedding Vega-Lite</title>
   <script src="https://d3js.org/d3.v5.js"></script>
@@ -263,4 +264,21 @@ vegaEmbed("#irangdpvis", plot, opt);
 </script>
 
 </body>
+
+</html>
+
+Iran's economy will have shrunk by 4.9% over the course of this 
+year and by a further 8.7% during 2020[^0], according to estimates 
+produced by the World Bank[^1]. The country is reeling in 
+the fallout of the Trump administration's decision to withdraw
+from the nuclear treaty[^2] it signed in 2015 with the Obama
+administration and other world powers. The deal had been a boon
+for the Islamic Republic where the lifting of sanctions contributed
+to growth of 13.4% during 2017. Once these latest effects
+are absorbed, World Bank forecasters predict flat growth of 0.1% 
+in 2021 and 1% in 2022.
+
+[^0]: All periods are fiscal year ends.
+[^1]: World Bank. (2019). _Iran’s Economic Update_. Retrieved from https://tinyurl.com/upwy79e
+[^2]: Formally named the Joint Comprehensive Plan of Action (JCPOA).
 

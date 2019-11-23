@@ -1441,7 +1441,8 @@ error involved in CSS changes.&lt;/p&gt;
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0100</pubDate>
       
       <guid>/chart/iran-economy/</guid>
-      <description>&lt;p&gt;&lt;head&gt;
+      <description>&lt;p&gt;&lt;html&gt;
+&lt;head&gt;
   &lt;title&gt;Embedding Vega-Lite&lt;/title&gt;
   &lt;script src=&#34;https://d3js.org/d3.v5.js&#34;&gt;&lt;/script&gt;
   &lt;script src=&#34;https://cdn.jsdelivr.net/npm/vega@5.7.3&#34;&gt;&lt;/script&gt;
@@ -1682,6 +1683,32 @@ vegaEmbed(&#34;#irangdpvis&#34;, plot, opt);
 &lt;/script&gt;
 
 &lt;p&gt;&lt;/body&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/html&gt;&lt;/p&gt;
+
+&lt;p&gt;Iran&amp;rsquo;s economy will have shrunk by 4.9% over the course of this
+year and by a further 8.7% during 2020&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:0&#34;&gt;&lt;a href=&#34;#fn:0&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;, according to estimates
+produced by the World Bank&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;. The country is reeling in
+the fallout of the Trump administration&amp;rsquo;s decision to withdraw
+from the nuclear treaty&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34;&gt;3&lt;/a&gt;&lt;/sup&gt; it signed in 2015 with the Obama
+administration and other world powers. The deal had been a boon
+for the Islamic Republic where the lifting of sanctions contributed
+to growth of 13.4% during 2017. Once these latest effects
+are absorbed, World Bank forecasters predict flat growth of 0.1%
+in 2021 and 1% in 2022.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:0&#34;&gt;All periods are fiscal year ends.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:0&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:1&#34;&gt;World Bank. (2019). &lt;em&gt;Iran’s Economic Update&lt;/em&gt;. Retrieved from &lt;a href=&#34;https://tinyurl.com/upwy79e&#34; target=&#34;_blank&#34;&gt;https://tinyurl.com/upwy79e&lt;/a&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;Formally named the Joint Comprehensive Plan of Action (JCPOA).
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:2&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
 </description>
     </item>
     
