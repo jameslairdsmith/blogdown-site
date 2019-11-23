@@ -13,7 +13,7 @@ image_preview = "iran_gdp_chart.png"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["Economics"]
+tags = ["Economics", "Politics"]
 
 # Optional external URL for project (replaces project detail page).
 #external_link = "https://jameslairdsmith.github.io/gs/"
@@ -271,12 +271,12 @@ Iran's economy will have shrunk by 4.9% over the course of this
 year and by a further 8.7% during 2020[^0], according to estimates 
 produced by the World Bank[^1]. The country is reeling in 
 the fallout of the Trump administration's decision to withdraw
-from the nuclear treaty[^2] it signed in 2015 with the Obama
-administration and other world powers. The deal had been a boon
+from the nuclear treaty it signed in 2015 with the Obama
+administration and other world powers[^2]. The deal had been a boon
 for the Islamic Republic where the lifting of sanctions contributed
-to growth of 13.4% during 2017. Once these latest effects
-are absorbed, World Bank forecasters predict flat growth of 0.1% 
-in 2021 and 1% in 2022.
+to growth of 13.4% during 2017. Once the effects of the latest
+sanctions are absorbed, World Bank forecasters predict flat growth 
+of 0.1% in 2021 and 1% in 2022.
 
 [^0]: All periods are fiscal year ends.
 [^1]: World Bank. (2019). _Iran’s Economic Update_. Retrieved from https://tinyurl.com/upwy79e
