@@ -15,7 +15,11 @@
   </a>
   {{end}}
   <h3 class="article-title" itemprop="headline">
+    {{ if $post.Params.affiliatelink }}
+    <a href="{{ $post.Params.affiliatelink }}" target="_blank">{{ $post.Title }}</a>
+    {{else}}
     <a href="{{ $post.Permalink }}" itemprop="url">{{ $post.Title }}</a>
+    {{ end }}
   </h3>
   <div class="article-style" itemprop="articleBody">
     {{ if $post.Params.summary }}
@@ -27,8 +31,14 @@
     {{ end }}
   </div>
   <p class="read-more" itemprop="mainEntityOfPage">
+    {{ if $post.Params.affiliatelink }}
+    <a href="{{ $post.Params.affiliatelink }}" class="btn btn-primary btn-outline">
+      {{ i18n "continue_reading" }}
+    </a>
+    {{else}}
     <a href="{{ $post.Permalink }}" class="btn btn-primary btn-outline">
       {{ i18n "continue_reading" }}
     </a>
+     {{ end }}
   </p>
 </div>
