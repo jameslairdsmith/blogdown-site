@@ -97,6 +97,15 @@ Here is some CSS that should appear, but not run:
     </item>
     
     <item>
+      <title>Test gallery post</title>
+      <link>/post/test-gallery/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0100</pubDate>
+      
+      <guid>/post/test-gallery/</guid>
+      <description>    </description>
+    </item>
+    
+    <item>
       <title>Hello R Markdown</title>
       <link>/post/2015-07-23-r-rmarkdown/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
