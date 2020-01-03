@@ -28,6 +28,213 @@
     </item>
     
     <item>
+      <title></title>
+      <link>/chart/language-efficiency/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/chart/language-efficiency/</guid>
+      <description>&lt;p&gt;&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Embedding Vega-Lite&lt;/title&gt;
+  &lt;script src=&#34;https://d3js.org/d3.v5.js&#34;&gt;&lt;/script&gt;
+  &lt;script src=&#34;https://cdn.jsdelivr.net/npm/vega@5.7.3&#34;&gt;&lt;/script&gt;
+  &lt;script src=&#34;https://cdn.jsdelivr.net/npm/vega-lite@4.0.0-beta.11&#34;&gt;&lt;/script&gt;
+  &lt;script src=&#34;https://cdn.jsdelivr.net/npm/vega-embed@6.0.0&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/head&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;body&gt;&lt;/p&gt;
+
+&lt;div id=&#34;headingblock&#34; align=&#34;center&#34;&gt;
+    &lt;h3 align=&#34;left&#34; id=&#34;irangdphead&#34;&gt;Talking, fast and slow&lt;/h3&gt;
+    &lt;p align=&#34;left&#34; id=&#34;irangdpsubhead&#34;&gt;Speech rate, syllables per second&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;div id=&#34;irangdpvis&#34; align=&#34;center&#34;&gt;&lt;/div&gt;
+&lt;p align=&#34;left&#34; id=&#34;irangdpsource&#34;&gt;Source: &amp;ldquo;Different languages, similar encoding efficiency: Comparable information rates across the human communicative niche&amp;rdquo; by Christophe Coupé, Yoon Mi Oh, Dan Dediu, and François Pellegrino, Science Advances (2019)&lt;/p&gt;&lt;/p&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+
+width = document.getElementById(&#34;irangdpvis&#34;).offsetWidth;
+
+maxWidth = 630;
+
+getWorkingWidth = function(width,maxWidth){if(width &lt; maxWidth)
+                                          {return 1 * width}
+                                          else {return maxWidth}};
+                                          
+plotWidth = getWorkingWidth(width, maxWidth);
+
+aspectRatio = 0.75;
+
+plotMaxHeight = 350;
+
+plotHight =  Math.max(aspectRatio * plotWidth, plotMaxHeight);
+
+leftMargin = (width - plotWidth)/2;
+
+rightMargin = leftMargin;
+
+document.getElementById(&#34;irangdphead&#34;)
+    .setAttribute(
+      &#34;style&#34;,`
+      margin-left: ${leftMargin}px;
+      margin-right: ${rightMargin}px`);
+      
+document.getElementById(&#34;irangdpsubhead&#34;)
+    .setAttribute(
+      &#34;style&#34;,`
+      margin-left: ${leftMargin}px;
+      margin-right: ${rightMargin}px;
+      font-style: italic;
+      //margin-bottom: 0;
+      text-align:left;`);
+      
+document.getElementById(&#34;irangdpsource&#34;)
+    .setAttribute(
+      &#34;style&#34;, `
+      margin-left: ${leftMargin}px; 
+      margin-right: ${rightMargin}px;
+      font-size: 0.7rem;
+      color: #696969;
+      //margin-bottom: 0; 
+      text-align:left;`);
+      
+document.getElementById(&#34;irangdpvis&#34;)
+    .setAttribute(
+      &#34;style&#34;, `
+      margin-left: ${leftMargin}px; 
+      margin-right: ${rightMargin}px;
+      // font-size: 0.7rem;
+      // color: #696969;
+      // margin-bottom: 0; 
+      //text-align:right;`
+);
+
+el = document.getElementById(&#39;irangdpsubhead&#39;);
+
+style = window.getComputedStyle(el, null).getPropertyValue(&#39;font-size&#39;);
+
+fontFamily = window.getComputedStyle(el, null).getPropertyValue(&#39;font-family&#39;);
+
+subFontSize = parseFloat(style); 
+
+url_string = &#34;https://gist.githubusercontent.com/jameslairdsmith/93a37c9670ec09d0da2282f3be6b3b05/raw/528736704c2a9dc8c677136a2896c2883e419189/language-complexity-summary.csv&#34;;
+
+myData = {&#34;url&#34;: url_string};
+
+lineMark = {
+      &#34;mark&#34;: {
+        &#34;type&#34;: &#34;line&#34;,
+        &#34;color&#34;: &#34;firebrick&#34;
+      },
+      &#34;transform&#34;: [
+        {
+          &#34;regression&#34;: &#34;SR&#34;,
+          &#34;on&#34;: &#34;ID&#34;
+        }
+      ],
+      &#34;encoding&#34;: {
+        &#34;x&#34;: {
+          &#34;field&#34;: &#34;ID&#34;,
+          &#34;type&#34;: &#34;quantitative&#34;
+        },
+        &#34;size&#34;: {&#34;value&#34;: 2},
+        &#34;color&#34;: {&#34;value&#34;: &#34;black&#34;},
+        &#34;y&#34;: {
+          &#34;field&#34;: &#34;SR&#34;,
+          &#34;type&#34;: &#34;quantitative&#34;
+        }
+      }
+    };
+    
+plot = {
+  &#34;$schema&#34;: &#34;https://vega.github.io/schema/vega-lite/v4.json&#34;,
+  &#34;width&#34;: plotWidth,
+  &#34;height&#34;: plotHight,
+  autosize: {
+        type: &#34;fit&#34;,
+        contains: &#34;padding&#34;
+      },
+  &#34;config&#34;: {&#34;view&#34;: {&#34;stroke&#34;: &#34;transparent&#34;}},
+  &#34;data&#34;: myData,
+  &#34;layer&#34;:[lineMark,
+    {&#34;mark&#34;: &#34;circle&#34;},
+          {
+    &#34;mark&#34;: {
+      &#34;type&#34;: &#34;text&#34;,
+      &#34;align&#34;: &#34;left&#34;,
+      &#34;font&#34;: fontFamily,
+      &#34;fontSize&#34;: subFontSize - 3,
+      &#34;baseline&#34;: &#34;middle&#34;,
+      &#34;dx&#34;: 0
+    },
+    &#34;encoding&#34;: {
+      &#34;x&#34;: {&#34;field&#34;: &#34;x-lab&#34;},
+      &#34;y&#34;: {&#34;field&#34;: &#34;y-lab&#34;},
+      &#34;color&#34;: {&#34;value&#34;: &#34;black&#34;},
+      &#34;size&#34;:{&#34;value&#34;: subFontSize - 3},
+      &#34;text&#34;: {&#34;field&#34;: &#34;language-name&#34;, &#34;type&#34;: &#34;nominal&#34;}
+    }
+  }],
+  &#34;encoding&#34;: {
+    &#34;size&#34;:{&#34;value&#34;: 200},
+    &#34;x&#34;: {&#34;field&#34;: &#34;ID&#34;, 
+          &#34;type&#34;: &#34;quantitative&#34;,
+          &#34;axis&#34;: {&#34;grid&#34;: false,
+                   &#34;labelFontSize&#34;: subFontSize - 3,
+                   &#34;labelFont&#34;: fontFamily,
+                   labelPadding: 6,
+                   tickCount: 6,
+                   titleFontSize: subFontSize - 3,
+                   titleFont: fontFamily,
+                   titlePadding: 12,
+                  &#34;title&#34;: &#34;Information density&#34;},
+          &#34;scale&#34;: {&#34;zero&#34;: false}
+         },
+    &#34;y&#34;: {&#34;field&#34;: &#34;SR&#34;,
+          &#34;type&#34;: &#34;quantitative&#34;,
+          &#34;axis&#34;: {&#34;grid&#34;: false,
+                   &#34;labelFontSize&#34;: subFontSize - 3,
+                   &#34;labelFont&#34;: fontFamily,
+                   &#34;title&#34;: null},
+         &#34;scale&#34;: {&#34;zero&#34;: false}
+         },
+    &#34;color&#34;: {&#34;field&#34;: &#34;simple-family-name&#34;,
+              &#34;type&#34;: &#34;nominal&#34;,
+             &#34;legend&#34;:{&#34;orient&#34;:&#34;none&#34;,
+                      &#34;legendX&#34;: plotWidth-rightMargin-130,
+                      &#34;legendY&#34;: -12,
+                      //&#34;direction&#34;: &#34;vertical&#34;,
+                      &#34;gridAlign&#34;: &#34;none&#34;,
+                      &#34;labelFontSize&#34;: subFontSize - 5,
+                      &#34;labelFont&#34;: fontFamily,
+                      &#34;title&#34;: null}}
+  }
+  //&#34;signals&#34;: [tooltipSignal],
+  //&#34;scales&#34;: [xScale, yScale],
+  //&#34;axes&#34;: [xAxis, yAxis],
+  //&#34;marks&#34;: [rectMark, textMark]
+}
+
+
+opt = ({
+      &#34;actions&#34;: false,
+      &#34;tooltip&#34;: false
+    });
+    
+vegaEmbed(&#34;#irangdpvis&#34;, plot, opt);
+
+
+&lt;/script&gt;
+
+&lt;p&gt;&lt;/body&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/html&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Competitive debate record</title>
       <link>/debate/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
@@ -1756,15 +1963,6 @@ of 0.1% in 2021 and 1% in 2022.&lt;/p&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>gs</title>
-      <link>/project/gs/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0100</pubDate>
-      
-      <guid>/project/gs/</guid>
-      <description></description>
     </item>
     
   </channel>

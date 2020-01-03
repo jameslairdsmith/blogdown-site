@@ -7,6 +7,23 @@
     
     <url>
     
+      <loc>/chart/language-efficiency/</loc>
+      <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/chart/</loc>
+      <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>/debate/</loc>
       <lastmod>2020-01-01T00:00:00+00:00</lastmod>
     </url>
@@ -16,6 +33,24 @@
     <url>
     
       <loc>/</loc>
+      <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/language/</loc>
+      <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/</loc>
       <lastmod>2020-01-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -170,15 +205,6 @@
     
     <url>
     
-      <loc>/chart/</loc>
-      <lastmod>2016-04-27T00:00:00+01:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
       <loc>/tags/economics/</loc>
       <lastmod>2016-04-27T00:00:00+01:00</lastmod>
       <priority>0</priority>
@@ -208,15 +234,6 @@
     
       <loc>/tags/r-packages/</loc>
       <lastmod>2016-04-27T00:00:00+01:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/tags/</loc>
-      <lastmod>2018-01-13T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
