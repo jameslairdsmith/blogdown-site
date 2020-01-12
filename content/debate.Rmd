@@ -34,7 +34,7 @@ library(emo)
 ```{r include=FALSE}
 # cv_entries_judging_from_sheet <-
 #   read_sheet("1aWslvXXbs70PLCkEnvtjAdAGxoOFiYFEK2y5IiJg9Zk",
-#              sheet = "Judging")
+#              sheet = "Combined")
 # 
 # cv_entries_judging_from_sheet %>%
 #   write_csv("judging_entries.csv")
@@ -59,12 +59,14 @@ cv_entries_judging <-
                          as.character(emo::ji("check")),
                          as.character(emo::ji("multiplication")))) %>% 
   mutate(competition_type = if_else(competition_type == "IV",
-                                    "Intervarsity",
+                                    "Universities",
                                     competition_type)) %>% 
+  arrange(rank) %>% 
   select(competition,
          year,
-         competition_type,
+         role,
          broke,
+         competition_type,
          reached,
          date_first_day) %>% 
   mutate(rn = row_number()) %>% 
@@ -72,29 +74,29 @@ cv_entries_judging <-
 ```
 
 For a big part of my life, I have involved myself in competitive debating.
-This is a different activity from ordinary debate in that participants rarely 
+This is different from ordinary debate in that participants rarely 
 know the topics in advance and cannot choose the position from which they argue. 
 The winners and losers of a competitive debate are not chosen by an audience, 
 but rather by a panel of other competitive debaters. 
 
-Much of competitive debating is centered around competitions which take place 
+Much of competitive debating is centered around competitions. These take place 
 all over the world and involve many rounds of debate happening over a number of
-days. As competitive debate is still a student-centered vocation, most of the
-competitions are hosted by university debate societies.
+days. Because competitive debate is still a student-centered 
+activity, most of these competitions are hosted by university debate societies.
 
-The following table is a summary of some of my performances as a judge at
-various debate competitions.
+The following table is a summary of some of my performances, both as a speaker
+and a judge, at various debate competitions.
 
 Each of the rows represents a different competition. To "break" at a debate
-competition means to progress through to the elimination rounds. In the later
-stages the teams compete to eliminate each another and so fewer panels of
-judges are required as the competition moves towards the final. As such, the
-further into the competition a judge progresses is taken to be an indicator 
-of their judging ability.
+competition is a good thing: it means to progress through to the elimination 
+rounds. In these later stages teams compete to knock each another out and 
+so fewer panels of judges are required. As such, the quality of a speaker or
+judge is indicated by how far into a competition they progress.
 
 ```{r echo=FALSE}
 colum_specs <- list(
   year = colDef(name = "Year", align = "left", maxWidth = 70),
+  role = colDef(name = "Role", align = "left", maxWidth = 95),
   competition = colDef(name = "Competition name"),
   competition_type = colDef(name = "Competition type", minWidth = 120),
   broke = colDef(name = "Broke", maxWidth = 70),

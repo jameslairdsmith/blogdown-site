@@ -1,32 +1,35 @@
-Rank,Competition,Type,Competition Type,Format,Date (first day),Date (last day),Year,Broke,Reached,Separator,Concat
-1,WUDC,Universities,World Championship,British Parliamentary,2018-12-27T00:00:00Z,2019-12-04T00:00:00Z,2019,TRUE,Broke to Semi-Final,",","WUDC, 2019, Broke to Semi-Final"
-2,SANUDC,Universities,National Championship,British Parliamentary,2011-07-09T00:00:00Z,2011-07-15T00:00:00Z,2011,TRUE,Broke to Semi-Final,",","SANUDC, 2011, Broke to Semi-Final"
-3,LSE Open,Universities,Open,British Parliamentary,2018-02-10T00:00:00Z,NA,2018,TRUE,Broke to Quarter Final,",","LSE Open, 2018, Broke to Quarter Final"
-3,Oxford IV,Universities,IV,British Parliamentary,2018-11-09T00:00:00Z,2018-11-10T00:00:00Z,2018,TRUE,Broke to Quarter Final,",","Oxford IV, 2018, Broke to Quarter Final"
-3,Inner Temple Open,Universities,Open,British Parliamentary,2019-01-18T00:00:00Z,2019-01-19T00:00:00Z,2019,TRUE,Chaired Semi-Final,",","Inner Temple Open, 2019, Chaired Semi-Final"
-3,Imperial Open,Universities,Open,British Parliamentary,2019-10-12T00:00:00Z,NA,2019,TRUE,Broke to Final,",","Imperial Open, 2019, Broke to Final"
-4,Cape Town Open,Universities,Open,British Parliamentary,2017-04-29T00:00:00Z,2017-05-01T00:00:00Z,2017,TRUE,Broke to Final,",","Cape Town Open, 2017, Broke to Final"
-NA,WUDC,Universities,World Championship,British Parliamentary,2013-12-27T00:00:00Z,2014-12-04T00:00:00Z,2014,FALSE,Didn't break,",","WUDC, 2014, Didn't break"
-NA,UCT 150th Year Open,Universities,Open,British Parliamentary,2015-07-24T00:00:00Z,2015-07-26T00:00:00Z,2015,TRUE,Chaired Semi-Final,",","UCT 150th Year Open, 2015, Chaired Semi-Final"
-NA,WUDC,Universities,World Championship,British Parliamentary,2015-12-27T00:00:00Z,2016-12-04T00:00:00Z,2016,FALSE,Didn't break,",","WUDC, 2016, Didn't break"
-NA,KCL Schools,Schools,Schools,British Parliamentary,2018-02-03T00:00:00Z,NA,2018,TRUE,Broke to Final,",","KCL Schools, 2018, Broke to Final"
-NA,UCL Schools,Schools,Schools,British Parliamentary,2018-02-24T00:00:00Z,NA,2018,TRUE,Broke to Final,",","UCL Schools, 2018, Broke to Final"
-NA,UCL IV,Universities,IV,British Parliamentary,2018-03-10T00:00:00Z,NA,2018,TRUE,Broke to Final,",","UCL IV, 2018, Broke to Final"
-NA,Imperial Schools,Schools,Schools,British Parliamentary,2018-03-17T00:00:00Z,NA,2018,TRUE,Broke to Final,",","Imperial Schools, 2018, Broke to Final"
-NA,The Science Open,Universities,Open,British Parliamentary,2018-03-18T00:00:00Z,NA,2018,TRUE,Broke to Final,",","The Science Open, 2018, Broke to Final"
-NA,KCL Pro-Am,Universities,Pro-Am,British Parliamentary,2018-03-24T00:00:00Z,NA,2018,TRUE,Broke to Final,",","KCL Pro-Am, 2018, Broke to Final"
-NA,Imperial IV,Universities,IV,British Parliamentary,2018-07-07T00:00:00Z,NA,2018,FALSE,Didn't break,",","Imperial IV, 2018, Didn't break"
-NA,Sci-Fi Open,Universities,Open,British Parliamentary,2018-03-25T00:00:00Z,NA,2018,TRUE,Broke to Final,",","Sci-Fi Open, 2018, Broke to Final"
-NA,Imperial Open,Universities,Open,British Parliamentary,2018-10-13T00:00:00Z,NA,2018,FALSE,Didn't break,",","Imperial Open, 2018, Didn't break"
-NA,LSE Asians,Universities,Open,Asian Parliamentary,2018-06-09T00:00:00Z,NA,2018,TRUE,Broke to Final,",","LSE Asians, 2018, Broke to Final"
-NA,KCL Open,Universities,Open,British Parliamentary,2018-06-30T00:00:00Z,NA,2018,TRUE,Broke to Final,",","KCL Open, 2018, Broke to Final"
-NA,UCL President's Cup,Universities,Novices,British Parliamentary,2018-10-06T00:00:00Z,NA,2018,TRUE,Broke to Semi-Final,",","UCL President's Cup, 2018, Broke to Semi-Final"
-NA,Imperial Novices,Universities,Novices,British Parliamentary,2018-10-14T00:00:00Z,NA,2018,TRUE,Broke to Final,",","Imperial Novices, 2018, Broke to Final"
-NA,Cambridge IV,Universities,IV,British Parliamentary,2018-11-16T00:00:00Z,2018-11-17T00:00:00Z,2018,FALSE,Didn't break,",","Cambridge IV, 2018, Didn't break"
-NA,KCL Pro-Am,Universities,Pro-Am,British Parliamentary,2018-10-20T00:00:00Z,NA,2018,TRUE,Broke to Final,",","KCL Pro-Am, 2018, Broke to Final"
-NA,KCL IV,Universities,IV,British Parliamentary,2018-10-27T00:00:00Z,NA,2018,TRUE,Broke to Semi-Final,",","KCL IV, 2018, Broke to Semi-Final"
-NA,LSE Pro-Am,Universities,Pro-Am,British Parliamentary,2019-01-13T00:00:00Z,2019-01-13T00:00:00Z,2019,TRUE,Broke to Final,",","LSE Pro-Am, 2019, Broke to Final"
-NA,UCL Schools,Schools,Schools,British Parliamentary,2019-01-26T00:00:00Z,2019-01-26T00:00:00Z,2019,TRUE,Was the CA,",","UCL Schools, 2019, Was the CA"
-NA,LSE Open,Universities,Open,British Parliamentary,2019-02-09T00:00:00Z,2019-02-10T00:00:00Z,2019,FALSE,Didn't break,",","LSE Open, 2019, Didn't break"
-NA,SOAS and Friends Mini-Open,Universities,Open,British Parliamentary,2019-02-24T00:00:00Z,2019-02-24T00:00:00Z,2019,TRUE,Chaired Novice Final,",","SOAS and Friends Mini-Open, 2019, Chaired Novice Final"
-NA,Oxford IV,Universities,IV,British Parliamentary,2019-11-08T00:00:00Z,2019-11-09T00:00:00Z,2019,FALSE,Didn't break,",","Oxford IV, 2019, Didn't break"
+Rank,Competition,Role,Type,Competition Type,Format,Date (first day),Date (last day),Year,Broke,Reached
+1,WUDC,Judge,Universities,World Championship,British Parliamentary,2018-12-27T00:00:00Z,2019-12-04T00:00:00Z,2019,TRUE,Broke to Semi-Final
+4,SANUDC,Judge,Universities,National Championship,British Parliamentary,2011-07-09T00:00:00Z,2011-07-15T00:00:00Z,2011,TRUE,Broke to Semi-Final
+3,LSE Open,Judge,Universities,Open,British Parliamentary,2018-02-10T00:00:00Z,NA,2018,TRUE,Broke to Quarter Final
+3,Oxford IV,Judge,Universities,IV,British Parliamentary,2018-11-09T00:00:00Z,2018-11-10T00:00:00Z,2018,TRUE,Broke to Quarter Final
+3,Inner Temple Open,Judge,Universities,Open,British Parliamentary,2019-01-18T00:00:00Z,2019-01-19T00:00:00Z,2019,TRUE,Chaired Semi-Final
+3,Imperial Open,Judge,Universities,Open,British Parliamentary,2019-10-12T00:00:00Z,NA,2019,TRUE,Broke to Final
+4,Cape Town Open,Judge,Universities,Open,British Parliamentary,2017-04-29T00:00:00Z,2017-05-01T00:00:00Z,2017,TRUE,Broke to Final
+99,WUDC,Judge,Universities,World Championship,British Parliamentary,2013-12-27T00:00:00Z,2014-12-04T00:00:00Z,2014,FALSE,Didn't break
+4,UCT 150th Year Open,Judge,Universities,Open,British Parliamentary,2015-07-24T00:00:00Z,2015-07-26T00:00:00Z,2015,TRUE,Chaired Semi-Final
+99,WUDC,Judge,Universities,World Championship,British Parliamentary,2015-12-27T00:00:00Z,2016-12-04T00:00:00Z,2016,FALSE,Didn't break
+7,KCL Schools,Judge,Schools,Schools,British Parliamentary,2018-02-03T00:00:00Z,NA,2018,TRUE,Broke to Final
+7,UCL Schools,Judge,Schools,Schools,British Parliamentary,2018-02-24T00:00:00Z,NA,2018,TRUE,Broke to Final
+3,UCL IV,Judge,Universities,IV,British Parliamentary,2018-03-10T00:00:00Z,NA,2018,TRUE,Broke to Final
+7,Imperial Schools,Judge,Schools,Schools,British Parliamentary,2018-03-17T00:00:00Z,NA,2018,TRUE,Broke to Final
+4,The Science Open,Judge,Universities,Open,British Parliamentary,2018-03-18T00:00:00Z,NA,2018,TRUE,Broke to Final
+6,KCL Pro-Am,Judge,Universities,Pro-Am,British Parliamentary,2018-03-24T00:00:00Z,NA,2018,TRUE,Broke to Final
+99,Imperial IV,Judge,Universities,IV,British Parliamentary,2018-07-07T00:00:00Z,NA,2018,FALSE,Didn't break
+4,Sci-Fi Open,Judge,Universities,Open,British Parliamentary,2018-03-25T00:00:00Z,NA,2018,TRUE,Broke to Final
+99,Imperial Open,Judge,Universities,Open,British Parliamentary,2018-10-13T00:00:00Z,NA,2018,FALSE,Didn't break
+3,LSE Asians,Judge,Universities,Open,Asian Parliamentary,2018-06-09T00:00:00Z,NA,2018,TRUE,Broke to Final
+3,KCL Open,Judge,Universities,Open,British Parliamentary,2018-06-30T00:00:00Z,NA,2018,TRUE,Broke to Final
+4,UCL President's Cup,Judge,Universities,Novices,British Parliamentary,2018-10-06T00:00:00Z,NA,2018,TRUE,Broke to Semi-Final
+7,Imperial Novices,Judge,Universities,Novices,British Parliamentary,2018-10-14T00:00:00Z,NA,2018,TRUE,Broke to Final
+99,Cambridge IV,Judge,Universities,IV,British Parliamentary,2018-11-16T00:00:00Z,2018-11-17T00:00:00Z,2018,FALSE,Didn't break
+6,KCL Pro-Am,Judge,Universities,Pro-Am,British Parliamentary,2018-10-20T00:00:00Z,NA,2018,TRUE,Broke to Final
+3,KCL IV,Judge,Universities,IV,British Parliamentary,2018-10-27T00:00:00Z,NA,2018,TRUE,Broke to Semi-Final
+6,LSE Pro-Am,Judge,Universities,Pro-Am,British Parliamentary,2019-01-13T00:00:00Z,2019-01-13T00:00:00Z,2019,TRUE,Broke to Final
+7,UCL Schools,Judge,Schools,Schools,British Parliamentary,2019-01-26T00:00:00Z,2019-01-26T00:00:00Z,2019,TRUE,Was the CA
+99,LSE Open,Judge,Universities,Open,British Parliamentary,2019-02-09T00:00:00Z,2019-02-10T00:00:00Z,2019,FALSE,Didn't break
+4,SOAS and Friends Mini-Open,Judge,Universities,Open,British Parliamentary,2019-02-24T00:00:00Z,2019-02-24T00:00:00Z,2019,TRUE,Chaired Novice Final
+99,Oxford IV,Judge,Universities,IV,British Parliamentary,2019-11-08T00:00:00Z,2019-11-09T00:00:00Z,2019,FALSE,Didn't break
+2,SANUDC,Speaker,Universities,National Championship,British Parliamentary,2013-06-29T00:00:00Z,2013-07-06T00:00:00Z,2013,TRUE,Finals
+4,SANUDC,Speaker,Universities,National Championship,British Parliamentary,2014-07-06T00:00:00Z,2014-07-13T00:00:00Z,2014,TRUE,Semi-Finals
+2,PAUDC,Speaker,Universities,Continental Championship,British Parliamentary,2012-12-09T00:00:00Z,2012-12-15T00:00:00Z,2012,TRUE,Semi-Finals
