@@ -91,7 +91,8 @@ Each of the rows represents a different competition. To "break" at a debate
 competition is a good thing: it means to progress through to the elimination 
 rounds. In these later stages teams compete to knock each another out and 
 so fewer panels of judges are required. As such, the quality of a speaker or
-judge is indicated by how far into a competition they progress.
+judge is indicated by how far into a competition they progress.<br>
+<br>
 
 ```{r echo=FALSE}
 colum_specs <- list(
