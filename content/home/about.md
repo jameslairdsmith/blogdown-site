@@ -35,5 +35,3 @@ weight = 5
 +++
 
 # About me
-
-I am a Data Scientist working in London.
