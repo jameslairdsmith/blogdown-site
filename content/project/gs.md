@@ -9,7 +9,7 @@ title = "gs"
 summary = "A grammar of recurring calendar events, implemented as an R package."
 
 # Optional image to display on homepage (relative to `static/img/` folder).
-image_preview = "gs_hex_sticker.png"
+#image_preview = "gs_hex_sticker.png"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
