@@ -348,7 +348,7 @@ enableGitInfo = false
   
 [[menu.main]]
   name = "Charts"
-  url = "/chartpage"
+  url = "/charts"
   weight = 5
   
 #[[menu.main]]
