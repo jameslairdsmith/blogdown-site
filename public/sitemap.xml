@@ -7,8 +7,26 @@
     
     <url>
     
-      <loc>/debate/</loc>
-      <lastmod>2020-01-12T00:00:00+00:00</lastmod>
+      <loc>/categories/</loc>
+      <lastmod>2020-03-22T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/categories/chart-legends/</loc>
+      <lastmod>2020-03-22T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/post/introducing-chart-legends/</loc>
+      <lastmod>2020-03-22T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -16,8 +34,16 @@
     <url>
     
       <loc>/</loc>
-      <lastmod>2020-01-12T00:00:00+00:00</lastmod>
+      <lastmod>2020-03-22T00:00:00+00:00</lastmod>
       <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/debate/</loc>
+      <lastmod>2020-01-12T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -93,15 +119,6 @@
     
       <loc>/post/web-platforms-should-be-better-at-handling-mixed-content/</loc>
       <lastmod>2018-09-29T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/categories/</loc>
-      <lastmod>2018-09-16T00:00:00+00:00</lastmod>
-      <priority>0</priority>
     </url>
     
   

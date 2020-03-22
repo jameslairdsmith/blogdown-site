@@ -6,7 +6,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 12 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 22 Mar 2020 00:00:00 +0000</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
@@ -25,6 +25,19 @@
       
       <guid>/projectspage/projects/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Introducing: Chart Legends</title>
+      <link>/post/introducing-chart-legends/</link>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/introducing-chart-legends/</guid>
+      <description>
+
+
+&lt;p&gt;This is a forum for me to discuss data visualations I like.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -1686,283 +1699,6 @@ error involved in CSS changes.&lt;/p&gt;
       
       <guid>/talk/example-talk/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/chart/iran-economy/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0100</pubDate>
-      
-      <guid>/chart/iran-economy/</guid>
-      <description>&lt;p&gt;&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;Embedding Vega-Lite&lt;/title&gt;
-  &lt;script src=&#34;https://d3js.org/d3.v5.js&#34;&gt;&lt;/script&gt;
-  &lt;script src=&#34;https://cdn.jsdelivr.net/npm/vega@5.7.3&#34;&gt;&lt;/script&gt;
-  &lt;script src=&#34;https://cdn.jsdelivr.net/npm/vega-lite@4.0.0-beta.11&#34;&gt;&lt;/script&gt;
-  &lt;script src=&#34;https://cdn.jsdelivr.net/npm/vega-embed@6.0.0&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/head&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;body&gt;&lt;/p&gt;
-
-&lt;div id=&#34;headingblock&#34; align=&#34;center&#34;&gt;
-    &lt;h3 align=&#34;left&#34; id=&#34;irangdphead&#34;&gt;Iran&#39;s economy: battered by sanctions&lt;/h3&gt;
-    &lt;p align=&#34;left&#34; id=&#34;irangdpsubhead&#34;&gt;Change in real GDP, annual %&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;div id=&#34;irangdpvis&#34; align=&#34;center&#34;&gt;&lt;/div&gt;
-&lt;p align=&#34;left&#34; id=&#34;irangdpsource&#34;&gt;Source for data, estimates and forecast: World Bank&lt;/p&gt;&lt;/p&gt;
-
-&lt;script type=&#34;text/javascript&#34;&gt;
-
-width = document.getElementById(&#34;irangdpvis&#34;).offsetWidth;
-
-maxWidth = 630;
-
-getWorkingWidth = function(width,maxWidth){if(width &lt; maxWidth)
-                                          {return 1 * width}
-                                          else {return maxWidth}};
-                                          
-plotWidth = getWorkingWidth(width, maxWidth);
-
-aspectRatio = 0.75;
-
-plotMaxHeight = 350;
-
-plotHight =  Math.max(aspectRatio * plotWidth, plotMaxHeight);
-
-leftMargin = (width - plotWidth)/2;
-
-rightMargin = leftMargin;
-
-document.getElementById(&#34;irangdphead&#34;)
-    .setAttribute(
-      &#34;style&#34;,`
-      margin-left: ${leftMargin}px;
-      margin-right: ${rightMargin}px`);
-      
-document.getElementById(&#34;irangdpsubhead&#34;)
-    .setAttribute(
-      &#34;style&#34;,`
-      margin-left: ${leftMargin}px;
-      margin-right: ${rightMargin}px;
-      font-style: italic;
-      //margin-bottom: 0;
-      text-align:left;`);
-      
-document.getElementById(&#34;irangdpsource&#34;)
-    .setAttribute(
-      &#34;style&#34;, `
-      margin-left: ${leftMargin}px; 
-      margin-right: ${rightMargin}px;
-      font-size: 0.7rem;
-      color: #696969;
-      //margin-bottom: 0; 
-      text-align:left;`);
-      
-document.getElementById(&#34;irangdpvis&#34;)
-    .setAttribute(
-      &#34;style&#34;, `
-      margin-left: ${leftMargin}px; 
-      margin-right: ${rightMargin}px;
-      // font-size: 0.7rem;
-      // color: #696969;
-      // margin-bottom: 0; 
-      //text-align:right;`
-);
-
-el = document.getElementById(&#39;irangdpsubhead&#39;);
-
-style = window.getComputedStyle(el, null).getPropertyValue(&#39;font-size&#39;);
-
-fontFamily = window.getComputedStyle(el, null).getPropertyValue(&#39;font-family&#39;);
-
-subFontSize = parseFloat(style); 
-
-url_string = &#34;https://raw.githubusercontent.com/jameslairdsmith/iran_worldbank_data/master/current_iran_indicators.csv&#34;;
-
-rectDataRaw =  [
-  {&#34;start&#34;: &#34;2018-06-30&#34;, &#34;end&#34;: &#34;2020-06-30&#34;, &#34;event&#34;: &#34;Estimate&#34;},
-  {&#34;start&#34;: &#34;2020-06-30&#34;, &#34;end&#34;: &#34;2022-06-15&#34;, &#34;event&#34;: &#34;Forecast&#34;}
-];
-
-eventDates =  [
-  {&#34;eventDate&#34;: &#34;2016-01-16&#34;, &#34;eventDescription&#34;: &#34;Nuclear deal implemented \u2192 &#34;, &#34;yVal&#34;: &#34;0.12&#34;},
-  {&#34;eventDate&#34;: &#34;2018-01-11&#34;, &#34;eventDescription&#34;: &#34;Trump sanctions take effect \u2192 &#34;, &#34;yVal&#34;: &#34;-0.0925&#34;}
-];
-
-makeGdpPercent = {calculate: &#34;datum.annual_gdp_growth/100&#34;, &#34;as&#34;: &#34;annual_gdp_growth_perc&#34;};
-
-getTextMidpoint = {calculate: &#34;(datum.start + datum.end)/2&#34;, &#34;as&#34;: &#34;midPoint&#34;};
-
-makeFirstDateLong = &#34;if(datum.label == &#39;2010&#39;, datum.label, timeFormat(datum.value, &#39;%y&#39;))&#34;;
-
-yAxis = {title: null,
-         tickCount: 8,
-         ticks: false,
-         domain:false,
-         labelFontSize: subFontSize - 3,
-         labelFont: fontFamily,
-         labelPadding: 5,
-         orient: &#34;right&#34;,
-         grid: true,
-         format: &#34;%&#34;};
-         
-xAxis = {title: &#34;Fiscal year ending&#34;,
-         grid: false,
-         labelExpr: makeFirstDateLong,
-         labelFontSize: subFontSize - 3,
-         labelFont: fontFamily,
-         maxExtent: 40,
-         orient: &#34;bottom&#34;,
-         minExtent: 40,
-         labelPadding: 6,
-         titleFontSize: subFontSize - 3,
-         titleFont: fontFamily,
-         titlePadding: -4,
-         domain:false,
-         ticks: false};
-         
-yEncoding = {field: &#34;annual_gdp_growth_perc&#34;,
-              type: &#34;quantitative&#34;,
-              scale: {domain: [-0.12, 0.15]},
-              axis: yAxis};
-              
-xEncoding = {field: &#34;year&#34;,
-              axis: xAxis,
-              scale: {domain: [&#34;2010-01-01&#34;, &#34;2022-01-01&#34;]},
-              type: &#34;temporal&#34;};
-              
-rectLegend = {orient: &#34;top&#34;, 
-               title: null, 
-               labelFont: fontFamily,
-               labelFontSize: subFontSize - 3};
-               
-rectEncoding = {
-  x: {field: &#34;start&#34;, type: &#34;temporal&#34;},
-  x2: {field: &#34;end&#34;},
-  fillOpacity: {value: 0.2},
-  color: {field: &#34;event&#34;,
-          type: &#34;nominal&#34;,
-          scale: {&#34;range&#34;: [&#34;#969696&#34;, &#34;#c7c7c7&#34;]},
-          legend: rectLegend}};
-          
-textEncoding = {
-  x: {field: &#34;midPoint&#34;, type: &#34;temporal&#34;},
-  y: {value: 60},
-  text: {field: &#34;event&#34;, type: &#34;nominal&#34;}
-};
-
-vLineEncoding = {
-  x: {field: &#34;eventDate&#34;, type: &#34;temporal&#34;}
-};
-
-labelEncoding = {
-      x: {field: &#34;eventDate&#34;, type: &#34;temporal&#34;},
-      y: {field: &#34;yVal&#34;, type: &#34;quantitative&#34;},
-      text: {field: &#34;eventDescription&#34;, 
-             legend: null,
-             type: &#34;nominal&#34;}
-};
-
-barMark = {
-      mark: {type: &#34;bar&#34;},
-      data: {url: url_string},
-      transform: [makeGdpPercent],
-      encoding: {
-        y: yEncoding,
-        x: xEncoding,
-        fillOpacity: {value: 1},
-        color: {value: &#34;#595959&#34;}}
-};
-
-rectMark = {
-    mark: {type: &#34;rect&#34;},
-    data: {values: rectDataRaw},
-    encoding: rectEncoding
-};
-
-vLineMark = {
-  mark: {type: &#34;rule&#34;},
-  data: {values: eventDates},
-  encoding: vLineEncoding
-};
-
-labelMark = {
-  mark: {type: &#34;text&#34;,
-         font: fontFamily,
-         fontSize: subFontSize - 5,
-         align: &#34;right&#34;},
-  data: {values: eventDates},
-  encoding: labelEncoding
-};
-
-ruleConfig = {
-    strokeDash: [6,4],
-    color: &#34;grey&#34;
-};
-
-barWidthMutiple = 16.5;
-
-barWidth = plotWidth/barWidthMutiple;
-
-plotConfig = {
-  bar: {continuousBandSize: barWidth},
-  rule: ruleConfig,
-  style: {cell: {stroke: &#34;transparent&#34;}}
-};
-
-plot = {
-  $schema: &#34;https://vega.github.io/schema/vega-lite/v4.json&#34;,
-  width: plotWidth,
-  height: plotHight,
-  autosize: {
-        type: &#34;fit&#34;,
-        contains: &#34;padding&#34;
-      },
-  layer:[barMark, rectMark, vLineMark, labelMark],
-  config: plotConfig
-};
-
-opt = ({
-      &#34;actions&#34;: false,
-      &#34;tooltip&#34;: false
-    });
-    
-vegaEmbed(&#34;#irangdpvis&#34;, plot, opt);
-
-
-&lt;/script&gt;
-
-&lt;p&gt;&lt;/body&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/html&gt;&lt;/p&gt;
-
-&lt;p&gt;Iran&amp;rsquo;s economy will have shrunk by 4.9% over the course of this
-year and by a further 8.7% during 2020&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:0&#34;&gt;&lt;a href=&#34;#fn:0&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;, according to estimates
-produced by the World Bank&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;. The country is reeling in
-the fallout of the Trump administration&amp;rsquo;s decision to withdraw
-from the nuclear treaty it signed in 2015 with the Obama
-administration and other world powers&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;. The deal had been a boon
-for the Islamic Republic where the lifting of sanctions contributed
-to growth of 13.4% during 2017. Once the effects of the latest
-sanctions are absorbed, World Bank forecasters predict flat growth
-of 0.1% in 2021 and 1% in 2022.&lt;/p&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-
-&lt;hr /&gt;
-
-&lt;ol&gt;
-&lt;li id=&#34;fn:0&#34;&gt;All periods are fiscal year ends.
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:0&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&#34;fn:1&#34;&gt;World Bank. (2019). &lt;em&gt;Iran’s Economic Update&lt;/em&gt;. Retrieved from &lt;a href=&#34;https://tinyurl.com/upwy79e&#34; target=&#34;_blank&#34;&gt;https://tinyurl.com/upwy79e&lt;/a&gt;
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&#34;fn:2&#34;&gt;Formally named the Joint Comprehensive Plan of Action (JCPOA).
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:2&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
     </item>
     
   </channel>
