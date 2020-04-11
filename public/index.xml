@@ -106,10 +106,11 @@ judge is indicated by how far into a competition they progress.&lt;br&gt;
 
 &lt;div id=&#34;headingblock&#34; align=&#34;center&#34;&gt;
     &lt;h3 align=&#34;left&#34; id=&#34;irangdphead&#34;&gt;Talking, fast and slow&lt;/h3&gt;
-    &lt;p align=&#34;left&#34; id=&#34;irangdpsubhead&#34;&gt;Speech rate, syllables per second&lt;/p&gt;
+    &lt;p align=&#34;left&#34; id=&#34;irangdpsubhead&#34;&gt;Speech rate, syllables per second*&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;p&gt;&lt;div id=&#34;irangdpvis&#34; align=&#34;center&#34;&gt;&lt;/div&gt;
+&lt;p align=&#34;left&#34; id=&#34;irangdpnote&#34;&gt;*Median value of observations&lt;/p&gt;
 &lt;p align=&#34;left&#34; id=&#34;irangdpsource&#34;&gt;Source: &amp;ldquo;Different languages, similar encoding efficiency: Comparable information rates across the human communicative niche&amp;rdquo; by Christophe Coupé, Yoon Mi Oh, Dan Dediu, and François Pellegrino, Science Advances (2019)&lt;/p&gt;&lt;/p&gt;
 
 &lt;script type=&#34;text/javascript&#34;&gt;
@@ -149,12 +150,22 @@ document.getElementById(&#34;irangdpsubhead&#34;)
       //margin-bottom: 0;
       text-align:left;`);
       
+document.getElementById(&#34;irangdpnote&#34;)
+    .setAttribute(
+      &#34;style&#34;, `
+      margin-left: ${leftMargin}px; 
+      margin-right: ${rightMargin}px;
+      font-size: 0.5rem;
+      color: #696969;
+      margin-bottom: 0; 
+      text-align:left;`);
+      
 document.getElementById(&#34;irangdpsource&#34;)
     .setAttribute(
       &#34;style&#34;, `
       margin-left: ${leftMargin}px; 
       margin-right: ${rightMargin}px;
-      font-size: 0.7rem;
+      font-size: 0.5rem;
       color: #696969;
       //margin-bottom: 0; 
       text-align:left;`);
@@ -248,7 +259,7 @@ plot = {
                    titleFontSize: subFontSize - 3,
                    titleFont: fontFamily,
                    titlePadding: 12,
-                  &#34;title&#34;: &#34;Information density&#34;},
+                  &#34;title&#34;: &#34;Information density*&#34;},
           &#34;scale&#34;: {&#34;zero&#34;: false}
          },
     &#34;y&#34;: {&#34;field&#34;: &#34;SR&#34;,
@@ -260,6 +271,11 @@ plot = {
          &#34;scale&#34;: {&#34;zero&#34;: false}
          },
     &#34;color&#34;: {&#34;field&#34;: &#34;simple-family-name&#34;,
+              &#34;sort&#34;: [&#34;Indo-European&#34;, 
+                       &#34;Sino-Tibetan&#34;, 
+                       &#34;Uralic&#34;,
+                       &#34;Language isolate&#34;,
+                       &#34;Other&#34;],
               &#34;type&#34;: &#34;nominal&#34;,
              &#34;legend&#34;:{&#34;orient&#34;:&#34;none&#34;,
                       &#34;legendX&#34;: plotWidth-rightMargin-130,
@@ -268,7 +284,11 @@ plot = {
                       &#34;gridAlign&#34;: &#34;none&#34;,
                       &#34;labelFontSize&#34;: subFontSize - 5,
                       &#34;labelFont&#34;: fontFamily,
-                      &#34;title&#34;: null}}
+                      &#34;titleFontSize&#34;: subFontSize - 3,
+                      &#34;titleFont&#34;: fontFamily,
+                      &#34;titlePadding&#34;: 10,
+                      &#34;titleFontWeight&#34;: 900,
+                      &#34;title&#34;: &#34;Language family&#34;}}
   }
   //&#34;signals&#34;: [tooltipSignal],
   //&#34;scales&#34;: [xScale, yScale],

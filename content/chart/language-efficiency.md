@@ -36,10 +36,11 @@ math = false
 
 <div id="headingblock" align="center">
     <h3 align="left" id="irangdphead">Talking, fast and slow</h3>
-    <p align="left" id="irangdpsubhead">Speech rate, syllables per second</p>
+    <p align="left" id="irangdpsubhead">Speech rate, syllables per second*</p>
 </div>
 
 <div id="irangdpvis" align="center"></div>
+<p align="left" id="irangdpnote">*Median value of observations</p> 
 <p align="left" id="irangdpsource">Source: "Different languages, similar encoding efficiency: Comparable information rates across the human communicative niche" by Christophe Coupé, Yoon Mi Oh, Dan Dediu, and François Pellegrino, Science Advances (2019)</p> 
 
 <script type="text/javascript">
@@ -79,12 +80,22 @@ document.getElementById("irangdpsubhead")
       //margin-bottom: 0;
       text-align:left;`);
       
+document.getElementById("irangdpnote")
+    .setAttribute(
+      "style", `
+      margin-left: ${leftMargin}px; 
+      margin-right: ${rightMargin}px;
+      font-size: 0.5rem;
+      color: #696969;
+      margin-bottom: 0; 
+      text-align:left;`);
+      
 document.getElementById("irangdpsource")
     .setAttribute(
       "style", `
       margin-left: ${leftMargin}px; 
       margin-right: ${rightMargin}px;
-      font-size: 0.7rem;
+      font-size: 0.5rem;
       color: #696969;
       //margin-bottom: 0; 
       text-align:left;`);
@@ -178,7 +189,7 @@ plot = {
                    titleFontSize: subFontSize - 3,
                    titleFont: fontFamily,
                    titlePadding: 12,
-                  "title": "Information density"},
+                  "title": "Information density*"},
           "scale": {"zero": false}
          },
     "y": {"field": "SR",
@@ -190,6 +201,11 @@ plot = {
          "scale": {"zero": false}
          },
     "color": {"field": "simple-family-name",
+              "sort": ["Indo-European", 
+                       "Sino-Tibetan", 
+                       "Uralic",
+                       "Language isolate",
+                       "Other"],
               "type": "nominal",
              "legend":{"orient":"none",
                       "legendX": plotWidth-rightMargin-130,
@@ -198,7 +214,11 @@ plot = {
                       "gridAlign": "none",
                       "labelFontSize": subFontSize - 5,
                       "labelFont": fontFamily,
-                      "title": null}}
+                      "titleFontSize": subFontSize - 3,
+                      "titleFont": fontFamily,
+                      "titlePadding": 10,
+                      "titleFontWeight": 900,
+                      "title": "Language family"}}
   }
   //"signals": [tooltipSignal],
   //"scales": [xScale, yScale],
