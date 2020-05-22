@@ -220,6 +220,25 @@ vegaEmbed("#readvis", plot, opt);
 
 </html>
 
+The ancient Greek maxium to 'know thyself' becomes much easier with data. 
+But data on one's self is suprisingly hard to come by. To make one small inroad
+into fixing this, I've gone about extracting all the annotations from my 
+Kindle e-reader. This lets me see not just my highlights, bookmarks and 
+comments but also when they were made. Plotting these by the time of day they
+were created (see chart) gives a retrospective of my reading life.
+
+My weekdays look to be quite regimented, at least during the daytime. The 
+noticeable peaks are for commuting and lunch breaks, filled almost exclusively
+by news reading. My evenings are more leisurely: with more spread-out reading
+of both news and books.
+
+By contrast, weekends are dominated by books rather than news, with reading 
+spead over more hours and with more gentle starts to the day. The practice
+resumes in the evening after a day of activity. Rarely does my reading strech
+past eleven, regardless of the day. All the better to rest and return afresh 
+tomorrow.
+
+
 
 [^0]: Some footnote.
 
