@@ -186,7 +186,7 @@ plot = {
                        labelFontSize: subFontSize - 3,
                        "labelAngle": 0,
                        "labelAlign":"right",
-                       "labelPadding": 20},
+                       "labelPadding": 10},
             "type": "nominal"},
     "y": {
       "field": "my_density", "type": "quantitative",
