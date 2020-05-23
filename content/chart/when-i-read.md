@@ -34,6 +34,8 @@ math = false
 
 <body>
 
+<div id="test"></div>
+
 <div id="headingblock" align="center">
     <h3 align="left" id="readhead">When I read</h3>
     <p align="left" id="readsubhead">Proportion of my Kindle annotations&#8224;</p>
@@ -44,9 +46,9 @@ math = false
 
 <script type="text/javascript">
 
-width = document.getElementById("readvis").offsetWidth;
+width = document.getElementById("test").offsetWidth;
 
-maxWidth = 660;
+maxWidth = 630;
 
 getWorkingWidth = function(width,maxWidth){if(width < maxWidth)
                                           {return width}
@@ -138,12 +140,16 @@ xAxis = {title: null,
          
 colorLegend = {orient: "none", 
                title: null,
-               direction: "horizontal",
+               direction: "vertical",
                padding: 0,
+               labelOffset: -20,
+               labelAlign: "right",
                titlePadding: 0,
                labelFont: fontFamily,
-               legendX : -25,
-               legendY: -15,
+               //legendX : -25,
+               //legendY: -15,
+               legendX : plotWidth-40,
+               legendY: -30,
                titleFontSize: subFontSize - 3,
                labelFontSize: subFontSize - 3};
 
@@ -155,11 +161,11 @@ plot = {
     }
     },
   padding: {"left": 0, "top": 0, "right": 0, "bottom": 0},
-  width: plotWidth/1.5,
+  width: plotWidth*0.9,
   height: plotHight/2.5,
   //autosize: {
-  //      type: "none",
-  //      contains: "content"
+  //      type: "fit",
+  //      contains: "padding"
   //    },
   "config": {"view": {"stroke": "transparent"}},
   "transform": [
@@ -179,14 +185,16 @@ plot = {
   "encoding": {
     "row": {"field": "is_weekend", 
             "sort": "descending",
+            spacing:  30,
             "header": {"title": null,
-                       "labelOrient": "right",
+                       "labelOrient": "top",
                        "labelAnchor":"middle",
                        labelFont: fontFamily,
                        labelFontSize: subFontSize - 3,
                        "labelAngle": 0,
+                       labelFontWeight: "bold",
                        "labelAlign":"right",
-                       "labelPadding": 10},
+                       "labelPadding": 0},
             "type": "nominal"},
     "y": {
       "field": "my_density", "type": "quantitative",
