@@ -203,7 +203,7 @@ plot = {
     },
     "x": {"field": "added_hour",
           "axis": xAxis,
-          "timeUnit": {"unit" :"hoursminutes",
+          "timeUnit": {"unit" :"utchoursminutes",
                        "step": 30},
           "type": "temporal"},
     "color": {
