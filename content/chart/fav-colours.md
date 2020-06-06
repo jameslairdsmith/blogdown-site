@@ -122,16 +122,28 @@ xAxisSpec = {title: "Hue",
              values: [0, 0.2, 0.4, 0.6, 0.8, 1],
              ticks: false}
              
-sizeLegend =  {title:  ["Share of", " responses"],
-               //title: "Proportion of responses",
+width = document.getElementById("vis").offsetWidth;
+             
+if (width > 450) {
+  sizeLegendOrient = "right"
+  sizeLegendDirection = "vertical"
+  sizeLegendTitle = ["Share of", " responses"]
+} else {
+  sizeLegendOrient = "top"
+  sizeLegendDirection = "horizontal"
+  sizeLegendTitle = "Share of responses"
+}
+    
+             
+sizeLegend =  {title: sizeLegendTitle,
                titleFontSize: subFontSize - 3,
                titleFont: fontFamily,
                labelFontSize: subFontSize - 3,
                labelFont: fontFamily,
-               direction: "vertical",
+               direction: sizeLegendDirection,
                padding: 0,
                //orient: "none",
-               orient: "right",
+               orient: sizeLegendOrient,
                //legendX: 325,
                //legendY: -5.5,
                values: [0.01, 0.05, 0.1, 0.15],
