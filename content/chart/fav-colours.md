@@ -60,7 +60,12 @@ math = false
 
 #visHeading{
   padding-bottom: "100%";
+  margin-top: 0;
   line-height: 1;
+}
+
+article .article-metadata {
+    margin-bottom: 0;
 }
 
 </style>
