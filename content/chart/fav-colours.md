@@ -47,7 +47,7 @@ math = false
 #visCaption{
   font-size: 50%;
   line-height: 1;
-  font-size: 0.6rem;
+  font-size: 0.5rem;
   color: #696969;
 }
 
