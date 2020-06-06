@@ -34,7 +34,7 @@ math = false
 
 <style>
 #visContainer {
-  width: min(630px, 100%);
+  width: min(720px, 100%);
   line-height:0;
   margin: auto;
 }
