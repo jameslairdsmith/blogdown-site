@@ -83,7 +83,7 @@ article .article-metadata {
 <div id="vis"></div>
 
 
-<p align="left" id="visCaption">Source: survey of Reddit users, 2017</p> 
+<p align="left" id="visCaption">Source: Survey of Reddit users, 2017</p> 
 
 </div>
 
