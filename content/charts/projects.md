@@ -41,6 +41,10 @@ filter_default = 0
 [[filter]]
   name = "Politics"
   tag = "Politics"
+  
+[[filter]]
+  name = "Colour"
+  tag = "Colour"
 
 # [[filter]]
 #   name = "Other"
