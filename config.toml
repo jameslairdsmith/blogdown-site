@@ -388,12 +388,17 @@ enableGitInfo = false
     url = "https://jameslairdsmith.github.io/curriculum_vitae/"
     #url = "CV/pagedown_cv.html"
     #url = '(CV/pagedown_cv.html){target="_blank"}'
-    weight = 10
+    weight = 99
     
 [[menu.main]]
     name = "Debate"
     url = "/debate"
     weight = 8
+    
+[[menu.main]]
+    name = "Photography"
+    url = "/photography"
+    weight = 11
 
 # Search.
 [params.search]
