@@ -3,7 +3,7 @@ title = "Mayfair, summer 2020"
 
 date = 2020-07-17T00:00:00
 # lastmod = 2018-01-13T00:00:00
-draft = true
+draft = false
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
 # authors = ["James Laird-Smith"]
