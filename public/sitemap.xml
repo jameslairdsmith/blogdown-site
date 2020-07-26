@@ -7,6 +7,75 @@
     
     <url>
     
+      <loc>/</loc>
+      <lastmod>2020-07-17T00:00:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/photography/mayfair-summer-2020/</loc>
+      <lastmod>2020-07-17T00:00:00+01:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/chart/favourite-colours/</loc>
+      <lastmod>2020-06-05T00:00:00+01:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/chart/</loc>
+      <lastmod>2020-06-05T00:00:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/colour/</loc>
+      <lastmod>2020-06-05T00:00:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/</loc>
+      <lastmod>2020-06-05T00:00:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/chart/when-i-read/</loc>
+      <lastmod>2020-05-22T00:00:00+01:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/personal/</loc>
+      <lastmod>2020-05-22T00:00:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>/categories/</loc>
       <lastmod>2020-03-22T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -33,15 +102,6 @@
     
     <url>
     
-      <loc>/</loc>
-      <lastmod>2020-03-22T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
       <loc>/debate/</loc>
       <lastmod>2020-01-12T00:00:00+00:00</lastmod>
     </url>
@@ -51,16 +111,7 @@
     <url>
     
       <loc>/chart/language-efficiency/</loc>
-      <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/chart/</loc>
-      <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-      <priority>0</priority>
+      <lastmod>2020-01-03T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -68,7 +119,7 @@
     <url>
     
       <loc>/tags/language/</loc>
-      <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+      <lastmod>2020-01-03T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -76,8 +127,25 @@
     
     <url>
     
-      <loc>/tags/</loc>
-      <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+      <loc>/chart/iran-economy/</loc>
+      <lastmod>2019-11-16T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/economics/</loc>
+      <lastmod>2019-11-16T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/politics/</loc>
+      <lastmod>2019-11-16T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -182,6 +250,14 @@
     
     <url>
     
+      <loc>/photography/</loc>
+      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>/post/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
@@ -208,49 +284,6 @@
     
       <loc>/projectspage/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/chart/iran-economy/</loc>
-      <lastmod>2016-04-27T00:00:00+01:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/chart/when-i-read/</loc>
-      <lastmod>2016-04-27T00:00:00+01:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/tags/economics/</loc>
-      <lastmod>2016-04-27T00:00:00+01:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/tags/personal/</loc>
-      <lastmod>2016-04-27T00:00:00+01:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/tags/politics/</loc>
-      <lastmod>2016-04-27T00:00:00+01:00</lastmod>
-      <priority>0</priority>
     </url>
     
   
