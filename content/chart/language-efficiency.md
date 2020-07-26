@@ -240,3 +240,15 @@ vegaEmbed("#irangdpvis", plot, opt);
 </body>
 
 </html>
+
+It is a well established fact that the speakers of different languages will
+talk at different rates. Japanese speakers, for example, will utter many 
+more syllables than a Thai speaker will, given equivalent time. This does not
+however answer the question of whether the Japanese speaker is communicating
+more information while doing so. This question is addressed by
+Christophe Coupé, Yoon Mi Oh, Dan Dediu, and François Pellegrino in their 2019
+paper published by *Science Advances*. In their investigations, the researchers
+took measurements of the speech rates of speakers accross a range of 
+languages spanning multiple language families. This speech rate was measured
+in syllables per second. The researchers also measured the density of the
+information conveyed while doing so, as measured by...
