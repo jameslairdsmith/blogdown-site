@@ -399,6 +399,11 @@ enableGitInfo = false
     name = "Photography"
     url = "/photography"
     weight = 11
+    
+[[menu.main]]
+    name = "Packages"
+    url = "/packages"
+    weight = 12
 
 # Search.
 [params.search]
