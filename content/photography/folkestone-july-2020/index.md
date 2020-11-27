@@ -20,6 +20,11 @@ album = "images"
 image = "https://lh3.googleusercontent.com/pw/ACtC-3cg3JGI8t3CSQ0ldT7YfNV2QokQBwftzaonwuS6Y8PmGS1uzn2yqXTVBOY2TthAmPBGm7OhTNW5VWxdm30QLXELrvGlIT8aIGpqq7UragwzdBkpCEV4qbmyWZVd1UH6vJqNETemovd_E2bepyTUL2tC5w=w2106-h1578-no?authuser=0"
 caption = "Stairway"
 
+[[gallery_item]]
+album = "images"
+image = "https://lh3.googleusercontent.com/Exbe5PO5tOBuvfSsjdw0wKwJfKfnhli2nQS3ui4ZupOtiPmV-q3eFARpZl8bwq4mWo2N_VbPLZJz0j0rNnNNweK5d0A1NatwvdFOINkUe5x1CtNmQ3mPg4r_c_DuzpKyMTOiUebUl5k=w2400"
+caption = "Stairway 2"
+
 +++
 
 
