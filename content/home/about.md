@@ -35,3 +35,5 @@ weight = 5
 +++
 
 # About me
+
+I'm a Data Scientist at the Bank of England. Formally at the Financial Times and the University of Cape Town.
