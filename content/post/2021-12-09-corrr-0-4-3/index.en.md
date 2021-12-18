@@ -1,11 +1,11 @@
 ---
-title: corrr 0.4.3 [external link]
+title: corrr 0.4.3
 author: R package build
 date: '2020-12-09'
 slug: []
 categories: []
 tags: []
-authors: []
+authors: [[External link]]
 header:
   caption: ''
   image: ''
