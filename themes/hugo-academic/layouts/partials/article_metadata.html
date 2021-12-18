@@ -8,8 +8,7 @@
   <div>
     {{ range $k, $v := $.Params.authors }}
     <span itemscope itemprop="author" itemtype="http://schema.org/Person">
-      <span itemprop="name">{{- $v -}}</span>
-    </span>
+      <span itemprop="name">{{- $v -}}</span></span>
     {{- if lt $k (sub $authorLen 1) -}}, {{ end }}
     {{ end }}
   </div>
