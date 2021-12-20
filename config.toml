@@ -246,15 +246,15 @@ enableGitInfo = false
 #    link = "https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ"
 
     
-  [[params.social]]
-    icon = "stack-overflow"
-    icon_pack = "fa"
-    link = "//stackoverflow.com/users/9467673/james-laird-smith?tab=profile"
+#  [[params.social]]
+#    icon = "stack-overflow"
+#    icon_pack = "fa"
+#    link = "//stackoverflow.com/users/9467673/james-laird-smith?tab=profile"
     
-  [[params.social]]
-    icon = "reddit-alien"
-    icon_pack = "fa"
-    link = "//reddit.com/user/jameslairdsmith"
+#  [[params.social]]
+#    icon = "reddit-alien"
+#    icon_pack = "fa"
+#    link = "//reddit.com/user/jameslairdsmith"
     
   [[params.social]]
     icon = "instagram"
@@ -271,25 +271,25 @@ enableGitInfo = false
   #  link = "//youtube.com/channel/UCCWUdea_VvGqosOWNPt6hew?view_as=subscriber"
   
   
-  [[params.social]]
-    icon = "flickr"
-    icon_pack = "fa"
-    link = "//flickr.com/photos/128032987@N05/"
+#  [[params.social]]
+#    icon = "flickr"
+#    icon_pack = "fa"
+#    link = "//flickr.com/photos/128032987@N05/"
     
-  [[params.social]]
-    icon = "500px"
-    icon_pack = "fa"
-    link = "//500px.com/jameslaird-smith"
+#  [[params.social]]
+#    icon = "500px"
+#    icon_pack = "fa"
+#    link = "//500px.com/jameslaird-smith"
     
-  [[params.social]]
-    icon = "orcid"
-    icon_pack = "ai"
-    link = "//orcid.org/0000-0003-1175-4046"
+#  [[params.social]]
+#    icon = "orcid"
+#    icon_pack = "ai"
+#    link = "//orcid.org/0000-0003-1175-4046"
     
-   [[params.social]]
-    icon = "google-scholar"
-    icon_pack = "ai"
-    link = "//scholar.google.com/citations?user=-5uCUpQAAAAJ&hl=en&oi=ao"
+#   [[params.social]]
+#    icon = "google-scholar"
+#    icon_pack = "ai"
+#    link = "//scholar.google.com/citations?user=-5uCUpQAAAAJ&hl=en&oi=ao"
     
   [[params.social]]
     icon = "linkedin"
