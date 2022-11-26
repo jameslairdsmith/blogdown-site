@@ -1,6 +1,6 @@
 +++
 title = "Advanced data exploration with corrr"
-#date = 2022-05-09T00:00:00  # Schedule page publish date.
+date = 2022-05-09T00:00:00  # Schedule page publish date.
 draft = false
 
 # Talk start and end times.
@@ -9,8 +9,8 @@ time_start = 2022-05-09T18:00:00
 time_end = 2022-05-09T19:00:00
 
 # Abstract and optional shortened version.
-#abstract = ""
-#abstract_short = "A grammar of recurring calendar events."
+abstract = ""
+abstract_short = ""
 
 # Name of event and optional event URL.
 event = "Oxford R User Group (OxfordRUG)"
